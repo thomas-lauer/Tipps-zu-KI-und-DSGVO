@@ -1,6 +1,6 @@
 # Datenschutz-Folgenabschaetzung (DSFA) - Vorlage fuer KI-Nutzung
 
-Stand: 16.06.2026  
+Stand: 17.06.2026  
 Status: Vorlage, vor produktivem Einsatz ausfuellen und durch Datenschutzbeauftragte/Rechtspruefung bewerten lassen.
 
 > Hinweis: Diese Vorlage ersetzt keine Rechtsberatung. Sie orientiert sich an Art. 35 DSGVO, den DPIA-Leitlinien WP248 rev.01/EDPB, DSK-Kurzpapier Nr. 5 und den DSK-Hinweisen zu KI. Wenn Informationen fehlen, als "offen" kennzeichnen.
@@ -35,9 +35,11 @@ Quellen: [Art. 35 DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/
 - Automatisierungsgrad:
 - Wird die KI nur assistiv genutzt?
 - Gibt es eine Entscheidung ueber Personen?
-- Werden Konnektoren, Browserzugriff, Computer Use, Cowork, Slack/Teams, E-Mail, Kalender oder lokale Dateien genutzt?
+- Werden Chat-Suche/Memory, Konnektoren, Browserzugriff, Computer Use, Cowork, Slack/Teams, E-Mail, Kalender oder lokale Dateien genutzt?
 
-Praxis-Hinweis: Zentrale Business-Accounts, AVV/DPA, Zero Data Retention, DSFA und interne Richtlinie sind Mindestbausteine vor produktiver Nutzung.
+Praxis-Hinweis: Zentrale Business-Accounts, AVV/DPA, Zero Data Retention, DSFA, dokumentierte Feature-Freigaben fuer Memory/Chat-Suche und Konnektoren sowie eine interne Richtlinie sind Mindestbausteine vor produktiver Nutzung.
+
+Quellen: [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp).
 
 ## 3. Schwellwertanalyse: Ist eine DSFA erforderlich?
 
@@ -103,13 +105,19 @@ Offene Rechtsfragen:
 | Rolle des Anbieters geklaert | Verantwortlicher / Auftragsverarbeiter / gemeinsam / offen |
 | Subprozessoren geprueft |  |
 | TOMs erhalten/geprueft |  |
+| Chat-Suche/Memory/Projektwissen aktiviert |  |
+| Admin-Kontrollen fuer Zusatzfunktionen geprueft |  |
+| MCP/Konnektoren/Drittserver separat geprueft |  |
 | Datenresidenz | EU / USA / global / offen |
 | SCC/DPF/TIA geprueft |  |
 | Training/Model Improvement deaktiviert |  |
 | Zero Data Retention verfuegbar und aktiv |  |
+| API-spezifische Speicherlogik (z. B. Responses API / Background Mode) geprueft |  |
 | Retention fuer Chats/Dateien/Logs dokumentiert |  |
 | Loeschkonzept vorhanden |  |
 | Betroffenenrechte umsetzbar |  |
+
+Quellen: [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
 
 ## 8. Notwendigkeit und Verhaeltnismaessigkeit
 
@@ -152,6 +160,7 @@ Bewertungsskala:
 | Automatisierte Entscheidung nach Art. 22 DSGVO |  |  |  | nur assistiv, menschliche Entscheidung |  |
 | Unberechtigter Zugriff durch falsche RAG-Berechtigungen |  |  |  | RBAC, Index-Trennung, Tests |  |
 | Prompt-Injection / Datenabfluss bei RAG oder Agenten |  |  |  | Isolation, Allowlist, Logging, Freigabe |  |
+| Ungewollte Wiederverwendung frueherer Chats/Projektinhalte durch Memory oder Chat-Suche |  |  |  | Feature-Freigabe, Retention, Admin-Kontrollen |  |
 | Missbrauch von Konnektoren, Browser oder lokalen Dateien |  |  |  | separate Freigabe, Least Privilege |  |
 | Unklare Loeschung aus Logs/Backups/Indexen |  |  |  | Loeschkonzept, Anbieterpruefung |  |
 | Fehlende Transparenz gegenueber Betroffenen |  |  |  | Datenschutzhinweise, interne Hinweise |  |
@@ -228,7 +237,9 @@ Erneute Pruefung bei:
 
 - Anbieterwechsel
 - Modellwechsel
+- Aktivierung oder Aenderung von Chat-Suche/Memory/Projektwissen
 - neuer Funktion wie Konnektoren, Computer Use, Cowork oder RAG
+- neuer Konnektor oder MCP-Server
 - Aenderung der Datenkategorien
 - Aenderung der Retention
 - neuer Drittlandtransfer
@@ -244,3 +255,6 @@ Erneute Pruefung bei:
 - [BfDI DSFA-Uebersicht](https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Technik/Datenschutz-Folgenabschaetzungen.html)
 - [DSK KI und Datenschutz](https://www.datenschutzkonferenz-online.de/media/oh/20240506_DSK_Orientierungshilfe_KI_und_Datenschutz.pdf)
 - [DSK RAG Orientierungshilfe](https://www.datenschutzkonferenz-online.de/media/oh/DSK_OH_RAG.pdf)
+- [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data)
+- [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp)
+- [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)

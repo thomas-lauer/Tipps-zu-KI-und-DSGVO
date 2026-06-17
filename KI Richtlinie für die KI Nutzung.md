@@ -1,6 +1,6 @@
 # KI-Richtlinie fuer die KI-Nutzung
 
-Stand: 16.06.2026  
+Stand: 17.06.2026  
 Status: Vorlage fuer Unternehmen/Organisationen
 
 > Ziel dieser Richtlinie ist eine produktive, sichere und DSGVO-konforme Nutzung von KI-Systemen wie Claude.ai, OpenAI/ChatGPT, API-Diensten, RAG-Systemen und vergleichbaren Tools. Diese Vorlage muss an Organisation, Rollen, Tools und Rechtsgrundlagen angepasst werden.
@@ -39,7 +39,11 @@ KI-Tools duerfen nur genutzt werden, wenn sie auf der Tool-Whitelist stehen.
 
 Private Accounts duerfen nicht fuer Unternehmensdaten verwendet werden.
 
+Zusaetzliche Funktionen wie Chat-Suche, Memory, Projektwissen, Konnektoren oder lokale Datei-/Browserzugriffe gelten als gesondert freigabepflichtige Features.
+
 Praxis-Hinweis: Zentrale Business-Accounts fuer Firmen-Tools, AVV/DPA, Zero Data Retention und klare Nutzungsregeln sind Kernanforderungen.
+
+Quellen: [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp).
 
 ## 4. Verbotene Eingaben
 
@@ -136,10 +140,14 @@ Mindestanforderungen:
 - keine autonomen Aktionen ohne Freigabe
 - Protokollierung
 - Prompt-Injection-Schutz
+- fuer Konnektoren und MCP-Server Retention/Residency jedes Drittservers separat pruefen
+- Chat-Suche/Memory nur nach dokumentierter Freigabe; Retention, Export und Admin-Kontrollen pruefen
 - klare Abbruch- und Kontrollmechanismen
 - DSFA-Pruefung bei personenbezogenen Daten
 
 Praxis-Hinweis: Cowork-Zugriffe auf lokale Daten, Browser und Dienste wie Slack koennen zu ungewollter Datenuebertragung fuehren und muessen separat freigegeben werden.
+
+Quellen: [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
 
 ## 10. RAG und interne Wissenssysteme
 
@@ -218,6 +226,10 @@ Externe Transparenz:
 - Datenschutzhinweise pruefen und anpassen.
 - Bei Kundenprozessen klarstellen, ob KI assistiv genutzt wird, soweit rechtlich erforderlich.
 
+Zusatzhinweis zum AI Act: Die KI-VO ist seit 1. August 2024 in Kraft; Verbote und KI-Kompetenzpflichten gelten seit 2. Februar 2025, GPAI-Regeln seit 2. August 2025 und die allgemeinen Transparenzpflichten nach Art. 50 fuer Anbieter und Betreiber generativer KI sind ab 2. August 2026 anwendbar. Nach dem am 10. Juni 2026 veroeffentlichten freiwilligen EU-Code of Practice betreffen diese Pflichten insbesondere Kennzeichnung und Markierung von Deepfakes sowie bestimmter KI-generierter oder manipulierter Inhalte.
+
+Quellen: [EU AI Act Framework](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai), [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content).
+
 ## 14. Sicherheitsvorfaelle
 
 Sofort melden:
@@ -258,8 +270,10 @@ Diese Richtlinie wird mindestens jaehrlich und bei wesentlichen Aenderungen aktu
 
 - neues KI-Tool
 - neues Modell
+- Aktivierung von Chat-Suche/Memory, Projektwissen, Konnektoren oder MCP
 - neue Anbieterbedingungen
 - neue Retention-/Trainingseinstellung
+- neue AI-Act-Transparenzpflicht fuer den eigenen Einsatzfall
 - neue Rechtslage
 - neue aufsichtsbehoerdliche Entscheidung
 - Datenschutzvorfall
@@ -273,4 +287,7 @@ Diese Richtlinie wird mindestens jaehrlich und bei wesentlichen Aenderungen aktu
 - [EDPB Opinion 28/2024 KI-Modelle](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)
 - [EDPB ChatGPT Taskforce](https://www.edpb.europa.eu/our-work-tools/our-documents/other/report-work-undertaken-chatgpt-taskforce_en)
 - [EU AI Act Framework](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
+- [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content)
+- [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp)
+- [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)
 - [EuGH SCHUFA C-634/21](https://infocuria.curia.europa.eu/tabs/redirect/juris/document/document.jsf?docid=280426&doclang=en)

@@ -1,6 +1,6 @@
 # Tipps zur DSGVO bei der Nutzung von Claude.ai und OpenAI
 
-Stand: 16.06.2026
+Stand: 17.06.2026
 
 Dieses Dokument ist eine praktische Checkliste fuer den Einsatz generativer KI. Es ersetzt keine Rechtsberatung. Wenn ein Punkt nicht sicher bewertet werden kann, muss er als offen dokumentiert und vor produktiver Nutzung geklaert werden.
 
@@ -59,7 +59,9 @@ Dokumentiere, wie lange gespeichert werden:
 
 Nutze moeglichst kurze Retention. Zero Data Retention ist nur dann relevant, wenn sie fuer den konkreten Vertrag/Plan/Endpunkt tatsaechlich gilt.
 
-Quellen: [OpenAI Business Data](https://openai.com/business-data/), [Anthropic Enterprise Retention](https://support.anthropic.com/en/articles/10440198-custom-data-retention-controls-for-claude-enterprise), [Anthropic Zero Data Retention](https://privacy.anthropic.com/en/articles/8956058-i-have-a-zero-retention-agreement-with-anthropic-what-products-does-it-apply-to).
+Bei API-Nutzung die konkrete Speicherlogik pro Funktion pruefen. Laut OpenAI werden im Responses API "Application State" standardmaessig fuer mindestens 30 Tage gespeichert; bei aktivierter Zero Data Retention wird `store` zwar auf `false` erzwungen, Background Mode speichert Daten aber fuer ungefaehr 10 Minuten auf Disk und ist deshalb nicht ZDR-kompatibel.
+
+Quellen: [OpenAI Business Data](https://openai.com/business-data/), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [Anthropic Enterprise Retention](https://support.anthropic.com/en/articles/10440198-custom-data-retention-controls-for-claude-enterprise), [Anthropic Zero Data Retention](https://privacy.anthropic.com/en/articles/8956058-i-have-a-zero-retention-agreement-with-anthropic-what-products-does-it-apply-to).
 
 ## 6. AVV/DPA abschliessen
 
@@ -80,7 +82,9 @@ Quellen: [Art. 28 DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/
 
 OpenAI und Anthropic sind US-nahe Anbieter bzw. nutzen internationale Infrastruktur/Subprozessoren. Vor Einsatz mit personenbezogenen Daten muss der Drittlandtransfer nach Art. 44 ff. DSGVO geprueft werden. Moegliche Bausteine sind EU-Data-Residency, Standardvertragsklauseln, Transfer Impact Assessment, EU-U.S. Data Privacy Framework und zusaetzliche technische Massnahmen. Ob ein Anbieter aktuell fuer einen konkreten Dienst zertifiziert ist, muss in der offiziellen DPF-Liste geprueft werden.
 
-Quellen: [Art. 44 ff. DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng), [Data Privacy Framework List](https://www.dataprivacyframework.gov/list), [OpenAI Data Residency Europe](https://openai.com/index/introducing-data-residency-in-europe/), [EU-Kommission DPF Q&A](https://ec.europa.eu/commission/presscorner/detail/en/qanda_23_3752).
+Bei Konnektoren oder MCP-Servern reicht die Data-Residency-/ZDR-Zusage des Hauptanbieters nicht automatisch aus. Fuer angebundene Drittserver muessen eigene Retention-, Residency- und Transferregeln geprueft werden.
+
+Quellen: [Art. 44 ff. DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng), [Data Privacy Framework List](https://www.dataprivacyframework.gov/list), [OpenAI Data Residency Europe](https://openai.com/index/introducing-data-residency-in-europe/), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [EU-Kommission DPF Q&A](https://ec.europa.eu/commission/presscorner/detail/en/qanda_23_3752).
 
 ## 8. DSFA pruefen
 
@@ -120,7 +124,9 @@ Ein internes RAG-System kann Datenschutz verbessern, wenn es nur freigegebene Qu
 - unklare Loeschung aus Indexen
 - Offenlegung vertraulicher Passagen in Antworten
 
-Quelle: [DSK RAG Orientierungshilfe, Oktober 2025](https://www.datenschutzkonferenz-online.de/media/oh/DSK_OH_RAG.pdf).
+Funktionen wie Chat-Suche, Projektwissen oder Memory koennen ebenfalls fruehere Inhalte fuer neue Antworten heranziehen. Bei Claude sollte deshalb separat geprueft werden, ob Chat-Suche/Memory aktiviert sein duerfen, wie Admin-Kontrollen aussehen und wie Retention, Export und Loeschung geregelt sind.
+
+Quellen: [DSK RAG Orientierungshilfe, Oktober 2025](https://www.datenschutzkonferenz-online.de/media/oh/DSK_OH_RAG.pdf), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
 
 ## 12. Interne KI-Richtlinie erstellen
 
@@ -154,9 +160,10 @@ Vor Freigabe eines KI-Tools beantworten:
 - Gibt es Logs fuer Missbrauch und Security?
 - Wie werden Betroffenenrechte erfuellt?
 - Gibt es eine Moeglichkeit fuer EU Data Residency oder ZDR?
+- Werden Konnektoren, MCP-Server, Chat-Suche, Memory oder Projektwissen genutzt, und welche eigenen Speicher-/Transferregeln gelten dort?
 - Ist eine DSFA erforderlich?
 
-Quellen: [OpenAI Security and Privacy](https://openai.com/security-and-privacy/), [OpenAI Enterprise Privacy](https://openai.com/enterprise-privacy/), [Anthropic Trust Center](https://trust.anthropic.com/), [Anthropic Commercial Customers](https://privacy.anthropic.com/en/collections/10663361-commercial-customers).
+Quellen: [OpenAI Security and Privacy](https://openai.com/security-and-privacy/), [OpenAI Enterprise Privacy](https://openai.com/enterprise-privacy/), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [Anthropic Trust Center](https://trust.anthropic.com/), [Anthropic Commercial Customers](https://privacy.anthropic.com/en/collections/10663361-commercial-customers), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
 
 ## 14. Was aus Entscheidungen gelernt werden kann
 
@@ -183,6 +190,10 @@ Quellen: [EDPB ChatGPT Taskforce](https://www.edpb.europa.eu/our-work-tools/our-
 13. Zentrale Business-Accounts fuer Firmen-Tools nutzen, nicht verstreute Einzelaccounts.
 14. Tool-Whitelist, Nutzungsregeln und Input-Grenzen schriftlich festlegen.
 15. Agentische Funktionen wie Cowork, Computer Use, Browserzugriff oder Slack-/Dienstzugriffe nur separat freigeben.
+16. Memory-, Chat-Suche-, Connector- und MCP-Funktionen nur separat freigeben und dokumentieren.
+17. Bei OpenAI-API-Integrationen ZDR/Data Residency nicht nur pauschal, sondern pro genutzter Funktion pruefen.
+
+Quellen: [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
 
 ## Mini-Entscheidungsbaum
 

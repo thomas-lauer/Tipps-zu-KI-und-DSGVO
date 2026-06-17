@@ -24,10 +24,27 @@ Enthaelt eine Vorlage fuer eine interne KI-Nutzungsrichtlinie. Sie beschreibt Ge
 
 ## Version
 
-Aktuelle Version: 1.0.0  
-Stand: 16.06.2026
+Aktuelle Version: 1.1.0  
+Stand: 17.06.2026
 
 ## Versionsinfo
+
+### Version 1.1.0 - 17.06.2026
+
+Ergaenzt:
+
+- AI-Act-Transparenzpflichten ab 02.08.2026 fuer generative KI in der KI-Richtlinie konkretisiert.
+- Hinweise zu Claude Chat-Suche/Memory und deren Retention-/Admin-Kontrollen in die Checkliste und Richtlinie aufgenommen.
+
+Geaendert:
+
+- Anbieter- und Transferpruefung um OpenAI-MCP/Konnektoren ergaenzt: Drittserver muessen separat auf Retention, Residency und Datenschutz geprueft werden.
+- DSFA-Vorlage um Pruefpunkte zu Chat-Suche/Memory, MCP/Konnektoren und API-spezifischer Speicherlogik erweitert.
+- OpenAI-API-Hinweise zu Responses-API-Retention und Background-Mode/ZDR in die Checkliste aufgenommen.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.0.0 - 16.06.2026
 
