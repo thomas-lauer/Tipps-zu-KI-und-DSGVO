@@ -1,11 +1,11 @@
 # Datenschutz-Folgenabschaetzung (DSFA) - Vorlage fuer KI-Nutzung
 
-Stand: 17.06.2026  
+Stand: 18.06.2026
 Status: Vorlage, vor produktivem Einsatz ausfuellen und durch Datenschutzbeauftragte/Rechtspruefung bewerten lassen.
 
 > Hinweis: Diese Vorlage ersetzt keine Rechtsberatung. Sie orientiert sich an Art. 35 DSGVO, den DPIA-Leitlinien WP248 rev.01/EDPB, DSK-Kurzpapier Nr. 5 und den DSK-Hinweisen zu KI. Wenn Informationen fehlen, als "offen" kennzeichnen.
 
-Quellen: [Art. 35 DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng), [EDPB/WP29 DPIA Guidelines WP248 rev.01](https://ec.europa.eu/newsroom/article29/items/611236/en), [DSK Kurzpapier Nr. 5 DSFA](https://www.datenschutzkonferenz-online.de/media/kp/dsk_kpnr_5.pdf), [BfDI DSFA-Uebersicht](https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Technik/Datenschutz-Folgenabschaetzungen.html), [DSK KI und Datenschutz](https://www.datenschutzkonferenz-online.de/media/oh/20240506_DSK_Orientierungshilfe_KI_und_Datenschutz.pdf).
+Quellen: [Art. 35 DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng), [EDPB/WP29 DPIA Guidelines WP248 rev.01](https://ec.europa.eu/newsroom/article29/items/611236/en), [DSK Kurzpapier Nr. 5 DSFA](https://www.datenschutzkonferenz-online.de/media/kp/dsk_kpnr_5.pdf), [BfDI DSFA-Uebersicht](https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Technik/Datenschutz-Folgenabschaetzungen.html), [DSK KI und Datenschutz](https://www.datenschutzkonferenz-online.de/media/oh/20240506_DSK_Orientierungshilfe_KI_und_Datenschutz.pdf), [EDPB AI Privacy Risks and Mitigations in LLMs](https://www.edpb.europa.eu/system/files/2025-04/ai-privacy-risks-and-mitigations-in-llms.pdf).
 
 ## 1. Stammdaten
 
@@ -20,6 +20,8 @@ Quellen: [Art. 35 DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/
 | Produktplan | Free / Pro / Team / Business / Enterprise / API / Sonstiges |
 | Vertragspartner |  |
 | AVV/DPA vorhanden | Ja / Nein / offen |
+| KI-VO-Rolle | Anbieter / Betreiber / Einfuehrer / Haendler / offen |
+| KI-VO-Risikoklasse | verboten / Hochrisiko / begrenztes Risiko / minimales Risiko / offen |
 | Datum der Bewertung |  |
 | Version der DSFA |  |
 | Naechste Ueberpruefung |  |
@@ -36,10 +38,12 @@ Quellen: [Art. 35 DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/
 - Wird die KI nur assistiv genutzt?
 - Gibt es eine Entscheidung ueber Personen?
 - Werden Chat-Suche/Memory, Konnektoren, Browserzugriff, Computer Use, Cowork, Slack/Teams, E-Mail, Kalender oder lokale Dateien genutzt?
+- Werden OpenAI-Funktionen mit eigener Retention genutzt, z. B. Responses API mit `store`, Background Mode, Extended Prompt Caching, Hosted Shell, Code Interpreter, gehostete Skills, Assistants, Threads oder Vector Stores?
+- Werden Anthropic-Funktionen mit eigener Retention genutzt, z. B. Claude Enterprise-Projekte, Audit Logs, Message Batches oder API-Features ohne ZDR?
 
 Praxis-Hinweis: Zentrale Business-Accounts, AVV/DPA, Zero Data Retention, DSFA, dokumentierte Feature-Freigaben fuer Memory/Chat-Suche und Konnektoren sowie eine interne Richtlinie sind Mindestbausteine vor produktiver Nutzung.
 
-Quellen: [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp).
+Quellen: [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs), [Anthropic API and Data Retention](https://platform.claude.com/docs/en/manage-claude/api-and-data-retention), [Anthropic Message Batches](https://platform.claude.com/docs/en/build-with-claude/batch-processing), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp).
 
 ## 3. Schwellwertanalyse: Ist eine DSFA erforderlich?
 
@@ -57,9 +61,13 @@ Quellen: [Claude Chat Search and Memory](https://support.claude.com/en/articles/
 | Einsatz von RAG/Wissensdatenbank mit internen Dokumenten |  |  |
 | Drittlandtransfer in die USA oder andere Drittlaender |  |  |
 | Agentische Funktionen mit Zugriff auf lokale Daten/Dienste |  |  |
+| Hochrisiko-KI oder Profiling nach KI-VO |  |  |
+| Grundrechte-Folgenabschaetzung nach KI-VO erforderlich |  |  |
 
 Ergebnis: DSFA erforderlich: Ja / Nein / offen  
 Begruendung:
+
+KI-VO-Hinweis: Die Grundrechte-Folgenabschaetzung nach [Art. 27 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-27) ersetzt die DSFA nicht; wenn Pflichten aus einer DSFA nach [Art. 35 DSGVO](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng) bereits erfuellt sind, ergaenzt die KI-VO-Abschaetzung diese DSFA. Hochrisiko-Einstufungen sind nach [Art. 6 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-6) zu dokumentieren.
 
 ## 4. Datenkategorien
 
@@ -113,11 +121,15 @@ Offene Rechtsfragen:
 | Training/Model Improvement deaktiviert |  |
 | Zero Data Retention verfuegbar und aktiv |  |
 | API-spezifische Speicherlogik (z. B. Responses API / Background Mode) geprueft |  |
+| Extended Prompt Caching / Hosted Containers / gehostete Skills geprueft |  |
+| Assistants / Threads / Vector Stores geloescht oder Retention dokumentiert |  |
+| Anthropic Message Batches oder sonstige nicht-ZDR-faehige Features ausgeschlossen oder bewertet |  |
+| Audit Logs und Datenexporte dokumentiert |  |
 | Retention fuer Chats/Dateien/Logs dokumentiert |  |
 | Loeschkonzept vorhanden |  |
 | Betroffenenrechte umsetzbar |  |
 
-Quellen: [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
+Quellen: [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [Claude Enterprise Retention](https://support.claude.com/en/articles/10440198-configure-custom-data-retention-controls-for-enterprise-plans), [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs), [Anthropic Message Batches](https://platform.claude.com/docs/en/build-with-claude/batch-processing).
 
 ## 8. Notwendigkeit und Verhaeltnismaessigkeit
 
@@ -162,8 +174,13 @@ Bewertungsskala:
 | Prompt-Injection / Datenabfluss bei RAG oder Agenten |  |  |  | Isolation, Allowlist, Logging, Freigabe |  |
 | Ungewollte Wiederverwendung frueherer Chats/Projektinhalte durch Memory oder Chat-Suche |  |  |  | Feature-Freigabe, Retention, Admin-Kontrollen |  |
 | Missbrauch von Konnektoren, Browser oder lokalen Dateien |  |  |  | separate Freigabe, Least Privilege |  |
+| Memorisation oder Rekonstruktion personenbezogener Daten aus LLM-Kontexten |  |  |  | Minimierung, Pseudonymisierung, kurze Retention, Tests |  |
+| Feature-Retention weicht von ZDR-Annahme ab |  |  |  | endpointbezogene Pruefung, technische Konfiguration, Vertragsnachweis |  |
+| Unvollstaendige KI-VO-Einstufung oder fehlende Transparenz |  |  |  | KI-VO-Kurzcheck, Schulung, Kennzeichnung, Dokumentation |  |
 | Unklare Loeschung aus Logs/Backups/Indexen |  |  |  | Loeschkonzept, Anbieterpruefung |  |
 | Fehlende Transparenz gegenueber Betroffenen |  |  |  | Datenschutzhinweise, interne Hinweise |  |
+
+Quellen: [EDPB AI Privacy Risks and Mitigations in LLMs](https://www.edpb.europa.eu/system/files/2025-04/ai-privacy-risks-and-mitigations-in-llms.pdf), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [Anthropic API and Data Retention](https://platform.claude.com/docs/en/manage-claude/api-and-data-retention), [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50).
 
 ## 11. Technische und organisatorische Massnahmen
 
@@ -196,7 +213,20 @@ Zusatzmassnahmen fuer hohe Risiken:
 - separate Freigabe fuer agentische Funktionen
 - Pilotphase mit anonymisierten Daten
 
-## 12. Betroffenenrechte
+## 12. KI-VO-Zusatzpruefung
+
+| Pruefpunkt | Ergebnis |
+|---|---|
+| Verbotene KI-Praktik nach Art. 5 KI-VO ausgeschlossen |  |
+| Hochrisiko-Einstufung nach Art. 6 KI-VO geprueft |  |
+| Transparenzpflichten nach Art. 50 KI-VO geprueft |  |
+| KI-Kompetenz und Schulung nach Art. 4 KI-VO umgesetzt |  |
+| Grundrechte-Folgenabschaetzung nach Art. 27 KI-VO erforderlich | Ja / Nein / offen |
+| Technische Dokumentation / Protokollierung / menschliche Aufsicht relevant |  |
+
+Quellen: [Art. 4 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-4), [Art. 5 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-5), [Art. 6 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-6), [Art. 27 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-27), [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50).
+
+## 13. Betroffenenrechte
 
 | Recht | Umsetzung |
 |---|---|
@@ -210,7 +240,7 @@ Zusatzmassnahmen fuer hohe Risiken:
 
 Offene Punkte:
 
-## 13. Ergebnis und Freigabeentscheidung
+## 14. Ergebnis und Freigabeentscheidung
 
 Gesamtrisiko vor Massnahmen: niedrig / mittel / hoch  
 Restrisiko nach Massnahmen: niedrig / mittel / hoch  
@@ -231,7 +261,7 @@ Unterschriften/Freigaben:
 | Informationssicherheit |  |  |  |
 | Geschaeftsfuehrung / Leitung |  |  |  |
 
-## 14. Review
+## 15. Review
 
 Erneute Pruefung bei:
 
@@ -243,6 +273,7 @@ Erneute Pruefung bei:
 - Aenderung der Datenkategorien
 - Aenderung der Retention
 - neuer Drittlandtransfer
+- neue KI-VO-Einstufung, Transparenzpflicht oder Grundrechte-Folgenabschaetzung
 - Datenschutzvorfall
 - neue aufsichtsbehoerdliche Entscheidung
 - spaetestens nach 12 Monaten
@@ -255,6 +286,16 @@ Erneute Pruefung bei:
 - [BfDI DSFA-Uebersicht](https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Technik/Datenschutz-Folgenabschaetzungen.html)
 - [DSK KI und Datenschutz](https://www.datenschutzkonferenz-online.de/media/oh/20240506_DSK_Orientierungshilfe_KI_und_Datenschutz.pdf)
 - [DSK RAG Orientierungshilfe](https://www.datenschutzkonferenz-online.de/media/oh/DSK_OH_RAG.pdf)
+- [EDPB AI Privacy Risks and Mitigations in LLMs](https://www.edpb.europa.eu/system/files/2025-04/ai-privacy-risks-and-mitigations-in-llms.pdf)
 - [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data)
 - [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp)
 - [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)
+- [Claude Enterprise Retention](https://support.claude.com/en/articles/10440198-configure-custom-data-retention-controls-for-enterprise-plans)
+- [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs)
+- [Anthropic API and Data Retention](https://platform.claude.com/docs/en/manage-claude/api-and-data-retention)
+- [Anthropic Message Batches](https://platform.claude.com/docs/en/build-with-claude/batch-processing)
+- [Art. 4 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-4)
+- [Art. 5 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-5)
+- [Art. 6 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-6)
+- [Art. 27 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-27)
+- [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50)

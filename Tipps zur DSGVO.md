@@ -1,6 +1,6 @@
 # Tipps zur DSGVO bei der Nutzung von Claude.ai und OpenAI
 
-Stand: 17.06.2026
+Stand: 18.06.2026
 
 Dieses Dokument ist eine praktische Checkliste fuer den Einsatz generativer KI. Es ersetzt keine Rechtsberatung. Wenn ein Punkt nicht sicher bewertet werden kann, muss er als offen dokumentiert und vor produktiver Nutzung geklaert werden.
 
@@ -59,9 +59,11 @@ Dokumentiere, wie lange gespeichert werden:
 
 Nutze moeglichst kurze Retention. Zero Data Retention ist nur dann relevant, wenn sie fuer den konkreten Vertrag/Plan/Endpunkt tatsaechlich gilt.
 
-Bei API-Nutzung die konkrete Speicherlogik pro Funktion pruefen. Laut OpenAI werden im Responses API "Application State" standardmaessig fuer mindestens 30 Tage gespeichert; bei aktivierter Zero Data Retention wird `store` zwar auf `false` erzwungen, Background Mode speichert Daten aber fuer ungefaehr 10 Minuten auf Disk und ist deshalb nicht ZDR-kompatibel.
+Bei API-Nutzung die konkrete Speicherlogik pro Funktion pruefen. Laut OpenAI werden im Responses API "Application State" standardmaessig fuer mindestens 30 Tage gespeichert; bei aktivierter Zero Data Retention wird `store` zwar auf `false` erzwungen, Background Mode speichert Daten aber fuer ungefaehr 10 Minuten auf Disk. Remote-MCP-Server sind Drittservices mit eigenen Retention-Regeln; Hosted Shell, Code Interpreter und gehostete Skills koennen temporaere Daten im Container-Dateisystem verarbeiten, bis der Container ablaeuft oder geloescht wird. Extended Prompt Caching kann verschluesselte Key/Value-Tensoren als Application State auf GPU-lokalem Speicher fuer bis zu 24 Stunden nutzen.
 
-Quellen: [OpenAI Business Data](https://openai.com/business-data/), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [Anthropic Enterprise Retention](https://support.anthropic.com/en/articles/10440198-custom-data-retention-controls-for-claude-enterprise), [Anthropic Zero Data Retention](https://privacy.anthropic.com/en/articles/8956058-i-have-a-zero-retention-agreement-with-anthropic-what-products-does-it-apply-to).
+Bei Anthropic sind Enterprise-Retention-Kontrollen plan- und rollenabhaengig. Fuer Claude Enterprise beginnen Retention-Fristen nach Anthropic-Angaben bei Chats mit der letzten Nachricht und bei Projekten mit der letzten Projektaktualisierung; Projekt-Retention kann Chat-Retention uebersteuern. Bei der Claude API muss ZDR pro Feature geprueft werden; Message Batches sind nach Anthropic-Dokumentation nicht ZDR-faehig.
+
+Quellen: [OpenAI Business Data](https://openai.com/business-data/), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [Anthropic Enterprise Retention](https://support.claude.com/en/articles/10440198-configure-custom-data-retention-controls-for-enterprise-plans), [Anthropic API and Data Retention](https://platform.claude.com/docs/en/manage-claude/api-and-data-retention), [Anthropic Message Batches](https://platform.claude.com/docs/en/build-with-claude/batch-processing), [Anthropic Zero Data Retention](https://privacy.anthropic.com/en/articles/8956058-i-have-a-zero-retention-agreement-with-anthropic-what-products-does-it-apply-to).
 
 ## 6. AVV/DPA abschliessen
 
@@ -100,6 +102,10 @@ Eine Datenschutz-Folgenabschaetzung ist besonders naheliegend bei:
 - RAG-Systemen mit grossen internen Wissensbestaenden
 
 Quellen: [Art. 35 DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng), [DSK KI und Datenschutz](https://www.datenschutzkonferenz-online.de/media/oh/20240506_DSK_Orientierungshilfe_KI_und_Datenschutz.pdf).
+
+Das EDPB-Dokument zu LLM-Risiken ersetzt keine DSFA, kann aber als technische Risikopruefung fuer LLM-Systeme herangezogen werden. Relevante Prueffelder sind insbesondere Datenminimierung, Schutz vor Datenabfluss, Prompt-Injection, Memorisation, unberechtigte Offenlegung aus Trainings-/Kontextdaten, Richtigkeit personenbezogener Outputs und technische/organisatorische Massnahmen nach Art. 25 und Art. 32 DSGVO.
+
+Quellen: [EDPB AI Privacy Risks and Mitigations in LLMs](https://www.edpb.europa.eu/system/files/2025-04/ai-privacy-risks-and-mitigations-in-llms.pdf), [BfDI Konsultation KI-Modelle und personenbezogene Daten](https://www.bfdi.bund.de/DE/BfDI/Konsultationsverfahren/KI-Modelle-pbD/KI-Modelle-pbD_node.html).
 
 ## 9. Keine automatisierte Letztentscheidung
 
@@ -160,10 +166,12 @@ Vor Freigabe eines KI-Tools beantworten:
 - Gibt es Logs fuer Missbrauch und Security?
 - Wie werden Betroffenenrechte erfuellt?
 - Gibt es eine Moeglichkeit fuer EU Data Residency oder ZDR?
+- Gibt es featurebezogene Abweichungen von ZDR oder Retention, z. B. Background Mode, Extended Prompt Caching, Hosted Containers, Message Batches oder nicht geloeschte Assistants-/Vector-Store-Objekte?
+- Gibt es Audit-Logs, wer darf sie exportieren, wie lange reichen sie zurueck und enthalten sie Chat-/Projektinhalte oder nur Identifier/Metadaten?
 - Werden Konnektoren, MCP-Server, Chat-Suche, Memory oder Projektwissen genutzt, und welche eigenen Speicher-/Transferregeln gelten dort?
 - Ist eine DSFA erforderlich?
 
-Quellen: [OpenAI Security and Privacy](https://openai.com/security-and-privacy/), [OpenAI Enterprise Privacy](https://openai.com/enterprise-privacy/), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [Anthropic Trust Center](https://trust.anthropic.com/), [Anthropic Commercial Customers](https://privacy.anthropic.com/en/collections/10663361-commercial-customers), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
+Quellen: [OpenAI Security and Privacy](https://openai.com/security-and-privacy/), [OpenAI Enterprise Privacy](https://openai.com/enterprise-privacy/), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [Anthropic Trust Center](https://trust.anthropic.com/), [Anthropic Commercial Customers](https://privacy.anthropic.com/en/collections/10663361-commercial-customers), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs).
 
 ## 14. Was aus Entscheidungen gelernt werden kann
 
@@ -194,6 +202,18 @@ Quellen: [EDPB ChatGPT Taskforce](https://www.edpb.europa.eu/our-work-tools/our-
 17. Bei OpenAI-API-Integrationen ZDR/Data Residency nicht nur pauschal, sondern pro genutzter Funktion pruefen.
 
 Quellen: [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
+
+## 16. KI-VO-Kurzcheck zusaetzlich zur DSGVO
+
+Die KI-Verordnung ersetzt die DSGVO nicht. Fuer jeden KI-Einsatz sollte separat dokumentiert werden:
+
+- Faellt der Use Case unter [verbotene KI-Praktiken nach Art. 5 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-5)?
+- Liegt ein Hochrisiko-KI-System nach [Art. 6 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-6) vor?
+- Geht es nur um begrenztes Risiko mit Transparenzpflichten, insbesondere nach [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50)?
+- Sind KI-Kompetenz, Schulung und Kontextkenntnis nach [Art. 4 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-4) umgesetzt?
+- Muss bei Hochrisiko-Einsatz eine Grundrechte-Folgenabschaetzung nach [Art. 27 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-27) die DSFA ergaenzen?
+
+Nach [Art. 113 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-113) gilt die Verordnung grundsaetzlich ab dem 2. August 2026; Kapitel I und II gelten seit dem 2. Februar 2025, bestimmte GPAI-, Governance- und Sanktionsregeln seit dem 2. August 2025, und Art. 6 Abs. 1 mit entsprechenden Pflichten ab dem 2. August 2027.
 
 ## Mini-Entscheidungsbaum
 

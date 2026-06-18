@@ -1,11 +1,11 @@
 # KI-Richtlinie fuer die KI-Nutzung
 
-Stand: 17.06.2026  
+Stand: 18.06.2026
 Status: Vorlage fuer Unternehmen/Organisationen
 
 > Ziel dieser Richtlinie ist eine produktive, sichere und DSGVO-konforme Nutzung von KI-Systemen wie Claude.ai, OpenAI/ChatGPT, API-Diensten, RAG-Systemen und vergleichbaren Tools. Diese Vorlage muss an Organisation, Rollen, Tools und Rechtsgrundlagen angepasst werden.
 
-Quellen: [DSK KI und Datenschutz](https://www.datenschutzkonferenz-online.de/media/oh/20240506_DSK_Orientierungshilfe_KI_und_Datenschutz.pdf), [DSK KI-Systeme TOM](https://datenschutzkonferenz-online.de/media/oh/DSK-OH_KI-Systeme.pdf), [DSK RAG](https://www.datenschutzkonferenz-online.de/media/oh/DSK_OH_RAG.pdf), [DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng), [EU AI Act Framework](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai).
+Quellen: [DSK KI und Datenschutz](https://www.datenschutzkonferenz-online.de/media/oh/20240506_DSK_Orientierungshilfe_KI_und_Datenschutz.pdf), [DSK KI-Systeme TOM](https://datenschutzkonferenz-online.de/media/oh/DSK-OH_KI-Systeme.pdf), [DSK RAG](https://www.datenschutzkonferenz-online.de/media/oh/DSK_OH_RAG.pdf), [DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng), [Art. 113 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-113).
 
 ## 1. Geltungsbereich
 
@@ -25,6 +25,8 @@ Sie gilt insbesondere fuer:
 KI darf nur so genutzt werden, dass Datenschutz, Informationssicherheit, Vertraulichkeit, Urheberrechte, Berufsgeheimnisse, Betriebsgeheimnisse und interne Compliance-Vorgaben eingehalten werden.
 
 AI Act und DSGVO muessen gleichzeitig beachtet werden. Die Einhaltung einer KI-Verordnungspflicht ersetzt keine DSGVO-Pruefung.
+
+Fuer jeden KI-Use-Case ist zusaetzlich zur DSGVO-Pruefung die KI-VO-Einstufung zu dokumentieren: verbotene KI-Praktik, Hochrisiko-KI, begrenztes Risiko mit Transparenzpflichten oder minimales Risiko. Verbotene Praktiken sind nach [Art. 5 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-5) unzulaessig; Hochrisiko-Einstufungen sind nach [Art. 6 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-6) zu pruefen; Transparenzpflichten fuer bestimmte KI-Systeme ergeben sich aus [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50).
 
 ## 3. Zugelassene Tools
 
@@ -132,6 +134,7 @@ Nur mit separater Freigabe erlaubt:
 - Zugriff auf lokale Dateien
 - Zugriff auf Slack, Teams, E-Mail, Kalender, CRM, ERP, Ticketsysteme
 - automatische Aktionen wie Senden, Speichern, Loeschen, Kaufen, Buchen oder Veraendern von Daten
+- Computer Use oder vergleichbare UI-Steuerung, bei der Screenshots, Browserinhalte oder Desktop-Oberflaechen verarbeitet werden
 
 Mindestanforderungen:
 
@@ -145,9 +148,9 @@ Mindestanforderungen:
 - klare Abbruch- und Kontrollmechanismen
 - DSFA-Pruefung bei personenbezogenen Daten
 
-Praxis-Hinweis: Cowork-Zugriffe auf lokale Daten, Browser und Dienste wie Slack koennen zu ungewollter Datenuebertragung fuehren und muessen separat freigegeben werden.
+Praxis-Hinweis: Cowork-, Computer-Use- und Browserzugriffe auf lokale Daten, Screenshots, Webseiten und Dienste wie Slack koennen zu ungewollter Datenuebertragung fuehren und muessen separat freigegeben werden. OpenAI beschreibt Computer Use als UI-operierende Modellfunktion; Anthropic kennzeichnet Computer Use als Beta-Funktion mit besonderen Sicherheitsrisiken, insbesondere bei Internetzugriff.
 
-Quellen: [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
+Quellen: [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Computer Use](https://developers.openai.com/api/docs/guides/tools-computer-use), [Anthropic Computer Use](https://docs.anthropic.com/en/docs/agents-and-tools/computer-use), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
 
 ## 10. RAG und interne Wissenssysteme
 
@@ -183,6 +186,8 @@ Vor Freigabe eines KI-Tools muessen geprueft werden:
 - DSFA-Pflicht
 - Informationssicherheit
 - AI-Act-Relevanz
+- KI-VO-Risikoklasse: verboten / Hochrisiko / begrenztes Risiko / minimales Risiko
+- featurebezogene Retention, z. B. Background Mode, Extended Prompt Caching, Hosted Containers, Message Batches, Audit Logs oder Vector Stores
 
 Freigabe erfolgt durch:
 
@@ -193,6 +198,8 @@ Freigabe erfolgt durch:
 | Informationssicherheit | Ja |
 | Rechtsabteilung / externe Beratung | bei hohem Risiko |
 | Geschaeftsfuehrung / Leitung | bei hohem Risiko |
+
+Quellen: [Art. 5 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-5), [Art. 6 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-6), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [Anthropic Message Batches](https://platform.claude.com/docs/en/build-with-claude/batch-processing), [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs).
 
 ## 12. Datenschutz-Folgenabschaetzung
 
@@ -209,7 +216,9 @@ Eine DSFA ist zu pruefen bei:
 
 Vorlage: `Datenschutz-Folgenabschätzung Vorlage KI Nutzung.md`
 
-Quellen: [Art. 35 DSGVO](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng), [DSK Kurzpapier Nr. 5 DSFA](https://www.datenschutzkonferenz-online.de/media/kp/dsk_kpnr_5.pdf).
+Eine Grundrechte-Folgenabschaetzung nach [Art. 27 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-27) kann fuer bestimmte Hochrisiko-KI-Systeme zusaetzlich relevant sein und ergaenzt eine DSFA, soweit deren Pflichten bereits einschlaegige Punkte abdecken.
+
+Quellen: [Art. 35 DSGVO](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng), [DSK Kurzpapier Nr. 5 DSFA](https://www.datenschutzkonferenz-online.de/media/kp/dsk_kpnr_5.pdf), [Art. 27 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-27).
 
 ## 13. Transparenz
 
@@ -226,9 +235,9 @@ Externe Transparenz:
 - Datenschutzhinweise pruefen und anpassen.
 - Bei Kundenprozessen klarstellen, ob KI assistiv genutzt wird, soweit rechtlich erforderlich.
 
-Zusatzhinweis zum AI Act: Die KI-VO ist seit 1. August 2024 in Kraft; Verbote und KI-Kompetenzpflichten gelten seit 2. Februar 2025, GPAI-Regeln seit 2. August 2025 und die allgemeinen Transparenzpflichten nach Art. 50 fuer Anbieter und Betreiber generativer KI sind ab 2. August 2026 anwendbar. Nach dem am 10. Juni 2026 veroeffentlichten freiwilligen EU-Code of Practice betreffen diese Pflichten insbesondere Kennzeichnung und Markierung von Deepfakes sowie bestimmter KI-generierter oder manipulierter Inhalte.
+Zusatzhinweis zum AI Act: Die KI-VO ist seit 1. August 2024 in Kraft. Nach [Art. 113 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-113) gilt sie grundsaetzlich ab dem 2. August 2026; Kapitel I und II gelten seit dem 2. Februar 2025, bestimmte GPAI-, Governance- und Sanktionsregeln seit dem 2. August 2025, und Art. 6 Abs. 1 mit entsprechenden Pflichten ab dem 2. August 2027. Nach [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50) muessen u. a. direkte Interaktion mit KI-Systemen, bestimmte KI-generierte oder manipulierte Inhalte, Deepfakes sowie Emotionserkennungs- oder biometrische Kategorisierungssysteme transparent gemacht werden; Ausnahmen und Detailpflichten sind einzelfallbezogen zu pruefen.
 
-Quellen: [EU AI Act Framework](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai), [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content).
+Quellen: [Art. 113 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-113), [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50), [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content).
 
 ## 14. Sicherheitsvorfaelle
 
@@ -259,6 +268,9 @@ Alle Nutzer freigegebener KI-Tools muessen geschult werden zu:
 - Datenschutzvorfaellen
 - Risiken von RAG und agentischer KI
 - Quellenkritik
+- KI-Kompetenz nach Art. 4 KI-VO, bezogen auf technische Kenntnisse, Erfahrung, Ausbildung, Nutzungskontext und betroffene Personengruppen
+
+Quelle: [Art. 4 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-4).
 
 ## 16. Kontrolle und Sanktionen
 
@@ -274,6 +286,7 @@ Diese Richtlinie wird mindestens jaehrlich und bei wesentlichen Aenderungen aktu
 - neue Anbieterbedingungen
 - neue Retention-/Trainingseinstellung
 - neue AI-Act-Transparenzpflicht fuer den eigenen Einsatzfall
+- neue KI-VO-Einstufung, Grundrechte-Folgenabschaetzung oder Hochrisiko-Leitlinie
 - neue Rechtslage
 - neue aufsichtsbehoerdliche Entscheidung
 - Datenschutzvorfall
@@ -286,8 +299,20 @@ Diese Richtlinie wird mindestens jaehrlich und bei wesentlichen Aenderungen aktu
 - [DSK RAG Orientierungshilfe](https://www.datenschutzkonferenz-online.de/media/oh/DSK_OH_RAG.pdf)
 - [EDPB Opinion 28/2024 KI-Modelle](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)
 - [EDPB ChatGPT Taskforce](https://www.edpb.europa.eu/our-work-tools/our-documents/other/report-work-undertaken-chatgpt-taskforce_en)
-- [EU AI Act Framework](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
+- [EDPB AI Privacy Risks and Mitigations in LLMs](https://www.edpb.europa.eu/system/files/2025-04/ai-privacy-risks-and-mitigations-in-llms.pdf)
+- [Art. 4 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-4)
+- [Art. 5 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-5)
+- [Art. 6 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-6)
+- [Art. 27 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-27)
+- [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50)
+- [Art. 113 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-113)
 - [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content)
+- [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data)
 - [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp)
+- [OpenAI Computer Use](https://developers.openai.com/api/docs/guides/tools-computer-use)
+- [Anthropic Computer Use](https://docs.anthropic.com/en/docs/agents-and-tools/computer-use)
 - [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)
+- [Claude Enterprise Retention](https://support.claude.com/en/articles/10440198-configure-custom-data-retention-controls-for-enterprise-plans)
+- [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs)
+- [Anthropic Message Batches](https://platform.claude.com/docs/en/build-with-claude/batch-processing)
 - [EuGH SCHUFA C-634/21](https://infocuria.curia.europa.eu/tabs/redirect/juris/document/document.jsf?docid=280426&doclang=en)

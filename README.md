@@ -24,10 +24,27 @@ Enthaelt eine Vorlage fuer eine interne KI-Nutzungsrichtlinie. Sie beschreibt Ge
 
 ## Version
 
-Aktuelle Version: 1.1.0  
-Stand: 17.06.2026
+Aktuelle Version: 1.2.0
+Stand: 18.06.2026
 
 ## Versionsinfo
+
+### Version 1.2.0 - 18.06.2026
+
+Ergaenzt:
+
+- KI-VO-Kurzcheck mit Risikoklassen, KI-Kompetenz, Transparenzpflichten und Grundrechte-Folgenabschaetzung auf Basis des EU AI Act Service Desk.
+- DSFA-Vorlage um LLM-spezifische Risiken, AI-Act-Pruefpunkte, OpenAI-Feature-Retention und Anthropic-Enterprise-/API-Kontrollen erweitert.
+- Hinweise zu agentischer KI, Computer Use, Hosted Containers, MCP-Drittservern, Claude Audit Logs und Anthropic Message Batches aufgenommen.
+
+Geaendert:
+
+- OpenAI-/Anthropic-Anbieterpruefung praezisiert: ZDR, Retention, Datenresidenz und Logs muessen funktions- bzw. endpointbezogen bewertet werden.
+- Quellenbasis um offizielle EDPB-, BfDI-, EU-AI-Act-Service-Desk-, OpenAI- und Anthropic-Dokumentation erweitert.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.1.0 - 17.06.2026
 
