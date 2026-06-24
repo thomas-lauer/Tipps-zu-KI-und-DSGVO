@@ -212,8 +212,14 @@ Die KI-Verordnung ersetzt die DSGVO nicht. Fuer jeden KI-Einsatz sollte separat 
 - Geht es nur um begrenztes Risiko mit Transparenzpflichten, insbesondere nach [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50)?
 - Sind KI-Kompetenz, Schulung und Kontextkenntnis nach [Art. 4 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-4) umgesetzt?
 - Muss bei Hochrisiko-Einsatz eine Grundrechte-Folgenabschaetzung nach [Art. 27 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-27) die DSFA ergaenzen?
+- Muss bei interaktiven KI-Systemen klar kenntlich gemacht werden, dass Personen mit KI interagieren?
+- Werden Deepfakes oder KI-generierte/manipulierte Texte zu Fragen von oeffentlichem Interesse veroeffentlicht und muessen klar gekennzeichnet werden?
 
 Nach [Art. 113 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-113) gilt die Verordnung grundsaetzlich ab dem 2. August 2026; Kapitel I und II gelten seit dem 2. Februar 2025, bestimmte GPAI-, Governance- und Sanktionsregeln seit dem 2. August 2025, und Art. 6 Abs. 1 mit entsprechenden Pflichten ab dem 2. August 2027.
+
+Praxis-Hinweis zu Art. 50 KI-VO: Der finale [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content) wurde laut EU-Kommission am 10.06.2026 veroeffentlicht. Der Code ist freiwillig, die Transparenzpflichten selbst gelten aber ab dem 02.08.2026. Nach der Kommissionsmitteilung muessen Nutzer informiert werden, wenn sie mit einem interaktiven KI-System wie einem Chatbot interagieren; ausserdem muessen Deepfakes sowie KI-generierte oder KI-manipulierte Texte, die auf Fragen von oeffentlichem Interesse abzielen, klar gekennzeichnet werden.
+
+Quellen: [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content), [EU-Kommission zum finalen Code of Practice vom 10.06.2026](https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content).
 
 ## Mini-Entscheidungsbaum
 

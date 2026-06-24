@@ -24,10 +24,25 @@ Enthaelt eine Vorlage fuer eine interne KI-Nutzungsrichtlinie. Sie beschreibt Ge
 
 ## Version
 
-Aktuelle Version: 1.2.0
-Stand: 18.06.2026
+Aktuelle Version: 1.3.0
+Stand: 24.06.2026
 
 ## Versionsinfo
+
+### Version 1.3.0 - 24.06.2026
+
+Ergaenzt:
+
+- Praktische Art.-50-KI-VO-Transparenzpflichten auf Basis des finalen EU Code of Practice vom 10.06.2026 in Checkliste, DSFA-Vorlage und KI-Richtlinie konkretisiert.
+- Pruefpunkte zu Nutzerhinweisen bei interaktiven KI-Systemen sowie zur Kennzeichnung von Deepfakes und KI-generierten/manipulierten Texten von oeffentlichem Interesse aufgenommen.
+
+Geaendert:
+
+- KI-VO-Hinweise praezisiert: Der Code of Practice ist freiwillig, die gesetzlichen Transparenzpflichten gelten dennoch ab dem 02.08.2026.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.2.0 - 18.06.2026
 
