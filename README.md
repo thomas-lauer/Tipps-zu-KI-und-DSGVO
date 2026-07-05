@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.4.0
-Stand: 25.06.2026
+Aktuelle Version: 1.5.0
+Stand: 05.07.2026
 
 ## Versionsinfo
+
+### Version 1.5.0 - 05.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um Prüfpunkte für private MCP-Server ergänzt, insbesondere zu outbound-only-Tunnelarchitektur, Zielbegrenzung, Rollen und Audit-Logs auf Basis offizieller OpenAI-Dokumentation.
+- KI-VO-Hinweise um die aktuellen Entwurfsleitlinien der EU-Kommission zur Hochrisiko-Einstufung erweitert.
+
+Geändert:
+
+- Zeitplanhinweise zu Hochrisiko-KI präzisiert: Die aktuelle Kommissionsdarstellung vom 01.07.2026 beschreibt einen differenzierten Zeitplan mit bestimmten Hochrisikobereichen ab 02.12.2027 und in Produkte integrierten Systemen ab 02.08.2028; die Leitlinien sind nicht rechtsverbindlich, sollen aber die Durchsetzung leiten.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.4.0 - 25.06.2026
 

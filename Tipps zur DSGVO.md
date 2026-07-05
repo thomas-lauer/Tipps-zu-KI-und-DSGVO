@@ -1,6 +1,6 @@
 # Tipps zur DSGVO bei der Nutzung von Claude.ai und OpenAI
 
-Stand: 18.06.2026
+Stand: 05.07.2026
 
 Dieses Dokument ist eine praktische Checkliste für den Einsatz generativer KI. Es ersetzt keine Rechtsberatung. Wenn ein Punkt nicht sicher bewertet werden kann, muss er als offen dokumentiert und vor produktiver Nutzung geklärt werden.
 
@@ -169,9 +169,10 @@ Vor Freigabe eines KI-Tools beantworten:
 - Gibt es featurebezogene Abweichungen von ZDR oder Retention, z. B. Background Mode, Extended Prompt Caching, Hosted Containers, Message Batches oder nicht gelöschte Assistants-/Vector-Store-Objekte?
 - Gibt es Audit-Logs, wer darf sie exportieren, wie lange reichen sie zurück und enthalten sie Chat-/Projektinhalte oder nur Identifier/Metadaten?
 - Werden Konnektoren, MCP-Server, Chat-Suche, Memory oder Projektwissen genutzt, und welche eigenen Speicher-/Transferregeln gelten dort?
+- Wenn private MCP-Server angebunden werden: Bleibt der Server hinter der eigenen Umgebung, erfolgt die Anbindung über eine enge outbound-only-Tunnelarchitektur statt über einen öffentlichen Endpoint oder breite Netzfreigaben, und sind Zielsystem, Rollen und Audit-Logs dokumentiert?
 - Ist eine DSFA erforderlich?
 
-Quellen: [OpenAI Security and Privacy](https://openai.com/security-and-privacy/), [OpenAI Enterprise Privacy](https://openai.com/enterprise-privacy/), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [Anthropic Trust Center](https://trust.anthropic.com/), [Anthropic Commercial Customers](https://privacy.anthropic.com/en/collections/10663361-commercial-customers), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs).
+Quellen: [OpenAI Security and Privacy](https://openai.com/security-and-privacy/), [OpenAI Enterprise Privacy](https://openai.com/enterprise-privacy/), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels), [Anthropic Trust Center](https://trust.anthropic.com/), [Anthropic Commercial Customers](https://privacy.anthropic.com/en/collections/10663361-commercial-customers), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs).
 
 ## 14. Was aus Entscheidungen gelernt werden kann
 
@@ -200,8 +201,9 @@ Quellen: [EDPB ChatGPT Taskforce](https://www.edpb.europa.eu/our-work-tools/our-
 15. Agentische Funktionen wie Cowork, Computer Use, Browserzugriff oder Slack-/Dienstzugriffe nur separat freigeben.
 16. Memory-, Chat-Suche-, Connector- und MCP-Funktionen nur separat freigeben und dokumentieren.
 17. Bei OpenAI-API-Integrationen ZDR/Data Residency nicht nur pauschal, sondern pro genutzter Funktion prüfen.
+18. Private MCP-Server nach Möglichkeit über eng begrenzte outbound-only-Tunnel statt über öffentliche Endpunkte oder unnötig breite Netzfreigaben anbinden; Ziele, Rollen und Audit-Logs dokumentieren.
 
-Quellen: [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
+Quellen: [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
 
 ## 16. KI-VO-Kurzcheck zusätzlich zur DSGVO
 
@@ -215,11 +217,11 @@ Die KI-Verordnung ersetzt die DSGVO nicht. Für jeden KI-Einsatz sollte separat 
 - Muss bei interaktiven KI-Systemen klar kenntlich gemacht werden, dass Personen mit KI interagieren?
 - Werden Deepfakes oder KI-generierte/manipulierte Texte zu Fragen von öffentlichem Interesse veröffentlicht und müssen klar gekennzeichnet werden?
 
-Nach [Art. 113 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-113) gilt die Verordnung grundsätzlich ab dem 2. August 2026; Kapitel I und II gelten seit dem 2. Februar 2025, bestimmte GPAI-, Governance- und Sanktionsregeln seit dem 2. August 2025, und Art. 6 Abs. 1 mit entsprechenden Pflichten ab dem 2. August 2027.
+Nach [Art. 113 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-113) gilt die Verordnung grundsätzlich ab dem 2. August 2026; Kapitel I und II gelten seit dem 2. Februar 2025, bestimmte GPAI-, Governance- und Sanktionsregeln seit dem 2. August 2025. Für Hochrisiko-KI verweist die aktuelle Kommissionsdarstellung vom 01.07.2026 auf einen differenzierten Zeitplan: bestimmte Hochrisikobereiche sollen ab dem 02.12.2027, in Produkte integrierte Systeme z. B. Robotik oder Industriemaschinen ab dem 02.08.2028 greifen. Die zugrunde liegenden Leitlinien sind nicht rechtsverbindlich, spiegeln aber die Auslegung der Kommission wider und sollen die Durchsetzung leiten.
 
 Praxis-Hinweis zu Art. 50 KI-VO: Der finale [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content) wurde laut EU-Kommission am 10.06.2026 veröffentlicht. Der Code ist freiwillig, die Transparenzpflichten selbst gelten aber ab dem 02.08.2026. Nach der Kommissionsmitteilung müssen Nutzer informiert werden, wenn sie mit einem interaktiven KI-System wie einem Chatbot interagieren; außerdem müssen Deepfakes sowie KI-generierte oder KI-manipulierte Texte, die auf Fragen von öffentlichem Interesse abzielen, klar gekennzeichnet werden.
 
-Quellen: [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content), [EU-Kommission zum finalen Code of Practice vom 10.06.2026](https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content).
+Quellen: [Guidelines for providers and deployers of AI high-risk systems](https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-high-risk-systems), [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content), [EU-Kommission zum finalen Code of Practice vom 10.06.2026](https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content).
 
 ## Mini-Entscheidungsbaum
 

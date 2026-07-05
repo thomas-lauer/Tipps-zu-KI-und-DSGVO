@@ -1,6 +1,6 @@
 # KI-Richtlinie für die KI-Nutzung
 
-Stand: 18.06.2026
+Stand: 05.07.2026
 Status: Vorlage für Unternehmen/Organisationen
 
 > Ziel dieser Richtlinie ist eine produktive, sichere und DSGVO-konforme Nutzung von KI-Systemen wie Claude.ai, OpenAI/ChatGPT, API-Diensten, RAG-Systemen und vergleichbaren Tools. Diese Vorlage muss an Organisation, Rollen, Tools und Rechtsgrundlagen angepasst werden.
@@ -43,9 +43,9 @@ Private Accounts dürfen nicht für Unternehmensdaten verwendet werden.
 
 Zusätzliche Funktionen wie Chat-Suche, Memory, Projektwissen, Konnektoren oder lokale Datei-/Browserzugriffe gelten als gesondert freigabepflichtige Features.
 
-Praxis-Hinweis: Zentrale Business-Accounts für Firmen-Tools, AVV/DPA, Zero Data Retention und klare Nutzungsregeln sind Kernanforderungen.
+Praxis-Hinweis: Zentrale Business-Accounts für Firmen-Tools, AVV/DPA, Zero Data Retention und klare Nutzungsregeln sind Kernanforderungen. Bei privaten MCP-Servern ist eine enge Tunnel-/Allowlist-Architektur statt öffentlicher Freigaben oder unnötig breiter Netzverbindungen zu bevorzugen.
 
-Quellen: [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp).
+Quellen: [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels).
 
 ## 4. Verbotene Eingaben
 
@@ -144,13 +144,14 @@ Mindestanforderungen:
 - Protokollierung
 - Prompt-Injection-Schutz
 - für Konnektoren und MCP-Server Retention/Residency jedes Drittservers separat prüfen
+- für private MCP-Server nach Möglichkeit outbound-only-Tunnel oder gleichwertig enge Anbindung; keine unnötigen öffentlichen Endpunkte oder breiten VPN-/Peering-Freigaben
 - Chat-Suche/Memory nur nach dokumentierter Freigabe; Retention, Export und Admin-Kontrollen prüfen
 - klare Abbruch- und Kontrollmechanismen
 - DSFA-Prüfung bei personenbezogenen Daten
 
-Praxis-Hinweis: Cowork-, Computer-Use- und Browserzugriffe auf lokale Daten, Screenshots, Webseiten und Dienste wie Slack können zu ungewollter Datenübertragung führen und müssen separat freigegeben werden. OpenAI beschreibt Computer Use als UI-operierende Modellfunktion; Anthropic kennzeichnet Computer Use als Beta-Funktion mit besonderen Sicherheitsrisiken, insbesondere bei Internetzugriff.
+Praxis-Hinweis: Cowork-, Computer-Use- und Browserzugriffe auf lokale Daten, Screenshots, Webseiten und Dienste wie Slack können zu ungewollter Datenübertragung führen und müssen separat freigegeben werden. OpenAI beschreibt Computer Use als UI-operierende Modellfunktion; Anthropic kennzeichnet Computer Use als Beta-Funktion mit besonderen Sicherheitsrisiken, insbesondere bei Internetzugriff. Für private MCP-Server beschreibt OpenAI seit Juni 2026 mit dem Secure MCP Tunnel eine kundenseitig betriebene outbound-only-Anbindung, bei der die private Serveradresse intern bleibt; das ersetzt aber nicht die Prüfung von Drittservern, Rollen, Zielbegrenzungen und Logging.
 
-Quellen: [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Computer Use](https://developers.openai.com/api/docs/guides/tools-computer-use), [Anthropic Computer Use](https://docs.anthropic.com/en/docs/agents-and-tools/computer-use), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
+Quellen: [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels), [OpenAI Computer Use](https://developers.openai.com/api/docs/guides/tools-computer-use), [Anthropic Computer Use](https://docs.anthropic.com/en/docs/agents-and-tools/computer-use), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
 
 ## 10. RAG und interne Wissenssysteme
 
@@ -187,6 +188,7 @@ Vor Freigabe eines KI-Tools müssen geprüft werden:
 - Informationssicherheit
 - AI-Act-Relevanz
 - KI-VO-Risikoklasse: verboten / Hochrisiko / begrenztes Risiko / minimales Risiko
+- Anbindungsarchitektur für private MCP-Server oder REST-Ziele: öffentliche Freigabe, VPN/Peering oder enge Tunnel-Lösung; Begründung und Freigabe dokumentieren
 - featurebezogene Retention, z. B. Background Mode, Extended Prompt Caching, Hosted Containers, Message Batches, Audit Logs oder Vector Stores
 
 Freigabe erfolgt durch:
@@ -199,7 +201,7 @@ Freigabe erfolgt durch:
 | Rechtsabteilung / externe Beratung | bei hohem Risiko |
 | Geschäftsführung / Leitung | bei hohem Risiko |
 
-Quellen: [Art. 5 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-5), [Art. 6 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-6), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [Anthropic Message Batches](https://platform.claude.com/docs/en/build-with-claude/batch-processing), [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs).
+Quellen: [Art. 5 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-5), [Art. 6 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-6), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels), [Anthropic Message Batches](https://platform.claude.com/docs/en/build-with-claude/batch-processing), [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs).
 
 ## 12. Datenschutz-Folgenabschätzung
 
@@ -237,9 +239,9 @@ Externe Transparenz:
 - Bei interaktiven KI-Systemen wie Chatbots dokumentieren, wie Nutzer vor oder spätestens bei der Interaktion darauf hingewiesen werden, dass sie mit KI interagieren.
 - Deepfakes sowie KI-generierte oder KI-manipulierte Texte zu Fragen von öffentlichem Interesse vor Veröffentlichung auf Kennzeichnungspflichten, Position des Labels und Verantwortlichkeit prüfen.
 
-Zusatzhinweis zum AI Act: Die KI-VO ist seit 1. August 2024 in Kraft. Nach [Art. 113 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-113) gilt sie grundsätzlich ab dem 2. August 2026; Kapitel I und II gelten seit dem 2. Februar 2025, bestimmte GPAI-, Governance- und Sanktionsregeln seit dem 2. August 2025, und Art. 6 Abs. 1 mit entsprechenden Pflichten ab dem 2. August 2027. Nach [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50) müssen u. a. direkte Interaktion mit KI-Systemen, bestimmte KI-generierte oder manipulierte Inhalte, Deepfakes sowie Emotionserkennungs- oder biometrische Kategorisierungssysteme transparent gemacht werden; Ausnahmen und Detailpflichten sind einzelfallbezogen zu prüfen. Der finale [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content) wurde am 10.06.2026 veröffentlicht. Er ist freiwillig, die gesetzlichen Transparenzpflichten gelten dennoch ab dem 02.08.2026.
+Zusatzhinweis zum AI Act: Die KI-VO ist seit 1. August 2024 in Kraft. Nach [Art. 113 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-113) gilt sie grundsätzlich ab dem 2. August 2026; Kapitel I und II gelten seit dem 2. Februar 2025, bestimmte GPAI-, Governance- und Sanktionsregeln seit dem 2. August 2025. Für Hochrisiko-KI verweist die aktuelle Kommissionsdarstellung vom 01.07.2026 auf einen differenzierten Zeitplan: bestimmte Hochrisikobereiche sollen ab dem 02.12.2027, in Produkte integrierte Systeme z. B. Robotik oder Industriemaschinen ab dem 02.08.2028 greifen. Die zugrunde liegenden Leitlinien sind nicht rechtsverbindlich, spiegeln aber die Auslegung der Kommission wider und sollen die Durchsetzung leiten. Nach [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50) müssen u. a. direkte Interaktion mit KI-Systemen, bestimmte KI-generierte oder manipulierte Inhalte, Deepfakes sowie Emotionserkennungs- oder biometrische Kategorisierungssysteme transparent gemacht werden; Ausnahmen und Detailpflichten sind einzelfallbezogen zu prüfen. Der finale [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content) wurde am 10.06.2026 veröffentlicht. Er ist freiwillig, die gesetzlichen Transparenzpflichten gelten dennoch ab dem 02.08.2026.
 
-Quellen: [Art. 113 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-113), [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50), [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content).
+Quellen: [Art. 113 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-113), [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50), [Guidelines for providers and deployers of AI high-risk systems](https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-high-risk-systems), [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content).
 
 ## 14. Sicherheitsvorfälle
 
@@ -308,9 +310,11 @@ Diese Richtlinie wird mindestens jährlich und bei wesentlichen Änderungen aktu
 - [Art. 27 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-27)
 - [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50)
 - [Art. 113 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-113)
+- [Guidelines for providers and deployers of AI high-risk systems](https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-high-risk-systems)
 - [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content)
 - [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data)
 - [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp)
+- [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels)
 - [OpenAI Computer Use](https://developers.openai.com/api/docs/guides/tools-computer-use)
 - [Anthropic Computer Use](https://docs.anthropic.com/en/docs/agents-and-tools/computer-use)
 - [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)
