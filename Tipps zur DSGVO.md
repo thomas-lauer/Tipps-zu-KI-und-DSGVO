@@ -1,6 +1,6 @@
 # Tipps zur DSGVO bei der Nutzung von Claude.ai und OpenAI
 
-Stand: 05.07.2026
+Stand: 06.07.2026
 
 Dieses Dokument ist eine praktische Checkliste für den Einsatz generativer KI. Es ersetzt keine Rechtsberatung. Wenn ein Punkt nicht sicher bewertet werden kann, muss er als offen dokumentiert und vor produktiver Nutzung geklärt werden.
 
@@ -59,7 +59,7 @@ Dokumentiere, wie lange gespeichert werden:
 
 Nutze möglichst kurze Retention. Zero Data Retention ist nur dann relevant, wenn sie für den konkreten Vertrag/Plan/Endpunkt tatsächlich gilt.
 
-Bei API-Nutzung die konkrete Speicherlogik pro Funktion prüfen. Laut OpenAI werden im Responses API "Application State" standardmäßig für mindestens 30 Tage gespeichert; bei aktivierter Zero Data Retention wird `store` zwar auf `false` erzwungen, Background Mode speichert Daten aber für ungefähr 10 Minuten auf Disk. Remote-MCP-Server sind Drittservices mit eigenen Retention-Regeln; Hosted Shell, Code Interpreter und gehostete Skills können temporäre Daten im Container-Dateisystem verarbeiten, bis der Container abläuft oder gelöscht wird. Extended Prompt Caching kann verschlüsselte Key/Value-Tensoren als Application State auf GPU-lokalem Speicher für bis zu 24 Stunden nutzen.
+Bei API-Nutzung die konkrete Speicherlogik pro Funktion prüfen. Laut OpenAI werden im Responses API "Application State" standardmäßig für mindestens 30 Tage gespeichert; bei aktivierter Zero Data Retention wird `store` zwar auf `false` erzwungen, Background Mode speichert Daten aber für ungefähr 10 Minuten auf Disk. Remote-MCP-Server sind Drittservices mit eigenen Retention-Regeln; Hosted Shell, Code Interpreter und gehostete Skills können temporäre Daten im Container-Dateisystem verarbeiten, bis der Container abläuft oder gelöscht wird. Laut aktueller OpenAI-Datendokumentation nutzen Organisationen ohne ZDR bei allen unterstützten Modellen standardmäßig Extended Prompt Caching; die dafür nötigen verschlüsselten Key/Value-Tensoren werden als Application State auf GPU-lokalem Speicher bis zum 24-Stunden-Ablauf gehalten. Für `gpt-5.5`, `gpt-5.5-pro` und künftige Modelle ist `prompt_cache_retention=in_memory` dabei nicht zulässig.
 
 Bei Anthropic sind Enterprise-Retention-Kontrollen plan- und rollenabhängig. Für Claude Enterprise beginnen Retention-Fristen nach Anthropic-Angaben bei Chats mit der letzten Nachricht und bei Projekten mit der letzten Projektaktualisierung; Projekt-Retention kann Chat-Retention übersteuern. Bei der Claude API muss ZDR pro Feature geprüft werden; Message Batches sind nach Anthropic-Dokumentation nicht ZDR-fähig.
 
@@ -166,7 +166,7 @@ Vor Freigabe eines KI-Tools beantworten:
 - Gibt es Logs für Missbrauch und Security?
 - Wie werden Betroffenenrechte erfüllt?
 - Gibt es eine Möglichkeit für EU Data Residency oder ZDR?
-- Gibt es featurebezogene Abweichungen von ZDR oder Retention, z. B. Background Mode, Extended Prompt Caching, Hosted Containers, Message Batches oder nicht gelöschte Assistants-/Vector-Store-Objekte?
+- Gibt es featurebezogene Abweichungen von ZDR oder Retention, z. B. Background Mode, standardmäßiges Extended Prompt Caching ohne ZDR, Hosted Containers, Message Batches oder nicht gelöschte Assistants-/Vector-Store-Objekte?
 - Gibt es Audit-Logs, wer darf sie exportieren, wie lange reichen sie zurück und enthalten sie Chat-/Projektinhalte oder nur Identifier/Metadaten?
 - Werden Konnektoren, MCP-Server, Chat-Suche, Memory oder Projektwissen genutzt, und welche eigenen Speicher-/Transferregeln gelten dort?
 - Wenn private MCP-Server angebunden werden: Bleibt der Server hinter der eigenen Umgebung, erfolgt die Anbindung über eine enge outbound-only-Tunnelarchitektur statt über einen öffentlichen Endpoint oder breite Netzfreigaben, und sind Zielsystem, Rollen und Audit-Logs dokumentiert?

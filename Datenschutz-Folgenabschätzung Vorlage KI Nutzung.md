@@ -1,6 +1,6 @@
 # Datenschutz-Folgenabschätzung (DSFA) - Vorlage für KI-Nutzung
 
-Stand: 05.07.2026
+Stand: 06.07.2026
 Status: Vorlage, vor produktivem Einsatz ausfüllen und durch Datenschutzbeauftragte/Rechtsprüfung bewerten lassen.
 
 > Hinweis: Diese Vorlage ersetzt keine Rechtsberatung. Sie orientiert sich an Art. 35 DSGVO, den DPIA-Leitlinien WP248 rev.01/EDPB, DSK-Kurzpapier Nr. 5 und den DSK-Hinweisen zu KI. Wenn Informationen fehlen, als "offen" kennzeichnen.
@@ -123,6 +123,7 @@ Offene Rechtsfragen:
 | Training/Model Improvement deaktiviert |  |
 | Zero Data Retention verfügbar und aktiv |  |
 | API-spezifische Speicherlogik (z. B. Responses API / Background Mode) geprüft |  |
+| Default-Retention ohne ZDR, insbesondere Extended Prompt Caching bei unterstützten OpenAI-Modellen, dokumentiert |  |
 | Extended Prompt Caching / Hosted Containers / gehostete Skills geprüft |  |
 | Assistants / Threads / Vector Stores gelöscht oder Retention dokumentiert |  |
 | Anthropic Message Batches oder sonstige nicht-ZDR-fähige Features ausgeschlossen oder bewertet |  |

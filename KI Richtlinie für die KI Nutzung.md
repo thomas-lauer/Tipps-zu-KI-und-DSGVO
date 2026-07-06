@@ -1,6 +1,6 @@
 # KI-Richtlinie für die KI-Nutzung
 
-Stand: 05.07.2026
+Stand: 06.07.2026
 Status: Vorlage für Unternehmen/Organisationen
 
 > Ziel dieser Richtlinie ist eine produktive, sichere und DSGVO-konforme Nutzung von KI-Systemen wie Claude.ai, OpenAI/ChatGPT, API-Diensten, RAG-Systemen und vergleichbaren Tools. Diese Vorlage muss an Organisation, Rollen, Tools und Rechtsgrundlagen angepasst werden.
@@ -189,7 +189,9 @@ Vor Freigabe eines KI-Tools müssen geprüft werden:
 - AI-Act-Relevanz
 - KI-VO-Risikoklasse: verboten / Hochrisiko / begrenztes Risiko / minimales Risiko
 - Anbindungsarchitektur für private MCP-Server oder REST-Ziele: öffentliche Freigabe, VPN/Peering oder enge Tunnel-Lösung; Begründung und Freigabe dokumentieren
-- featurebezogene Retention, z. B. Background Mode, Extended Prompt Caching, Hosted Containers, Message Batches, Audit Logs oder Vector Stores
+- featurebezogene Retention, z. B. Background Mode, standardmäßiges Extended Prompt Caching ohne ZDR, Hosted Containers, Message Batches, Audit Logs oder Vector Stores
+
+Praxis-Hinweis: Bei OpenAI-API-Integrationen ist nicht nur zu prüfen, ob Extended Prompt Caching theoretisch genutzt werden könnte. Laut aktueller OpenAI-Datendokumentation verwenden Organisationen ohne Zero Data Retention bei allen unterstützten Modellen standardmäßig Extended Prompt Caching; bei `gpt-5.5`, `gpt-5.5-pro` und künftigen Modellen ist `prompt_cache_retention=in_memory` nicht zulässig. Diese Default-Logik ist im Freigabe- und Löschkonzept ausdrücklich zu dokumentieren.
 
 Freigabe erfolgt durch:
 

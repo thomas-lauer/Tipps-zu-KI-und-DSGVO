@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.5.0
-Stand: 05.07.2026
+Aktuelle Version: 1.5.1
+Stand: 06.07.2026
 
 ## Versionsinfo
+
+### Version 1.5.1 - 06.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen Prüfaspekt zur aktuellen OpenAI-Retention ergänzt: Ohne Zero Data Retention nutzen unterstützte Modelle laut aktueller Datendokumentation standardmäßig Extended Prompt Caching; bei `gpt-5.5`, `gpt-5.5-pro` und künftigen Modellen ist `prompt_cache_retention=in_memory` nicht zulässig ([OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data)).
+
+Geändert:
+
+- OpenAI-Hinweise zu API-Retention und Freigabeprozessen präzisiert, damit Default-Speicherlogiken nicht fälschlich als rein optionale Zusatzfunktion bewertet werden ([OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.5.0 - 05.07.2026
 
