@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.5.1
-Stand: 06.07.2026
+Aktuelle Version: 1.5.2
+Stand: 07.07.2026
 
 ## Versionsinfo
+
+### Version 1.5.2 - 07.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen modellbezogenen Anthropic-Prüfpunkt ergänzt: Für `covered models` bzw. Mythos-class-Modelle dokumentiert Anthropic inzwischen eine 30-Tage-Retention; Claude Fable 5 ist laut offizieller Modelldokumentation nicht unter Zero Data Retention nutzbar ([Anthropic Help Center: Data retention practices for Mythos-class models](https://support.claude.com/en/articles/15425996-data-retention-practices-for-mythos-class-models), [Anthropic Migration Guide](https://platform.claude.com/docs/en/about-claude/models/migration-guide)).
+
+Geändert:
+
+- Anbieterprüfung präzisiert: Bei Anthropic reichen pauschale ZDR-Annahmen nicht aus; für Claude Code, Cowork und Cloud-Zugänge mit ZDR muss modellbezogen dokumentiert werden, ob ein separates Workspace-, Subscription- oder Sandbox-Setup mit aktivierter Retention erforderlich ist ([Anthropic Help Center: Data retention practices for Mythos-class models](https://support.claude.com/en/articles/15425996-data-retention-practices-for-mythos-class-models)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.5.1 - 06.07.2026
 

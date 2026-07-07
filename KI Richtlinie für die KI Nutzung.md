@@ -1,6 +1,6 @@
 # KI-Richtlinie für die KI-Nutzung
 
-Stand: 06.07.2026
+Stand: 07.07.2026
 Status: Vorlage für Unternehmen/Organisationen
 
 > Ziel dieser Richtlinie ist eine produktive, sichere und DSGVO-konforme Nutzung von KI-Systemen wie Claude.ai, OpenAI/ChatGPT, API-Diensten, RAG-Systemen und vergleichbaren Tools. Diese Vorlage muss an Organisation, Rollen, Tools und Rechtsgrundlagen angepasst werden.
@@ -151,7 +151,9 @@ Mindestanforderungen:
 
 Praxis-Hinweis: Cowork-, Computer-Use- und Browserzugriffe auf lokale Daten, Screenshots, Webseiten und Dienste wie Slack können zu ungewollter Datenübertragung führen und müssen separat freigegeben werden. OpenAI beschreibt Computer Use als UI-operierende Modellfunktion; Anthropic kennzeichnet Computer Use als Beta-Funktion mit besonderen Sicherheitsrisiken, insbesondere bei Internetzugriff. Für private MCP-Server beschreibt OpenAI seit Juni 2026 mit dem Secure MCP Tunnel eine kundenseitig betriebene outbound-only-Anbindung, bei der die private Serveradresse intern bleibt; das ersetzt aber nicht die Prüfung von Drittservern, Rollen, Zielbegrenzungen und Logging.
 
-Quellen: [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels), [OpenAI Computer Use](https://developers.openai.com/api/docs/guides/tools-computer-use), [Anthropic Computer Use](https://docs.anthropic.com/en/docs/agents-and-tools/computer-use), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context).
+Wenn Claude Code, Cowork oder Cloud-Zugänge mit ZDR betrieben werden, ist zusätzlich modellbezogen zu prüfen, ob Anthropic für das gewünschte Modell eine Retention-Pflicht vorgibt. Anthropic dokumentiert für `covered models` bzw. Mythos-class-Modelle eine 30-Tage-Retention; Claude Fable 5 ist laut Migration Guide nicht unter Zero Data Retention verfügbar. Für solche Modelle kann ein getrenntes Workspace-, Subscription- oder Sandbox-Setup mit aktivierter Retention erforderlich sein.
+
+Quellen: [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels), [OpenAI Computer Use](https://developers.openai.com/api/docs/guides/tools-computer-use), [Anthropic Computer Use](https://docs.anthropic.com/en/docs/agents-and-tools/computer-use), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [Anthropic Help Center: Data retention practices for Mythos-class models](https://support.claude.com/en/articles/15425996-data-retention-practices-for-mythos-class-models), [Anthropic Migration Guide](https://platform.claude.com/docs/en/about-claude/models/migration-guide).
 
 ## 10. RAG und interne Wissenssysteme
 
@@ -190,8 +192,11 @@ Vor Freigabe eines KI-Tools müssen geprüft werden:
 - KI-VO-Risikoklasse: verboten / Hochrisiko / begrenztes Risiko / minimales Risiko
 - Anbindungsarchitektur für private MCP-Server oder REST-Ziele: öffentliche Freigabe, VPN/Peering oder enge Tunnel-Lösung; Begründung und Freigabe dokumentieren
 - featurebezogene Retention, z. B. Background Mode, standardmäßiges Extended Prompt Caching ohne ZDR, Hosted Containers, Message Batches, Audit Logs oder Vector Stores
+- modellbezogene Retention-Ausnahmen, z. B. Anthropic-`covered models` oder Claude Fable 5 mit 30-Tage-Retention statt ZDR, sowie ein ggf. erforderliches separates Workspace-, Subscription- oder Sandbox-Setup
 
 Praxis-Hinweis: Bei OpenAI-API-Integrationen ist nicht nur zu prüfen, ob Extended Prompt Caching theoretisch genutzt werden könnte. Laut aktueller OpenAI-Datendokumentation verwenden Organisationen ohne Zero Data Retention bei allen unterstützten Modellen standardmäßig Extended Prompt Caching; bei `gpt-5.5`, `gpt-5.5-pro` und künftigen Modellen ist `prompt_cache_retention=in_memory` nicht zulässig. Diese Default-Logik ist im Freigabe- und Löschkonzept ausdrücklich zu dokumentieren.
+
+Praxis-Hinweis: Bei Anthropic ist ZDR ebenfalls nicht pauschal auf jedes Modell übertragbar. Für `covered models` verlangt Anthropic laut aktueller Help-Center-Dokumentation 30 Tage Retention; Claude Fable 5 ist laut Migration Guide nicht unter ZDR verfügbar. Freigaben sollten deshalb dokumentieren, welches Modell verwendet wird und ob dafür eine getrennte Retention-Konfiguration nötig ist.
 
 Freigabe erfolgt durch:
 
@@ -203,7 +208,7 @@ Freigabe erfolgt durch:
 | Rechtsabteilung / externe Beratung | bei hohem Risiko |
 | Geschäftsführung / Leitung | bei hohem Risiko |
 
-Quellen: [Art. 5 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-5), [Art. 6 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-6), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels), [Anthropic Message Batches](https://platform.claude.com/docs/en/build-with-claude/batch-processing), [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs).
+Quellen: [Art. 5 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-5), [Art. 6 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-6), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels), [Anthropic Message Batches](https://platform.claude.com/docs/en/build-with-claude/batch-processing), [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs), [Anthropic Help Center: Data retention practices for Mythos-class models](https://support.claude.com/en/articles/15425996-data-retention-practices-for-mythos-class-models), [Anthropic Migration Guide](https://platform.claude.com/docs/en/about-claude/models/migration-guide).
 
 ## 12. Datenschutz-Folgenabschätzung
 
@@ -288,6 +293,7 @@ Diese Richtlinie wird mindestens jährlich und bei wesentlichen Änderungen aktu
 
 - neues KI-Tool
 - neues Modell
+- neues Anthropic-`covered model` oder geänderte modellbezogene Retention-Pflicht
 - Aktivierung von Chat-Suche/Memory, Projektwissen, Konnektoren oder MCP
 - neue Anbieterbedingungen
 - neue Retention-/Trainingseinstellung
