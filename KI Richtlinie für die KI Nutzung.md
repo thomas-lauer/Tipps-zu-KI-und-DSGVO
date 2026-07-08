@@ -1,6 +1,6 @@
 # KI-Richtlinie für die KI-Nutzung
 
-Stand: 07.07.2026
+Stand: 08.07.2026
 Status: Vorlage für Unternehmen/Organisationen
 
 > Ziel dieser Richtlinie ist eine produktive, sichere und DSGVO-konforme Nutzung von KI-Systemen wie Claude.ai, OpenAI/ChatGPT, API-Diensten, RAG-Systemen und vergleichbaren Tools. Diese Vorlage muss an Organisation, Rollen, Tools und Rechtsgrundlagen angepasst werden.
@@ -43,9 +43,11 @@ Private Accounts dürfen nicht für Unternehmensdaten verwendet werden.
 
 Zusätzliche Funktionen wie Chat-Suche, Memory, Projektwissen, Konnektoren oder lokale Datei-/Browserzugriffe gelten als gesondert freigabepflichtige Features.
 
+Für Claude Cowork ist zusätzlich zu beachten, dass Anthropic seit dem 07.07.2026 Remote-Sessions auf Web und Mobile dokumentiert: Die Arbeit läuft serverseitig auf Anthropic-Servern, Sitzungen und Dateien liegen im Claude-Account und lokale Dateien oder Browserfunktionen werden nur über die geöffnete Claude-Desktop-App und freigegebene Ordner erreicht ([Anthropic Release notes, 07.07.2026](https://support.claude.com/en/articles/12138966-release-notes), [Use Claude Cowork on web, desktop, and mobile](https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile), [Use Claude Cowork safely](https://support.claude.com/en/articles/13364135-use-claude-cowork-safely)).
+
 Praxis-Hinweis: Zentrale Business-Accounts für Firmen-Tools, AVV/DPA, Zero Data Retention und klare Nutzungsregeln sind Kernanforderungen. Bei privaten MCP-Servern ist eine enge Tunnel-/Allowlist-Architektur statt öffentlicher Freigaben oder unnötig breiter Netzverbindungen zu bevorzugen.
 
-Quellen: [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels).
+Quellen: [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels), [Anthropic Release notes](https://support.claude.com/en/articles/12138966-release-notes), [Use Claude Cowork on web, desktop, and mobile](https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile), [Use Claude Cowork safely](https://support.claude.com/en/articles/13364135-use-claude-cowork-safely).
 
 ## 4. Verbotene Eingaben
 
@@ -133,6 +135,7 @@ Nur mit separater Freigabe erlaubt:
 - Browsersteuerung
 - Zugriff auf lokale Dateien
 - Zugriff auf Slack, Teams, E-Mail, Kalender, CRM, ERP, Ticketsysteme
+- Connector-Schreibzugriffe, z. B. E-Mail-Versand, Kalenderänderungen sowie Schreiben in OneDrive oder SharePoint
 - automatische Aktionen wie Senden, Speichern, Löschen, Kaufen, Buchen oder Verändern von Daten
 - Computer Use oder vergleichbare UI-Steuerung, bei der Screenshots, Browserinhalte oder Desktop-Oberflächen verarbeitet werden
 
@@ -144,16 +147,18 @@ Mindestanforderungen:
 - Protokollierung
 - Prompt-Injection-Schutz
 - für Konnektoren und MCP-Server Retention/Residency jedes Drittservers separat prüfen
+- bei Claude Cowork Remote-Sessions, gespeicherte Sitzungen/Dateien, geplante Tasks und erreichbare lokale Ordner separat freigeben und dokumentieren
+- Microsoft-365-Connector-`write tools` nur nach Admin-Freigabe und enger Zweckbegrenzung aktivieren
 - für private MCP-Server nach Möglichkeit outbound-only-Tunnel oder gleichwertig enge Anbindung; keine unnötigen öffentlichen Endpunkte oder breiten VPN-/Peering-Freigaben
 - Chat-Suche/Memory nur nach dokumentierter Freigabe; Retention, Export und Admin-Kontrollen prüfen
 - klare Abbruch- und Kontrollmechanismen
 - DSFA-Prüfung bei personenbezogenen Daten
 
-Praxis-Hinweis: Cowork-, Computer-Use- und Browserzugriffe auf lokale Daten, Screenshots, Webseiten und Dienste wie Slack können zu ungewollter Datenübertragung führen und müssen separat freigegeben werden. OpenAI beschreibt Computer Use als UI-operierende Modellfunktion; Anthropic kennzeichnet Computer Use als Beta-Funktion mit besonderen Sicherheitsrisiken, insbesondere bei Internetzugriff. Für private MCP-Server beschreibt OpenAI seit Juni 2026 mit dem Secure MCP Tunnel eine kundenseitig betriebene outbound-only-Anbindung, bei der die private Serveradresse intern bleibt; das ersetzt aber nicht die Prüfung von Drittservern, Rollen, Zielbegrenzungen und Logging.
+Praxis-Hinweis: Cowork-, Computer-Use- und Browserzugriffe auf lokale Daten, Screenshots, Webseiten und Dienste wie Slack können zu ungewollter Datenübertragung führen und müssen separat freigegeben werden. OpenAI beschreibt Computer Use als UI-operierende Modellfunktion; Anthropic kennzeichnet Computer Use als Beta-Funktion mit besonderen Sicherheitsrisiken, insbesondere bei Internetzugriff. Neu dokumentiert ist zudem, dass Cowork auf Web und Mobile als Remote-Session auf Anthropic-Servern läuft und Aufgaben ohne online Gerät weiterlaufen können. Für den Claude-Microsoft-365-Connector gilt zusätzlich: Wenn `write tools` aktiviert sind, kann Claude E-Mails senden und organisieren, Kalenderereignisse erstellen, aktualisieren oder löschen sowie Dateien in OneDrive und SharePoint erstellen oder aktualisieren; Teams bleibt read-only, und gesendete E-Mails tragen laut Anthropic einen agent-initiated-Header ([Use Claude Cowork on web, desktop, and mobile](https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile), [Use Claude Cowork safely](https://support.claude.com/en/articles/13364135-use-claude-cowork-safely), [Connect to Microsoft 365](https://support.claude.com/en/articles/15183774-connect-to-microsoft-365), [Microsoft 365 connector security guide](https://support.claude.com/en/articles/12684923-microsoft-365-connector-security-guide)). Für private MCP-Server beschreibt OpenAI seit Juni 2026 mit dem Secure MCP Tunnel eine kundenseitig betriebene outbound-only-Anbindung, bei der die private Serveradresse intern bleibt; das ersetzt aber nicht die Prüfung von Drittservern, Rollen, Zielbegrenzungen und Logging.
 
 Wenn Claude Code, Cowork oder Cloud-Zugänge mit ZDR betrieben werden, ist zusätzlich modellbezogen zu prüfen, ob Anthropic für das gewünschte Modell eine Retention-Pflicht vorgibt. Anthropic dokumentiert für `covered models` bzw. Mythos-class-Modelle eine 30-Tage-Retention; Claude Fable 5 ist laut Migration Guide nicht unter Zero Data Retention verfügbar. Für solche Modelle kann ein getrenntes Workspace-, Subscription- oder Sandbox-Setup mit aktivierter Retention erforderlich sein.
 
-Quellen: [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels), [OpenAI Computer Use](https://developers.openai.com/api/docs/guides/tools-computer-use), [Anthropic Computer Use](https://docs.anthropic.com/en/docs/agents-and-tools/computer-use), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [Anthropic Help Center: Data retention practices for Mythos-class models](https://support.claude.com/en/articles/15425996-data-retention-practices-for-mythos-class-models), [Anthropic Migration Guide](https://platform.claude.com/docs/en/about-claude/models/migration-guide).
+Quellen: [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels), [OpenAI Computer Use](https://developers.openai.com/api/docs/guides/tools-computer-use), [Anthropic Computer Use](https://docs.anthropic.com/en/docs/agents-and-tools/computer-use), [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [Anthropic Help Center: Data retention practices for Mythos-class models](https://support.claude.com/en/articles/15425996-data-retention-practices-for-mythos-class-models), [Anthropic Migration Guide](https://platform.claude.com/docs/en/about-claude/models/migration-guide), [Use Claude Cowork on web, desktop, and mobile](https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile), [Use Claude Cowork safely](https://support.claude.com/en/articles/13364135-use-claude-cowork-safely), [Connect to Microsoft 365](https://support.claude.com/en/articles/15183774-connect-to-microsoft-365), [Microsoft 365 connector security guide](https://support.claude.com/en/articles/12684923-microsoft-365-connector-security-guide).
 
 ## 10. RAG und interne Wissenssysteme
 
@@ -295,6 +300,7 @@ Diese Richtlinie wird mindestens jährlich und bei wesentlichen Änderungen aktu
 - neues Modell
 - neues Anthropic-`covered model` oder geänderte modellbezogene Retention-Pflicht
 - Aktivierung von Chat-Suche/Memory, Projektwissen, Konnektoren oder MCP
+- Aktivierung von Claude-Cowork-Remote-Sessions oder Microsoft-365-Connector-`write tools`
 - neue Anbieterbedingungen
 - neue Retention-/Trainingseinstellung
 - neue AI-Act-Transparenzpflicht für den eigenen Einsatzfall

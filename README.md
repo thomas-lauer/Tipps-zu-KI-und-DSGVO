@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.5.2
-Stand: 07.07.2026
+Aktuelle Version: 1.6.0
+Stand: 08.07.2026
 
 ## Versionsinfo
+
+### Version 1.6.0 - 08.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen operativen Cowork-Prüfpunkt ergänzt: Anthropic dokumentiert seit dem 07.07.2026 für Claude Cowork auf Web und Mobile serverseitige Remote-Sessions; Sitzungen und Dateien liegen im Claude-Account, geplante Tasks laufen ohne online Gerät weiter ([Anthropic Release notes, 07.07.2026](https://support.claude.com/en/articles/12138966-release-notes), [Use Claude Cowork on web, desktop, and mobile](https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile), [Use Claude Cowork safely](https://support.claude.com/en/articles/13364135-use-claude-cowork-safely)).
+- Hinweise zu Connector-Schreibrechten konkretisiert: Der Claude-Microsoft-365-Connector kann bei aktivierten `write tools` nun E-Mails senden/organisieren, Kalendereinträge ändern sowie Dateien in OneDrive und SharePoint erstellen oder aktualisieren; Teams bleibt dabei read-only ([Anthropic Release notes, 07.07.2026](https://support.claude.com/en/articles/12138966-release-notes), [Connect to Microsoft 365](https://support.claude.com/en/articles/15183774-connect-to-microsoft-365), [Microsoft 365 connector security guide](https://support.claude.com/en/articles/12684923-microsoft-365-connector-security-guide)).
+
+Geändert:
+
+- Anbieter- und Freigabeprüfung präzisiert: Für Cowork-Remote-Sessions und Connector-Schreibwerkzeuge reichen allgemeine Agentik-Hinweise nicht mehr aus; es sollte getrennt dokumentiert werden, welche Ordner, Konten, Schreibaktionen und laufenden Hintergrundaufgaben tatsächlich freigegeben sind ([Use Claude Cowork safely](https://support.claude.com/en/articles/13364135-use-claude-cowork-safely), [Connect to Microsoft 365](https://support.claude.com/en/articles/15183774-connect-to-microsoft-365)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.5.2 - 07.07.2026
 
