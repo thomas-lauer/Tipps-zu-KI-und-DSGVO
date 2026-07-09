@@ -1,6 +1,6 @@
 # KI-Richtlinie für die KI-Nutzung
 
-Stand: 08.07.2026
+Stand: 09.07.2026
 Status: Vorlage für Unternehmen/Organisationen
 
 > Ziel dieser Richtlinie ist eine produktive, sichere und DSGVO-konforme Nutzung von KI-Systemen wie Claude.ai, OpenAI/ChatGPT, API-Diensten, RAG-Systemen und vergleichbaren Tools. Diese Vorlage muss an Organisation, Rollen, Tools und Rechtsgrundlagen angepasst werden.
@@ -42,6 +42,8 @@ KI-Tools dürfen nur genutzt werden, wenn sie auf der Tool-Whitelist stehen.
 Private Accounts dürfen nicht für Unternehmensdaten verwendet werden.
 
 Zusätzliche Funktionen wie Chat-Suche, Memory, Projektwissen, Konnektoren oder lokale Datei-/Browserzugriffe gelten als gesondert freigabepflichtige Features.
+
+Öffentlich zugängliche Webquellen oder bereits gescrapte Datensätze für Training, Fine-Tuning oder externe Wissensbestände gelten ebenfalls als gesondert freigabepflichtig. Der Umstand, dass Daten öffentlich erreichbar sind, ersetzt weder Rechtsgrundlage noch Transparenz- und Art.-9-Prüfung ([Guidelines on web scraping](https://www.edpb.europa.eu/public-consultations/guidelines-on-web-scraping_en), [EDPB News, 08.07.2026](https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en)).
 
 Für Claude Cowork ist zusätzlich zu beachten, dass Anthropic seit dem 07.07.2026 Remote-Sessions auf Web und Mobile dokumentiert: Die Arbeit läuft serverseitig auf Anthropic-Servern, Sitzungen und Dateien liegen im Claude-Account und lokale Dateien oder Browserfunktionen werden nur über die geöffnete Claude-Desktop-App und freigegebene Ordner erreicht ([Anthropic Release notes, 07.07.2026](https://support.claude.com/en/articles/12138966-release-notes), [Use Claude Cowork on web, desktop, and mobile](https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile), [Use Claude Cowork safely](https://support.claude.com/en/articles/13364135-use-claude-cowork-safely)).
 
@@ -96,6 +98,8 @@ Beispiele:
 - Statt "Max Mueller, Kunde 12345, mahnt Rechnung an" schreiben: "Kunde A mahnt eine Rechnung an".
 - Statt vollständiger Vertragsdatei nur die relevante anonymisierte Klausel eingeben.
 - Statt Mitarbeiterbewertung keine KI-Einschätzung über Leistung, Verhalten oder Zukunftsentscheidungen erzeugen lassen.
+
+Als "anonymisiert" deklarierte Daten dürfen nicht allein deshalb freigegeben werden. Nach den EDPB-Entwurfsleitlinien ist Anonymität perspektivbezogen zu prüfen; bis zu einer dokumentierten Prüfung sollten nur pseudonymisierte oder geschwärzte Daten weiter als personenbezogen behandelt werden ([Guidelines on anonymisation](https://www.edpb.europa.eu/public-consultations/guidelines-on-anonymisation_en), [EDPB News, 08.07.2026](https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en)).
 
 ## 7. Output-Regeln
 
@@ -198,10 +202,14 @@ Vor Freigabe eines KI-Tools müssen geprüft werden:
 - Anbindungsarchitektur für private MCP-Server oder REST-Ziele: öffentliche Freigabe, VPN/Peering oder enge Tunnel-Lösung; Begründung und Freigabe dokumentieren
 - featurebezogene Retention, z. B. Background Mode, standardmäßiges Extended Prompt Caching ohne ZDR, Hosted Containers, Message Batches, Audit Logs oder Vector Stores
 - modellbezogene Retention-Ausnahmen, z. B. Anthropic-`covered models` oder Claude Fable 5 mit 30-Tage-Retention statt ZDR, sowie ein ggf. erforderliches separates Workspace-, Subscription- oder Sandbox-Setup
+- Nutzung öffentlich zugänglicher Webquellen, gescrapter Datensätze oder Datenbroker-Datensätze: getrennte Prüfung von Rechtsgrundlage, Transparenz, Quellenauswahl, Widerspruchs-/robots.txt-Behandlung, Datenminimierung, Validierung und Art.-9-Ausnahmen
+- dokumentierte Anonymisierungsbewertung statt bloßer Annahme, dass entfernte Identifikatoren genügen
 
 Praxis-Hinweis: Bei OpenAI-API-Integrationen ist nicht nur zu prüfen, ob Extended Prompt Caching theoretisch genutzt werden könnte. Laut aktueller OpenAI-Datendokumentation verwenden Organisationen ohne Zero Data Retention bei allen unterstützten Modellen standardmäßig Extended Prompt Caching; bei `gpt-5.5`, `gpt-5.5-pro` und künftigen Modellen ist `prompt_cache_retention=in_memory` nicht zulässig. Diese Default-Logik ist im Freigabe- und Löschkonzept ausdrücklich zu dokumentieren.
 
 Praxis-Hinweis: Bei Anthropic ist ZDR ebenfalls nicht pauschal auf jedes Modell übertragbar. Für `covered models` verlangt Anthropic laut aktueller Help-Center-Dokumentation 30 Tage Retention; Claude Fable 5 ist laut Migration Guide nicht unter ZDR verfügbar. Freigaben sollten deshalb dokumentieren, welches Modell verwendet wird und ob dafür eine getrennte Retention-Konfiguration nötig ist.
+
+Praxis-Hinweis: Die neuen EDPB-Entwurfsleitlinien vom 07./08.07.2026 behandeln Web Scraping für generative KI und Anonymisierung ausdrücklich noch als Konsultationsfassungen. Inhaltlich sind sie dennoch belastbar genug, um Freigabeprozesse bereits jetzt zu schärfen: Das EDPB empfiehlt für Web-Scraping-Setups u. a. verlässliche Quellen, Zeitstempel und Validierung, Filter zur Datensparsamkeit sowie den Ausschluss von Quellen, die Scraping klar entgegenstehen. Für Anonymisierung nennt das EDPB die Prüfkriterien `No Record Isolation`, `No Linkage` und `No Inference` ([Guidelines on web scraping](https://www.edpb.europa.eu/public-consultations/guidelines-on-web-scraping_en), [Guidelines on anonymisation](https://www.edpb.europa.eu/public-consultations/guidelines-on-anonymisation_en), [EDPB News, 08.07.2026](https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en)).
 
 Freigabe erfolgt durch:
 
@@ -301,6 +309,8 @@ Diese Richtlinie wird mindestens jährlich und bei wesentlichen Änderungen aktu
 - neues Anthropic-`covered model` oder geänderte modellbezogene Retention-Pflicht
 - Aktivierung von Chat-Suche/Memory, Projektwissen, Konnektoren oder MCP
 - Aktivierung von Claude-Cowork-Remote-Sessions oder Microsoft-365-Connector-`write tools`
+- Nutzung neuer Web-Scraping-Quellen oder fremder Trainingsdatensätze
+- neue Anonymisierungsmethode oder geänderte Re-Identifikationsbewertung
 - neue Anbieterbedingungen
 - neue Retention-/Trainingseinstellung
 - neue AI-Act-Transparenzpflicht für den eigenen Einsatzfall
@@ -329,6 +339,9 @@ Diese Richtlinie wird mindestens jährlich und bei wesentlichen Änderungen aktu
 - [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data)
 - [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp)
 - [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels)
+- [Guidelines on anonymisation](https://www.edpb.europa.eu/public-consultations/guidelines-on-anonymisation_en)
+- [Guidelines on web scraping](https://www.edpb.europa.eu/public-consultations/guidelines-on-web-scraping_en)
+- [EDPB News, 08.07.2026](https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en)
 - [OpenAI Computer Use](https://developers.openai.com/api/docs/guides/tools-computer-use)
 - [Anthropic Computer Use](https://docs.anthropic.com/en/docs/agents-and-tools/computer-use)
 - [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)

@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.6.0
-Stand: 08.07.2026
+Aktuelle Version: 1.7.0
+Stand: 09.07.2026
 
 ## Versionsinfo
+
+### Version 1.7.0 - 09.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um EDPB-Entwurfsleitlinien vom 07./08.07.2026 zu Web Scraping für generative KI ergänzt: Öffentlich zugängliche Webdaten sind nicht frei für KI-Training oder Fine-Tuning nutzbar; Rechtsgrundlage, Zweckbindung, Transparenz, Datenminimierung, Quellenauswahl und eine etwaige Art.-9-Ausnahme müssen gesondert geprüft werden ([EDPB News, 08.07.2026](https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en), [Guidelines on web scraping](https://www.edpb.europa.eu/public-consultations/guidelines-on-web-scraping_en)).
+- Hinweise zur Anonymisierung ergänzt: Nach den neuen EDPB-Entwurfsleitlinien ist Anonymität perspektivbezogen zu bewerten; das EDPB nennt dafür die Prüfkriterien `No Record Isolation`, `No Linkage` und `No Inference` ([Guidelines on anonymisation](https://www.edpb.europa.eu/public-consultations/guidelines-on-anonymisation_en), [EDPB News, 08.07.2026](https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en)).
+
+Geändert:
+
+- Freigabe- und DSFA-Prüfung präzisiert: Bloßes Entfernen direkter Identifikatoren reicht nicht automatisch als Anonymisierung, und gescrapte öffentliche Daten oder fremde Trainingskorpora müssen getrennt dokumentiert und freigegeben werden ([Guidelines on anonymisation](https://www.edpb.europa.eu/public-consultations/guidelines-on-anonymisation_en), [Guidelines on web scraping](https://www.edpb.europa.eu/public-consultations/guidelines-on-web-scraping_en)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.6.0 - 08.07.2026
 
