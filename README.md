@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.7.0
-Stand: 09.07.2026
+Aktuelle Version: 1.7.1
+Stand: 10.07.2026
 
 ## Versionsinfo
+
+### Version 1.7.1 - 10.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um den neuen Art.-50-KI-VO-Nachweisstand ergänzt: Die EU-Kommission bewertet den Transparency Code seit dem 09.07.2026 als angemessenes freiwilliges Instrument; der AI Board hat die Angemessenheitsbewertung am Folgetag übernommen. Das kann als belastbarer Compliance-Baustein dokumentiert werden, ersetzt aber keine Einzelfallprüfung ([Commission Opinion on the assessment of the Code of Practice on Transparency of AI-generated content](https://digital-strategy.ec.europa.eu/en/library/commission-opinion-assessment-code-practice-transparency-ai-generated-content), [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content)).
+
+Geändert:
+
+- KI-VO-Transparenzhinweise präzisiert: Eine Unterzeichnung des freiwilligen Codes ist nun als EU-weit anerkanntes Hilfsmittel darstellbar, begründet laut Kommission aber keinen abschließenden Compliance-Nachweis und ersetzt keine konkrete Pflichtenumsetzung nach Art. 50 KI-VO ([Commission Opinion on the assessment of the Code of Practice on Transparency of AI-generated content](https://digital-strategy.ec.europa.eu/en/library/commission-opinion-assessment-code-practice-transparency-ai-generated-content)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.7.0 - 09.07.2026
 
