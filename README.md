@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.7.1
-Stand: 10.07.2026
+Aktuelle Version: 1.7.2
+Stand: 11.07.2026
 
 ## Versionsinfo
+
+### Version 1.7.2 - 11.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen neuen Agentik-Prüfpunkt ergänzt: Anthropic dokumentiert seit dem 10.07.2026 für Managed Agents geplante `scheduled deployments`, die Sessions autonom per Cron starten können; dabei können u. a. Dateien, GitHub-Zugänge, Memory Stores und Vaults eingebunden werden. Für `environment_variable`-Vault-Credentials stellt Anthropic klar, dass Secret-Werte dem Agenten nicht offengelegt, sondern erst beim ausgehenden Request eingesetzt werden ([Scheduled deployments](https://platform.claude.com/docs/en/managed-agents/scheduled-deployments), [Authenticate with vaults](https://platform.claude.com/docs/en/managed-agents/vaults), [Claude Platform Release Notes, 10.07.2026](https://platform.claude.com/docs/en/release-notes/overview)).
+- KI-VO-Hinweise um den neuen AI-Office-FAQ-Stand ergänzt: Für die erste Signatory-Liste zum Art.-50-Transparenzcode müssen Signaturformulare bis zum 22.07.2026, 18:00 CEST eingereicht werden; eine spätere Unterzeichnung bleibt möglich, Nicht-Unterzeichner müssen die Einhaltung von Art. 50 KI-VO aber auf anderem Weg darlegen ([Signing the Code of Practice on transparency of AI-generated content](https://digital-strategy.ec.europa.eu/en/faqs/signing-code-practice-transparency-ai-generated-content)).
+
+Geändert:
+
+- Freigabe- und DSFA-Prüfung präzisiert: Für Anthropic-Managed-Agents reichen allgemeine Hinweise zu Agentik oder Secrets nicht mehr aus; Zeitpläne, autonome Sessionstarts, Run-Historie/Webhooks, eingebundene Vaults und Secret-Scopes sollten getrennt freigegeben und dokumentiert werden ([Scheduled deployments](https://platform.claude.com/docs/en/managed-agents/scheduled-deployments), [Authenticate with vaults](https://platform.claude.com/docs/en/managed-agents/vaults)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.7.1 - 10.07.2026
 
