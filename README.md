@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.7.2
-Stand: 11.07.2026
+Aktuelle Version: 1.7.3
+Stand: 12.07.2026
 
 ## Versionsinfo
+
+### Version 1.7.3 - 12.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen Governance-Prüfpunkt ergänzt: Anthropic dokumentiert seit dem 01.07.2026 für Enterprise-Pläne eine Beta zur organisations- und rollenbezogenen Modellfreigabe einschließlich Effort-Caps; damit lassen sich nicht freigegebene Modelle technisch begrenzen, statt nur organisatorisch zu verbieten ([Release notes, 01.07.2026](https://support.claude.com/en/articles/12138966-release-notes), [Manage model access for your organization](https://support.claude.com/en/articles/15694740-manage-model-access-for-your-organization)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen Transparenz-/Beschäftigtendatenschutz-Prüfpunkt ergänzt: Bei Anthropic Team und Enterprise ist `individual usage analytics` laut aktueller Herstellerdokumentation ab dem 11.07.2026 standardmäßig aktiviert, sofern die Organisation es nicht wieder abschaltet; damit werden nutzerbezogene Nutzungsdaten nach Produkt, Modell und Skill sichtbar ([View usage analytics for Team and Enterprise plans](https://support.claude.com/en/articles/12883420-view-usage-analytics-for-team-and-enterprise-plans)).
+
+Geändert:
+
+- Anbieter- und DSFA-Prüfung präzisiert: Für Claude Code, Cowork und andere Anthropic-Organisationen reichen allgemeine Freigabehinweise nicht mehr aus; Modell-Allowlist, Effort-Grenzen und der Umgang mit nutzerbezogenen Usage-Analytics sollten getrennt dokumentiert werden ([Manage model access for your organization](https://support.claude.com/en/articles/15694740-manage-model-access-for-your-organization), [View usage analytics for Team and Enterprise plans](https://support.claude.com/en/articles/12883420-view-usage-analytics-for-team-and-enterprise-plans)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.7.2 - 11.07.2026
 
