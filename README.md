@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.7.3
-Stand: 12.07.2026
+Aktuelle Version: 1.7.4
+Stand: 23.07.2026
 
 ## Versionsinfo
+
+### Version 1.7.4 - 23.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um den neuen Leitlinienstand der EU-Kommission vom 20.07.2026 zu Art. 50 KI-VO ergänzt: direkte Interaktion mit Chatbots, Agenten oder Avataren soll grundsätzlich ab der ersten Interaktion klar kenntlich gemacht werden; für veröffentlichte KI-Texte zu Fragen von öffentlichem Interesse reicht eine bloß formale Endredaktion nicht als `human review` oder `editorial control` aus ([Guidelines on transparency obligations for providers and deployers of AI systems](https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems), [Transparency obligations under Article 50 of the AI Act](https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act)).
+- KI-VO-Hinweise um den neuen Kommissionsstand zu Übergangslogik und Labels ergänzt: Laut FAQ vom 20.07.2026 ist nur für vor dem 02.08.2026 in Verkehr gebrachte Systeme eine begrenzte Übergangslogik bei Art. 50 Abs. 2 KI-VO vorgesehen; Inhalte von vor dem 02.08.2026 müssen nicht rückwirkend gekennzeichnet werden. Die neuen EU-Icons sind nur ein optionales Hilfsmittel und begründen für sich keinen Compliance-Nachweis ([Transparency obligations under Article 50 of the AI Act](https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act), [EU Icons for labelling AI-generated content](https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content)).
+
+Geändert:
+
+- Den operativen FAQ-Hinweis zum Art.-50-Transparenzcode aktualisiert: Für die erste Signatory-Liste nennt die aktuelle AI-Office-FAQ den 27.07.2026, 18:00 CEST; spätere Unterzeichnungen bleiben möglich ([Signing the Code of Practice on Transparency of AI-generated content](https://digital-strategy.ec.europa.eu/en/faqs/signing-code-practice-transparency-ai-generated-content)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.7.3 - 12.07.2026
 
@@ -67,7 +82,7 @@ Entfernt:
 Ergänzt:
 
 - Checkliste, DSFA-Vorlage und KI-Richtlinie um einen neuen Agentik-Prüfpunkt ergänzt: Anthropic dokumentiert seit dem 10.07.2026 für Managed Agents geplante `scheduled deployments`, die Sessions autonom per Cron starten können; dabei können u. a. Dateien, GitHub-Zugänge, Memory Stores und Vaults eingebunden werden. Für `environment_variable`-Vault-Credentials stellt Anthropic klar, dass Secret-Werte dem Agenten nicht offengelegt, sondern erst beim ausgehenden Request eingesetzt werden ([Scheduled deployments](https://platform.claude.com/docs/en/managed-agents/scheduled-deployments), [Authenticate with vaults](https://platform.claude.com/docs/en/managed-agents/vaults), [Claude Platform Release Notes, 10.07.2026](https://platform.claude.com/docs/en/release-notes/overview)).
-- KI-VO-Hinweise um den neuen AI-Office-FAQ-Stand ergänzt: Für die erste Signatory-Liste zum Art.-50-Transparenzcode müssen Signaturformulare bis zum 22.07.2026, 18:00 CEST eingereicht werden; eine spätere Unterzeichnung bleibt möglich, Nicht-Unterzeichner müssen die Einhaltung von Art. 50 KI-VO aber auf anderem Weg darlegen ([Signing the Code of Practice on transparency of AI-generated content](https://digital-strategy.ec.europa.eu/en/faqs/signing-code-practice-transparency-ai-generated-content)).
+- KI-VO-Hinweise um den neuen AI-Office-FAQ-Stand ergänzt: Für die erste Signatory-Liste zum Art.-50-Transparenzcode müssen Signaturformulare bis zum 27.07.2026, 18:00 CEST eingereicht werden; eine spätere Unterzeichnung bleibt möglich, Nicht-Unterzeichner müssen die Einhaltung von Art. 50 KI-VO aber auf anderem Weg darlegen ([Signing the Code of Practice on transparency of AI-generated content](https://digital-strategy.ec.europa.eu/en/faqs/signing-code-practice-transparency-ai-generated-content)).
 
 Geändert:
 
