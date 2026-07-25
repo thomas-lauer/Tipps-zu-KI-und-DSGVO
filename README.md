@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.7.4
-Stand: 23.07.2026
+Aktuelle Version: 1.8.0
+Stand: 25.07.2026
 
 ## Versionsinfo
+
+### Version 1.8.0 - 25.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Prüfpunkte ergänzt: `custom connectors` über remote MCP können laut aktueller Herstellerdokumentation auf Claude, Cowork und Claude Desktop aus der Anthropic-Cloud statt vom lokalen Gerät verbinden; außerdem beschreibt Anthropic für Cowork zusätzliche Organisationskontrollen für Remote-Sessions, weist aber zugleich darauf hin, dass Cowork-Aktivität derzeit nicht in Audit Logs, Compliance API oder Data Exports erscheint ([Get started with custom connectors using remote MCP](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp), [Claude Cowork architecture overview](https://support.claude.com/en/articles/14479288-claude-cowork-architecture-overview)).
+- KI-VO-Hinweise um die neue Kommissions-FAQ vom 22.07.2026 ergänzt: Bei Hochrisiko-KI müssen Betreiber laut FAQ u. a. Nutzungsanweisungen umsetzen, den Betrieb überwachen, menschliche Aufsicht zuweisen und bei eigenen Eingabedaten auf Relevanz und hinreichende Repräsentativität achten; öffentliche Stellen bzw. Anbieter öffentlicher Dienste brauchen grundsätzlich vor der ersten Nutzung eine Grundrechte-Folgenabschätzung, und bei entscheidungsrelevanten Hochrisiko-Outputs ist ein Recht auf Erklärung zu berücksichtigen ([Navigating the AI Act](https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act)).
+
+Geändert:
+
+- Hinweise zu Claude-Microsoft-365-`write tools` präzisiert: Für die aktivierten Schreibwerkzeuge ist laut aktueller Herstellerdokumentation eine erneute Tenant-Einwilligung zu erweiterten Microsoft-Graph-Berechtigungen erforderlich; E-Mails tragen einen `agent-initiated`-Header, Datei- und Kalender-Schreibvorgänge derzeit nicht ([Set up the Microsoft 365 connector](https://support.claude.com/en/articles/12542951-set-up-the-microsoft-365-connector)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.7.4 - 23.07.2026
 

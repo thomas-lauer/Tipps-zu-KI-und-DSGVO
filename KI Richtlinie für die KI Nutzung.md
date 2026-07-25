@@ -1,6 +1,6 @@
 # KI-Richtlinie für die KI-Nutzung
 
-Stand: 23.07.2026
+Stand: 25.07.2026
 Status: Vorlage für Unternehmen/Organisationen
 
 > Ziel dieser Richtlinie ist eine produktive, sichere und DSGVO-konforme Nutzung von KI-Systemen wie Claude.ai, OpenAI/ChatGPT, API-Diensten, RAG-Systemen und vergleichbaren Tools. Diese Vorlage muss an Organisation, Rollen, Tools und Rechtsgrundlagen angepasst werden.
@@ -28,6 +28,8 @@ AI Act und DSGVO müssen gleichzeitig beachtet werden. Die Einhaltung einer KI-V
 
 Für jeden KI-Use-Case ist zusätzlich zur DSGVO-Prüfung die KI-VO-Einstufung zu dokumentieren: verbotene KI-Praktik, Hochrisiko-KI, begrenztes Risiko mit Transparenzpflichten oder minimales Risiko. Verbotene Praktiken sind nach [Art. 5 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-5) unzulässig; Hochrisiko-Einstufungen sind nach [Art. 6 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-6) zu prüfen; Transparenzpflichten für bestimmte KI-Systeme ergeben sich aus [Art. 50 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-50).
 
+Bei Hochrisiko-KI sind nach der aktuellen Kommissions-FAQ insbesondere `instructions of use`, laufendes Monitoring, menschliche Aufsicht, relevante und hinreichend repräsentative Eingabedaten sowie gegebenenfalls eine Grundrechte-Folgenabschätzung vor Erstnutzung zu organisieren; für entscheidungsrelevante Outputs ist außerdem ein Prozess für das Recht auf Erklärung vorzusehen ([Navigating the AI Act](https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act)).
+
 ## 3. Zugelassene Tools
 
 KI-Tools dürfen nur genutzt werden, wenn sie auf der Tool-Whitelist stehen.
@@ -53,9 +55,15 @@ Für Anthropic Enterprise ist zusätzlich zu beachten, dass laut Release Notes s
 
 Zusätzlich ist zu beachten, dass Anthropic laut aktueller Herstellerdokumentation `individual usage analytics` für Team- und Enterprise-Organisationen ab dem 11.07.2026 standardmäßig aktiviert. Nutzerbezogene Auswertungen nach Produkt, Modell und Skill dürfen nur mit dokumentiertem Zweck, klaren Sichtrechten und interner Transparenz genutzt werden; falls das nicht gewollt ist, muss die Option organisatorisch geprüft und gegebenenfalls deaktiviert werden ([View usage analytics for Team and Enterprise plans](https://support.claude.com/en/articles/12883420-view-usage-analytics-for-team-and-enterprise-plans)).
 
+Neu zu berücksichtigen ist außerdem, dass Anthropic `custom connectors` über remote MCP inzwischen auf Claude, Cowork und Claude Desktop anbietet. Laut Help Center verbindet sich Claude dabei aus der Anthropic-Cloud mit dem MCP-Server und nicht vom lokalen Gerät aus. Solche Connectoren gelten deshalb als gesondert freigabepflichtig; dokumentiert werden sollten Ziel-URL, Authentisierung, Datenfluss und Drittlandbezug ([Get started with custom connectors using remote MCP](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp)).
+
+Für Claude Cowork ist außerdem zu beachten, dass Anthropic den Architektur- und Kontrollstand präzisiert hat: Remote-Sessions laufen standardmäßig in isolierten temporären Sandboxes auf Anthropic-Infrastruktur; zusätzlich gibt es Organisationskontrollen wie `network-access policy`, Approval-Vorgaben und Trusted Devices. Zugleich weist Anthropic darauf hin, dass Cowork-Aktivität derzeit nicht in Audit Logs, der Compliance API oder Data Exports erscheint und hostbasierte EDR-Werkzeuge die Remote-VM nicht überwachen können. Wenn die Organisation auf solche Nachweise angewiesen ist, darf Cowork nur mit dokumentierter Kompensation oder technischer Begrenzung freigegeben werden ([Claude Cowork architecture overview](https://support.claude.com/en/articles/14479288-claude-cowork-architecture-overview), [Continue local sessions from any device with Remote Control](https://code.claude.com/docs/en/remote-control)).
+
+Für den Claude-Microsoft-365-Connector ist zusätzlich zu beachten, dass `write tools` laut aktueller Herstellerdokumentation erneute Tenant-Einwilligungen zu erweiterten Microsoft-Graph-Berechtigungen voraussetzen können. Außerdem tragen derzeit nur gesendete E-Mails einen `agent-initiated`-Header; Datei- und Kalender-Schreibvorgänge werden nach derzeitigem Dokumentationsstand nicht entsprechend gekennzeichnet ([Set up the Microsoft 365 connector](https://support.claude.com/en/articles/12542951-set-up-the-microsoft-365-connector)).
+
 Praxis-Hinweis: Zentrale Business-Accounts für Firmen-Tools, AVV/DPA, Zero Data Retention und klare Nutzungsregeln sind Kernanforderungen. Bei privaten MCP-Servern ist eine enge Tunnel-/Allowlist-Architektur statt öffentlicher Freigaben oder unnötig breiter Netzverbindungen zu bevorzugen.
 
-Quellen: [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels), [Anthropic Release notes](https://support.claude.com/en/articles/12138966-release-notes), [Manage model access for your organization](https://support.claude.com/en/articles/15694740-manage-model-access-for-your-organization), [View usage analytics for Team and Enterprise plans](https://support.claude.com/en/articles/12883420-view-usage-analytics-for-team-and-enterprise-plans), [Use Claude Cowork on web, desktop, and mobile](https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile), [Use Claude Cowork safely](https://support.claude.com/en/articles/13364135-use-claude-cowork-safely), [Scheduled deployments](https://platform.claude.com/docs/en/managed-agents/scheduled-deployments), [Authenticate with vaults](https://platform.claude.com/docs/en/managed-agents/vaults), [Claude Platform Release Notes, 10.07.2026](https://platform.claude.com/docs/en/release-notes/overview).
+Quellen: [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context), [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp), [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels), [Anthropic Release notes](https://support.claude.com/en/articles/12138966-release-notes), [Manage model access for your organization](https://support.claude.com/en/articles/15694740-manage-model-access-for-your-organization), [View usage analytics for Team and Enterprise plans](https://support.claude.com/en/articles/12883420-view-usage-analytics-for-team-and-enterprise-plans), [Use Claude Cowork on web, desktop, and mobile](https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile), [Use Claude Cowork safely](https://support.claude.com/en/articles/13364135-use-claude-cowork-safely), [Claude Cowork architecture overview](https://support.claude.com/en/articles/14479288-claude-cowork-architecture-overview), [Continue local sessions from any device with Remote Control](https://code.claude.com/docs/en/remote-control), [Get started with custom connectors using remote MCP](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp), [Set up the Microsoft 365 connector](https://support.claude.com/en/articles/12542951-set-up-the-microsoft-365-connector), [Scheduled deployments](https://platform.claude.com/docs/en/managed-agents/scheduled-deployments), [Authenticate with vaults](https://platform.claude.com/docs/en/managed-agents/vaults), [Claude Platform Release Notes, 10.07.2026](https://platform.claude.com/docs/en/release-notes/overview).
 
 ## 4. Verbotene Eingaben
 
@@ -157,8 +165,12 @@ Mindestanforderungen:
 - Protokollierung
 - Prompt-Injection-Schutz
 - für Konnektoren und MCP-Server Retention/Residency jedes Drittservers separat prüfen
+- Anthropic-`custom connectors`/remote MCP nur mit dokumentiertem cloudseitigem Verbindungsweg, Zielsystem und Owner-Freigabe einsetzen
 - bei Claude Cowork Remote-Sessions, gespeicherte Sitzungen/Dateien, geplante Tasks und erreichbare lokale Ordner separat freigeben und dokumentieren
+- bei Claude Cowork oder Remote Control soweit verfügbar `network-access policy`, restriktives Approval-Verhalten und Trusted Devices erzwingen
+- bei Claude Cowork die fehlende Sichtbarkeit in Audit Logs, Compliance API und Data Exports sowie die fehlende hostseitige EDR-Sicht auf die Remote-VM ausdrücklich bewerten und kompensieren
 - Microsoft-365-Connector-`write tools` nur nach Admin-Freigabe und enger Zweckbegrenzung aktivieren
+- Microsoft-365-Connector-`write tools` nur nach erneuter Tenant-Einwilligung zu erweiterten Graph-Berechtigungen aktivieren; berücksichtigen, dass derzeit nur E-Mails einen `agent-initiated`-Header tragen
 - Anthropic-Managed-Agents mit `scheduled deployments`, Vaults oder GitHub-/Dateianbindung nur nach separater Freigabe, enger Zeitplan- und Secret-Begrenzung sowie dokumentierter Run-Historie einsetzen
 - bei Anthropic Enterprise Modell-Allowlist und Effort-Caps so setzen, dass nicht freigegebene oder retention-pflichtige Modelle technisch begrenzt sind
 - nutzerbezogene KI-Analytics nur mit dokumentiertem Zweck, enger Sichtberechtigung und interner Transparenz aktiv lassen
@@ -210,10 +222,14 @@ Vor Freigabe eines KI-Tools müssen geprüft werden:
 - KI-VO-Risikoklasse: verboten / Hochrisiko / begrenztes Risiko / minimales Risiko
 - Anbindungsarchitektur für private MCP-Server oder REST-Ziele: öffentliche Freigabe, VPN/Peering oder enge Tunnel-Lösung; Begründung und Freigabe dokumentieren
 - featurebezogene Retention, z. B. Background Mode, standardmäßiges Extended Prompt Caching ohne ZDR, Hosted Containers, Message Batches, Audit Logs oder Vector Stores
+- cloudseitiger Verbindungsweg bei Anthropic-`custom connectors`/remote MCP statt bloßer Annahme eines lokalen Desktop-Datenpfads
 - autonome Agentik-Orchestrierung, z. B. Anthropic-`scheduled deployments`, Deployment-Run-Historie/Webhooks sowie Dateien-, GitHub-, Memory- und Vault-Einbindung
+- verfügbare Remote-Session-Kontrollen für Claude Cowork wie `network-access policy`, Trusted Devices, Approval-Vorgaben sowie MDM-Sperren für lokale MCP-Server/Desktop Extensions
+- fehlende Nachweisquellen für Claude Cowork, insbesondere keine Audit-Logs/Compliance-API/Data-Exports und keine hostseitige EDR-Sicht auf die Remote-VM
 - modellbezogene Retention-Ausnahmen, z. B. Anthropic-`covered models` oder Claude Fable 5 mit 30-Tage-Retention statt ZDR, sowie ein ggf. erforderliches separates Workspace-, Subscription- oder Sandbox-Setup
 - organisations- oder rollenbezogene Modell-Allowlist und Effort-Caps, soweit der Anbieter dies unterstützt
 - nutzerbezogene Usage-Analytics, Reports oder ähnliche Admin-Auswertungen: Zweck, Sichtberechtigungen und interne Transparenz prüfen
+- Microsoft-365-Connector-`write tools`: Tenant-Re-Consent zu erweiterten Graph-Scopes und fehlende Kennzeichnung von Datei-/Kalenderwrites
 - Nutzung öffentlich zugänglicher Webquellen, gescrapter Datensätze oder Datenbroker-Datensätze: getrennte Prüfung von Rechtsgrundlage, Transparenz, Quellenauswahl, Widerspruchs-/robots.txt-Behandlung, Datenminimierung, Validierung und Art.-9-Ausnahmen
 - dokumentierte Anonymisierungsbewertung statt bloßer Annahme, dass entfernte Identifikatoren genügen
 
