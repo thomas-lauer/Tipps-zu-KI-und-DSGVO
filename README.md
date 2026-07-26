@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.8.0
-Stand: 25.07.2026
+Aktuelle Version: 1.8.1
+Stand: 26.07.2026
 
 ## Versionsinfo
+
+### Version 1.8.1 - 26.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um den neuen FAQ-Stand der EU-Kommission vom 26.07.2026 zu Art. 50 KI-VO ergänzt: Die Kommission präzisiert u. a. eng auszulegende Ausnahmen von der Markierungs- und Erkennungspflicht für generative Outputs, etwa für Quellcode, reine Maschine-zu-Maschine-Outputs, geschlossene Entwicklungsumgebungen und Standard-Editing; außerdem nennt sie für vor dem 02.08.2026 in Verkehr gebrachte Systeme nun ausdrücklich den 02.12.2026 als Ende der begrenzten Übergangsfrist für Art. 50 Abs. 2 und verweist im Regelfall auf nationale Marktüberwachungsbehörden als Vollzugsstellen ([Transparency obligations under Article 50 of the AI Act](https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act)).
+
+Geändert:
+
+- KI-VO-Zeitplan zu Hochrisiko-KI präzisiert: Die bisher nur über Leitlinien dargestellte Verschiebung bestimmter Hochrisiko-Pflichten steht nun im Zusammenhang mit dem im Amtsblatt vom 24.07.2026 veröffentlichten `Digital Omnibus on AI` (Regulation (EU) 2026/1744); die Kommissionsübersicht nennt dafür nun einen endgültigen Anwendungsbeginn ab 02.12.2027 bzw. 02.08.2028 ([AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai), [Regulation (EU) 2026/1744](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.8.0 - 25.07.2026
 
