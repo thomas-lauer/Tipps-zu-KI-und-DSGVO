@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.8.1
-Stand: 26.07.2026
+Aktuelle Version: 1.8.2
+Stand: 27.07.2026
 
 ## Versionsinfo
+
+### Version 1.8.2 - 27.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Governance-Hinweise ergänzt: Seit dem 09.07.2026 laufen ChatGPT-Apps über das Plugin Directory; in Enterprise/Edu werden Plugin-Installation, zugrunde liegende Apps und Rollen getrennt verwaltet, und für Enterprise-Workspaces ohne Opt-out plant OpenAI seit dem 23.07.2026 eine Standardaktivierung von Skills. Skill-Uploads und pluginbasierte Zusatzfunktionen sollten deshalb getrennt freigegeben und dokumentiert werden ([Apps in ChatGPT](https://help.openai.com/en/articles/11487775-connectors-in-chatgpt), [Admin controls, security, and compliance for plugins and apps](https://help.openai.com/en/articles/11509118-admin-controls-security-and-compliance-for-plugins-and-apps), [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt), [ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes)).
+
+Geändert:
+
+- OpenAI-Connector-/App-Hinweise präzisiert: Bei `apps with sync` werden Inhalte vorab indexiert; für nicht in der eigenen Residency-Region unterstützte Sync-Apps liegt dieser Suchindex laut OpenAI in US-Azure-Rechenzentren. Außerdem sind App-Unterhaltungen in der Compliance API und App-Calls in den Compliance Logs nachvollziehbar, während nicht synchronisierte Apps zwar residency-kompatibel sein können, Daten an den angebundenen Drittservice aber dessen eigenen Residency-Regeln unterwerfen ([Admin controls, security, and compliance for plugins and apps](https://help.openai.com/en/articles/11509118-admin-controls-security-and-compliance-for-plugins-and-apps), [Apps in ChatGPT](https://help.openai.com/en/articles/11487775-connectors-in-chatgpt)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.8.1 - 26.07.2026
 
