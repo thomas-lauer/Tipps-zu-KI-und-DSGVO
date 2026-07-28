@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.8.2
-Stand: 27.07.2026
+Aktuelle Version: 1.9.0
+Stand: 28.07.2026
 
 ## Versionsinfo
+
+### Version 1.9.0 - 28.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen neuen Art.-4-KI-VO-Prüfpunkt ergänzt: Die aktuelle Kommissions-Q&A konkretisiert AI Literacy als risikobasiertes, rollen- und kontextbezogenes Pflichtprogramm; interne Nachweise zu Trainings oder anderen Leitmaßnahmen genügen, ein Zertifikat oder eine bestimmte AI-Officer-Struktur werden nicht verlangt. Die Überwachung und Durchsetzung zu Art. 4 startet ab dem 03.08.2026 ([AI Literacy - Questions & Answers](https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Agentik-Hinweise ergänzt: ChatGPT Work kann auf dem Desktop freigegebene lokale Ordner öffnen; lokale Dateien und Outputs bleiben dort, bis sie ausdrücklich bewegt oder geteilt werden. Work kann außerdem über Scheduled Tasks einmalig, wiederkehrend oder monitoringbasiert laufen; solche Tasks sind laut OpenAI in der Compliance API enthalten und sollten deshalb als gesondert freigabepflichtige Agentik-Funktion dokumentiert werden ([ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex), [Scheduled Tasks in ChatGPT](https://help.openai.com/en/articles/10291617-tasks-in-chatgpt)).
+
+Geändert:
+
+- Schulungs-, Freigabe- und DSFA-Hinweise präzisiert: Art.-4-KI-VO-Compliance sollte nicht nur als allgemeine Schulung, sondern nach Zielgruppe, Risiko und Use Case dokumentiert werden. Für ChatGPT Work und Scheduled Tasks sollten freigegebene lokale Ordner, zulässige App-/Dateizugriffe, Monitoring-Läufe, Benachrichtigungen und der fehlende Zugriff von Tasks auf Projektdateien getrennt bewertet werden ([AI Literacy - Questions & Answers](https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers), [ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex), [Scheduled Tasks in ChatGPT](https://help.openai.com/en/articles/10291617-tasks-in-chatgpt)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.8.2 - 27.07.2026
 
