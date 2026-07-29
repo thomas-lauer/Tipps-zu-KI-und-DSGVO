@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.9.0
-Stand: 28.07.2026
+Aktuelle Version: 1.9.1
+Stand: 29.07.2026
 
 ## Versionsinfo
+
+### Version 1.9.1 - 29.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um eine neue Anthropic-Klarstellung ergänzt: Die aktuelle Team-/Enterprise-Dokumentation trennt bei Claude Cowork zwischen Cloud-/Remote-Sessions und lokaler Nutzung. Für mobile/webbasierte bzw. cloudgespeicherte Remote-Sessions verweist Anthropic nun auf Erfassbarkeit über die Compliance API; lokale Sessions bleiben dagegen lokal gespeichert und nicht zentral exportierbar ([Use Claude Cowork on Team and Enterprise plans](https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans)).
+
+Geändert:
+
+- Bisher zu pauschale Cowork-Hinweise präzisiert: Für Claude Cowork sollte nach aktueller Anthropic-Dokumentation zwischen Session-Inhalten/Artefakten einerseits und laufender Aktivitätstelemetrie andererseits unterschieden werden. Anthropic beschreibt für Tool-Calls, Dateizugriffe und Approval-Entscheidungen OpenTelemetry als Monitoring-Weg und stellt zugleich klar, dass dies die Compliance API nicht ersetzt; die genaue Grenzziehung sollte deshalb intern ausdrücklich dokumentiert werden ([Use Claude Cowork on Team and Enterprise plans](https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans), [Monitor Claude Cowork activity with OpenTelemetry](https://support.claude.com/en/articles/14477985-monitor-claude-cowork-activity-with-opentelemetry)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.9.0 - 28.07.2026
 
