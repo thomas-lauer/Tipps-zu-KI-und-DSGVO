@@ -42,10 +42,26 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.9.1
-Stand: 29.07.2026
+Aktuelle Version: 1.10.0
+Stand: 30.07.2026
 
 ## Versionsinfo
+
+### Version 1.10.0 - 30.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zu Work/Agent/Library ergänzt: Das aktuelle Work-Admin-FAQ grenzt die Nachweislage enger ein. Für Work/Codex decken Compliance API und Compliance Logs zwar Unterhaltungen und Responses ab, nicht aber Dateien, Aktionen oder Tool-Calls; die Compliance Logs Platform hält diese Daten laut OpenAI 30 Tage vor, längere Aufbewahrung erfordert einen laufenden Export. Für ChatGPT-Agent stellt OpenAI außerdem klar, dass individuelle Agent-Aktionen nicht in der Compliance API erscheinen und `apps with sync` nicht direkt als Agent-Datenquelle dienen. Zusätzlich werden ChatGPT-Library-Dateien getrennt von Chats verwaltet; das Löschen eines Chats löscht gespeicherte Library-Dateien nicht automatisch, und Compliance-Admins können sie über eigene Endpunkte exportieren oder löschen ([ChatGPT Work admin FAQ](https://learn.chatgpt.com/docs/enterprise/work-admin-faq), [ChatGPT agent](https://help.openai.com/en/articles/11752874-chatgpt-agent), [File storage and Library in ChatGPT](https://help.openai.com/en/articles/20001052-file-storage-and-library-in-chatgpt), [Chat and File Retention Policies in ChatGPT](https://help.openai.com/en/articles/8983778-chat-and-file-retention-policies-in-chatgpt)).
+- KI-VO-Hinweise um den neuen Kommissionsstand vom 30.07.2026 ergänzt: Die veröffentlichte Art.-50-Leitlinienseite stellt nun ausdrücklich klar, dass Unterzeichner des Transparency Code sich unionsweit auf dessen Maßnahmen stützen können; außerdem nennt sie nationale Marktüberwachungsbehörden, das AI Office für seine Zuständigkeiten und den EDPS für EU-Organe als Vollzugsstellen. Für die Anbieterprüfung kommt hinzu, dass die aktuelle EU-Liste zum GPAI Code of Practice `Anthropic` und `OpenAI` als Signatories führt; das ist ein freiwilliger Governance-Hinweis, ersetzt aber keine DSGVO-, Transfer- oder Featureprüfung ([Guidelines on transparency obligations for providers and deployers of certain AI systems](https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content), [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content), [The General-Purpose AI Code of Practice](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai)).
+
+Geändert:
+
+- OpenAI-Freigabe-, Lösch- und Logging-Hinweise präzisiert: Für ChatGPT Work, Agent, Codex und Library sollten Nachweislücken bei Dateien/Aktionen/Tool-Calls, getrennte Retention von Chats und Library-Dateien sowie ein nötiger Export aus den 30-Tage-Compliance-Logs ausdrücklich dokumentiert werden ([ChatGPT Work admin FAQ](https://learn.chatgpt.com/docs/enterprise/work-admin-faq), [ChatGPT agent](https://help.openai.com/en/articles/11752874-chatgpt-agent), [Chat and File Retention Policies in ChatGPT](https://help.openai.com/en/articles/8983778-chat-and-file-retention-policies-in-chatgpt)).
+- Art.-50-KI-VO-Umsetzung präzisiert: Neben den bisherigen FAQ- und Leitlinienhinweisen sollte jetzt auch dokumentiert werden, ob die Organisation den Transparency Code als Nachweisbaustein nutzt oder gleichwertige Alternativmaßnahmen vorhält; bei Modellanbietern kann der aktuelle GPAI-Code-Signaturstatus als ergänzender, aber nicht abschließender Governance-Baustein erfasst werden ([Guidelines on transparency obligations for providers and deployers of certain AI systems](https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content), [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content), [The General-Purpose AI Code of Practice](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.9.1 - 29.07.2026
 
