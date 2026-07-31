@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.10.0
-Stand: 30.07.2026
+Aktuelle Version: 1.10.1
+Stand: 31.07.2026
 
 ## Versionsinfo
+
+### Version 1.10.1 - 31.07.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen kleinen OpenAI-API-Hinweis ergänzt: OpenAI dokumentiert `Fast mode` seit dem 30./31.07.2026 ausdrücklich als mit Data Residency, Zero Data Retention und BAA kompatibel. Für Freigaben bedeutet das, dass ein bloßer Wechsel des Verarbeitungsmodus die Datenschutz-Grundvoraussetzungen nicht automatisch ändert, die Prüfung der konkret genutzten Endpunkte, Tools und der regionalen Verfügbarkeit aber bestehen bleibt ([Fast mode](https://developers.openai.com/api/docs/guides/fast-mode), [Fast mode FAQ](https://help.openai.com/en/articles/11647665-fast-mode-faq)).
+
+Geändert:
+
+- OpenAI-Freigabehinweise für API-Projekte präzisiert: `Fast mode` sollte nicht pauschal als unzulässig behandelt werden, wenn Data Residency, ZDR oder BAA genutzt werden; maßgeblich bleiben die Dokumentation der konkret aktivierten Features und die regionale Verfügbarkeit laut OpenAI ([Fast mode](https://developers.openai.com/api/docs/guides/fast-mode), [Fast mode FAQ](https://help.openai.com/en/articles/11647665-fast-mode-faq), [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.10.0 - 30.07.2026
 
