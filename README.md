@@ -42,10 +42,27 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.10.1
-Stand: 31.07.2026
+Aktuelle Version: 1.11.0
+Stand: 07.08.2026
 
 ## Versionsinfo
+
+### Version 1.11.0 - 07.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue operative Steuerungshinweise zu Claude Cowork ergänzt: Anthropic präzisiert in der am 07.08.2026 aktualisierten Team-/Enterprise-Dokumentation die Default-Einstellungen für Cloud-Sessions, die Freigabelogik für schreibfähige Connector-Tools, die fehlende separate Admin-Abschaltung für Cowork-Projekte und die getrennte Behandlung von `web fetch`, `web search` und MCPs außerhalb der normalen Network-Egress-Regeln ([Use Claude Cowork on Team and Enterprise plans](https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen kleinen OpenAI-Governance-Hinweis ergänzt: Seit dem 06.08.2026 können Enterprise-, Edu- und Healthcare-Admins In-App-Updates der ChatGPT-Desktop-App abschalten. Wenn diese Steuerung genutzt wird, braucht es einen eigenen zeitnahen Freigabe- und Patchprozess, weil OpenAI laut Release Notes weder Version-Pinning noch einen separaten Stable Channel oder erweiterten Support für ältere Versionen anbietet ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes)).
+- KI-VO-Hinweise um den Vollzugsstart zu Art. 50 ergänzt: Die EU-Kommission dokumentiert seit dem 31.07./02.08.2026 den Beginn der Durchsetzung, fasst die vier Transparenzfallgruppen nochmals kompakt zusammen und nennt den Bußgeldrahmen sowie die fortgeltende Übergangslogik für vor dem 02.08.2026 in Verkehr gebrachte generative Systeme ([Commission starts enforcing AI Act rules and new transparency requirements on 2 August](https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august), [Quick Facts: Transparency rules for AI systems](https://digital-strategy.ec.europa.eu/en/factpages/quick-facts-transparency-rules-ai-systems)).
+
+Geändert:
+
+- Cowork- und Agentik-Freigabehinweise präzisiert: Für Claude Cowork sollten Session-Ort, Rollenfreigaben, Per-Task-Approval, Projekt-/Dateispeicher sowie separate Kontrollen für Websuche, Web-Fetch und MCPs jetzt ausdrücklich getrennt dokumentiert werden ([Use Claude Cowork on Team and Enterprise plans](https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans)).
+- Art.-50-KI-VO-Hinweise auf laufenden Vollzug umgestellt: Seit dem 02.08.2026 sind Transparenzpflichten nicht mehr nur ein Vorbereitungsprojekt, sondern ein aktiv durchgesetzter Compliance-Baustein mit dokumentierbaren Sanktionen ([Commission starts enforcing AI Act rules and new transparency requirements on 2 August](https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august), [Quick Facts: Transparency rules for AI systems](https://digital-strategy.ec.europa.eu/en/factpages/quick-facts-transparency-rules-ai-systems)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.10.1 - 31.07.2026
 
