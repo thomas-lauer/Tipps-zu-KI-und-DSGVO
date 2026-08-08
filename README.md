@@ -42,10 +42,27 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.11.0
-Stand: 07.08.2026
+Aktuelle Version: 1.12.0
+Stand: 08.08.2026
 
 ## Versionsinfo
+
+### Version 1.12.0 - 08.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Hinweise zu Managed Agents ergänzt: Laut aktueller Anthropic-Produktdokumentation sind Claude Managed Agents zustandsbehaftet, speichern Gesprächsverlauf, Sandbox-Zustand und Outputs serverseitig und sind deshalb derzeit weder für Zero Data Retention noch für HIPAA-BAA-Abdeckung geeignet; Sessions und hochgeladene Dateien lassen sich aber separat per API löschen ([Claude Managed Agents overview](https://platform.claude.com/docs/en/managed-agents/overview)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Hinweise zu `Inference hooks` ergänzt: Seit dem 05.08.2026 dokumentiert Anthropic die Beta für Claude Enterprise als vorgelagerten Allow-/Deny-Kontrollpunkt über `claude.ai`, Cowork und Claude Code; die technische Doku nennt zusätzlich Shadow-Mode, konfigurierbares Failure Handling und den Ausschluss von Bedrock/Google Cloud ([Claude Platform release notes, 05.08.2026](https://platform.claude.com/docs/en/release-notes/overview), [Inference hooks](https://platform.claude.com/docs/en/manage-claude/inference-hooks), [Configure Inference hooks](https://platform.claude.com/docs/en/manage-claude/inference-hooks-configuration)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zu ChatGPT Work/Voice ergänzt: OpenAI dokumentiert für die Desktop-App jetzt ausdrücklich, dass Voice in Work und Codex dieselben Tools und Berechtigungen wie die gewählte Experience nutzt und zur Koordination laufender Aufgaben dienen kann; für berechtigte Enterprise-/Edu-Workspaces mit EKM ist Work standardmäßig für Mitglieder der Default-Rolle aktiviert, Cloud-Work-Chats synchronisieren zwischen Web, Mobile und Desktop, lokale Chats bleiben dagegen auf dem jeweiligen Rechner ([ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex), [ChatGPT Voice](https://help.openai.com/en/articles/20001274-chatgpt-voice-in-work-and-codex)).
+
+Geändert:
+
+- Freigabehinweise für Anthropic-Agentik präzisiert: Für Managed Agents sollten neben Zeitplänen, Vaults und Deployment-Rechten jetzt ausdrücklich Server-State, fehlende ZDR-/BAA-Eignung und eine eventuelle vorgeschaltete Inline-Policy-Prüfung per `Inference hooks` dokumentiert werden ([Claude Managed Agents overview](https://platform.claude.com/docs/en/managed-agents/overview), [Inference hooks](https://platform.claude.com/docs/en/manage-claude/inference-hooks)).
+- Freigabehinweise für OpenAI-Workloads präzisiert: Bei Work/Codex sind jetzt Default-Aktivierung, Cloud-vs.-Lokal-Trennung und Voice-Nutzung mit identischen Tool-/Rechtepfaden als eigener Governance-Punkt zu dokumentieren ([ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex), [ChatGPT Voice](https://help.openai.com/en/articles/20001274-chatgpt-voice-in-work-and-codex)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.11.0 - 07.08.2026
 
