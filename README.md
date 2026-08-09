@@ -42,10 +42,26 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.12.0
-Stand: 08.08.2026
+Aktuelle Version: 1.13.0
+Stand: 09.08.2026
 
 ## Versionsinfo
+
+### Version 1.13.0 - 09.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Hinweise zu Skill-/Plugin-Scanning ergänzt: Seit dem 06.08.2026 dokumentiert Anthropic für Enterprise-Pläne eine Beta, mit der neue Uploads oder Änderungen an Dritt-Skills und -Plugins vor der Ausführung auf schädliche Inhalte geprüft werden können; die Funktion ist standardmäßig aus, bestehende Skills/Plugins bleiben unberührt, und Rollen können den Geltungsbereich weiter eingrenzen ([Release notes](https://support.claude.com/en/articles/12138966-release-notes), [Provision and manage skills for your organization](https://support.claude.com/en/articles/13119606-provision-and-manage-skills-for-your-organization)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zu ChatGPT Voice ergänzt: Laut Enterprise-/Edu-Release-Notes vom 07.08.2026 unterstützt `ChatGPT Voice` jetzt Datei-Uploads und Projects; Voice kann damit in Projekten auf aktuelle Projekt-Chats, Quellen und Projektanweisungen zugreifen. Ebenfalls seit dem 07.08.2026 ist `Live` in Enterprise-, Edu- und Healthcare-Workspaces die Standard-Voice-Erfahrung, sobald Workspace-Owner Voice aktivieren ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes)).
+
+Geändert:
+
+- Freigabehinweise für Anthropic-Skills/-Plugins präzisiert: Wenn Skills oder Plugins zugelassen werden, sollte jetzt dokumentiert werden, ob das optionale Scanning aktiviert ist, dass es nur für neue Uploads/Änderungen gilt und wie mit Warnhinweisen für riskante Inhalte umgegangen wird ([Provision and manage skills for your organization](https://support.claude.com/en/articles/13119606-provision-and-manage-skills-for-your-organization)).
+- Freigabehinweise für OpenAI-Voice/Workloads präzisiert: Bei `ChatGPT Voice` in Work oder Codex sind jetzt nicht nur identische Tool-/Rechtepfade, sondern auch Datei-Uploads, Project-Kontext und die Default-Umstellung auf `Live` als eigener Governance-Punkt zu dokumentieren ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.12.0 - 08.08.2026
 
