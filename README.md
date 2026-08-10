@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.13.0
-Stand: 09.08.2026
+Aktuelle Version: 1.14.0
+Stand: 10.08.2026
 
 ## Versionsinfo
+
+### Version 1.14.0 - 10.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Managed-Agents-Hinweise zu `inference_geo` und `self-hosted sandboxes` ergänzt: Laut Claude-Platform-Release-Notes vom 07.08.2026 kann Anthropic den Ort der Modellinferenz nun pro Agent oder Session steuern; die aktuelle Data-Residency-Dokumentation trennt dabei zwischen Inference-Geo und Workspace-Geo. Für `self-hosted sandboxes` dokumentiert Anthropic, dass Tool-Ausführung, Dateisystem und Network Egress in eigener Infrastruktur bleiben können, Tool-Ein- und -Ausgaben aber weiter an die Control Plane fließen ([Claude Platform release notes, 07.08.2026](https://platform.claude.com/docs/en/release-notes/overview), [Data residency](https://platform.claude.com/docs/en/manage-claude/data-residency), [Self-hosted sandboxes](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Hinweise zu gemounteten GitHub-Repositories ergänzt: Ebenfalls seit dem 07.08.2026 können Claude Managed Agents Skills aus dem Wurzelpfad `.claude/skills` eines gemounteten GitHub-Repositories automatisch erkennen und laden; dafür sind Repo-Herkunft, Zugriffsrechte sowie Branch-/PR-Kontrollen als eigener Governance-Punkt zu dokumentieren ([Claude Platform release notes, 07.08.2026](https://platform.claude.com/docs/en/release-notes/overview), [Accessing GitHub](https://platform.claude.com/docs/en/managed-agents/github)).
+
+Geändert:
+
+- Freigabehinweise für Anthropic-Agentik präzisiert: Für Managed Agents sollten jetzt zusätzlich Geo-Einstellungen, Cloud-vs.-`self-hosted`-Betrieb und automatisch geladene GitHub-Skills getrennt dokumentiert und freigegeben werden ([Data residency](https://platform.claude.com/docs/en/manage-claude/data-residency), [Self-hosted sandboxes](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes), [Accessing GitHub](https://platform.claude.com/docs/en/managed-agents/github)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.13.0 - 09.08.2026
 
