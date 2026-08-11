@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.14.0
-Stand: 10.08.2026
+Aktuelle Version: 1.15.0
+Stand: 11.08.2026
 
 ## Versionsinfo
+
+### Version 1.15.0 - 11.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Hinweise zu Art.-50-Markierungen ergänzt: Anthropic dokumentiert jetzt ausdrücklich maschinenlesbare Markierungen für unterstützte Claude-Outputs. Für in der EU am oder nach dem 02.08.2026 gestartete Modelle nennt Anthropic eingebettete Wasserzeichen für Text und digital signierte Provenance-Metadaten für unterstützte Dateien; ältere Modelle sind laut Hersteller noch in der Nachrüstung ([How Claude marks AI-generated content](https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zur EU-AI-Act- und Provenance-Guidance ergänzt: OpenAI ordnet seine Trainingsdatensummaries nun ausdrücklich Art. 53 Abs. 1 Buchst. d KI-VO zu und verweist für Herkunftsnachweise auf C2PA/SynthID, `openai.com/verify` und eine Content Provenance API. Laut separater Help-Center-Doku decken diese Provenance-Signale derzeit unterstützte Bilder und Audiodateien ab; für Text beschreibt OpenAI bislang nur das Ziel eines späteren Ausbaus ([EU AI Act: OpenAI Resources and Customer Guidance](https://help.openai.com/en/articles/12141645-eu-ai-act-openai-resources-and-customer-guidance), [Provenance signals (Content Credentials, SynthID) in OpenAI-generated content](https://help.openai.com/en/articles/8912793-provenance-signals-content-credentials-synthid-in-openai-generated-content)).
+
+Geändert:
+
+- Art.-50- und Freigabehinweise präzisiert: Für Anbieter-Markierungen genügt kein pauschales Vertrauen; pro Modalität, Exportpfad und Plattform sollte dokumentiert werden, ob Markierungen technisch verfügbar, erhaltbar und intern prüfbar sind ([How Claude marks AI-generated content](https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content), [Provenance signals (Content Credentials, SynthID) in OpenAI-generated content](https://help.openai.com/en/articles/8912793-provenance-signals-content-credentials-synthid-in-openai-generated-content), [Transparency obligations under Article 50 of the AI Act](https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.14.0 - 10.08.2026
 
