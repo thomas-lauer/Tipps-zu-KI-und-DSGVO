@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.15.0
-Stand: 11.08.2026
+Aktuelle Version: 1.16.0
+Stand: 12.08.2026
 
 ## Versionsinfo
+
+### Version 1.16.0 - 12.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zur Abschaltung individuell autorisierter App-Synchronisierung in Enterprise/Edu ergänzt: Seit dem 10.08.2026 sind neue solche Sync-Verbindungen nicht mehr verfügbar; ab dem 14.08.2026 werden bestehende deaktiviert und die Löschung der zugehörigen Sync-Daten beginnt. Wenn synchronisiertes Wissen weiter benötigt wird, verweist OpenAI auf admin-gemanagte Google-Drive-/SharePoint-Syncs oder auf nicht-synchronisierte Plugins/Apps ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Admin controls, security, and compliance for plugins and apps](https://help.openai.com/en/articles/11509118-admin-controls-security-and-compliance-for-plugins-and-apps), [Apps in ChatGPT](https://help.openai.com/en/articles/11487775-connectors-in-chatgpt)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Hinweise zur Identitäts- und Business-Verifikation ergänzt: Anthropic beschreibt seit dem 12.08.2026 offiziell, dass für einzelne Use Cases, Integritätsprüfungen oder andere Safety-/Compliance-Maßnahmen eine Verifikation mit Ausweis, Live-Selfie und ggf. Organisationsdaten verlangt werden kann. Laut Hersteller ist Anthropic für diese Verifikationsdaten verantwortlich, die ID-/Selfie-Bilder werden aber bei Persona gehalten und laut Anthropic nicht auf Anthropics Systemen kopiert oder für Modelltraining genutzt ([Identity verification on Claude](https://support.claude.com/en/articles/14328960-identity-verification-on-claude)).
+
+Geändert:
+
+- Account-, Freigabe- und Connector-Hinweise präzisiert: Bei Anthropic sollte vorab festgelegt werden, wer eine etwaige Verifikation überhaupt durchführen darf und ob Business-Verifikation statt ad hoc privater Individualverifikation zu nutzen ist; bei OpenAI sind Altbestände individuell autorisierter Sync-Verbindungen jetzt als konkreter Migrations- und Löschpunkt zu dokumentieren ([Identity verification on Claude](https://support.claude.com/en/articles/14328960-identity-verification-on-claude), [ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Admin controls, security, and compliance for plugins and apps](https://help.openai.com/en/articles/11509118-admin-controls-security-and-compliance-for-plugins-and-apps)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.15.0 - 11.08.2026
 
