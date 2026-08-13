@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.16.0
-Stand: 12.08.2026
+Aktuelle Version: 1.17.0
+Stand: 13.08.2026
 
 ## Versionsinfo
+
+### Version 1.17.0 - 13.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Hinweise zur Compliance-API-Abdeckung lokaler Cowork- und Claude-Code-Sitzungen ergänzt: Anthropic dokumentiert seit dem am 12.08.2026 aktualisierten Help-Center-Stand die Beta-Abdeckung von Cowork über Claude, Claude Desktop und Claude Mobile sowie von Claude Code über CLI und Claude Desktop in der Compliance API für Enterprise. Für lokale Cowork-Sitzungen nennt Anthropic zusätzlich, dass Session-Inhalte zwar in der Beta abrufbar sind, Lösch-Endpunkte dafür aber noch nicht bereitstehen ([Access the Compliance API](https://support.claude.com/en/articles/13015708-access-the-compliance-api), [Use Claude Cowork on Team and Enterprise plans](https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans), [Claude Code on Console to Enterprise migration](https://support.claude.com/en/articles/14128775-claude-code-on-console-to-enterprise-migration)).
+
+Geändert:
+
+- Frühere Cowork-Hinweise präzisiert: Für lokale Anthropic-Sitzungen reicht die Formulierung "nicht zentral exportierbar" nach dem aktuellen Herstellerstand nicht mehr aus. Zu dokumentieren ist jetzt getrennt, welche lokalen Cowork- und Claude-Code-Transkripte in der Enterprise-Beta über die Compliance API abrufbar sind, welche lokalen Daten weiterhin nicht zentral administrierbar bleiben und dass für lokale Sessions noch keine Lösch-Endpunkte dokumentiert sind ([Access the Compliance API](https://support.claude.com/en/articles/13015708-access-the-compliance-api), [Use Claude Cowork on Team and Enterprise plans](https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.16.0 - 12.08.2026
 
