@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.17.0
-Stand: 13.08.2026
+Aktuelle Version: 1.18.0
+Stand: 14.08.2026
 
 ## Versionsinfo
+
+### Version 1.18.0 - 14.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zu `Computer History` ergänzt: OpenAI dokumentiert in den Enterprise-&-Edu-Release-Notes vom 13.08.2026 eine optionale macOS-Funktion für ChatGPT Enterprise, die Kontext aus ausgewählten Apps und Websites in ChatGPT und Codex einbringt und dabei laut OpenAI Interaktionsereignisse, aber keine Screenshots, Bildschirmaufnahmen, Mikrofoneingaben oder Systemaudio erfasst. Die Funktion ist standardmäßig deaktiviert, rollenbasiert freizugeben, erfordert zusätzlich ein Nutzer-Opt-in und ist derzeit laut OpenAI nicht im EEA, im Vereinigten Königreich oder in der Schweiz verfügbar ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zu `Codex service accounts` und lokalen `access tokens` ergänzt: OpenAI beschreibt seit den Enterprise-&-Edu-Release-Notes vom 13.08.2026 dedizierte nicht-menschliche Workspace-Identitäten für CI-Runner und Scheduled Jobs. Die verifizierte OpenAI-Dokumentation trennt diese ausdrücklich von persönlichen Access Tokens und verweist auf getrennte Rollen-, Gruppen-, Plugin- und Token-Steuerung für vertrauenswürdige lokale Automatisierung ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Service accounts](https://learn.chatgpt.com/docs/enterprise/service-accounts), [Access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens)).
+
+Geändert:
+
+- Freigabe- und Governance-Hinweise präzisiert: Für OpenAI-Automatisierung ist jetzt getrennt zu dokumentieren, ob private Benutzerkonten, persönliche Access Tokens oder dedizierte Service Accounts genutzt werden; für `Computer History` sind Rollenfreigabe, App-/Site-Auswahl, Nutzer-Opt-in und interne Transparenz gesondert festzuhalten ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Service accounts](https://learn.chatgpt.com/docs/enterprise/service-accounts), [Access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.17.0 - 13.08.2026
 
