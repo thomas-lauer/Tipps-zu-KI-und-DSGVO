@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.18.0
-Stand: 14.08.2026
+Aktuelle Version: 1.19.0
+Stand: 15.08.2026
 
 ## Versionsinfo
+
+### Version 1.19.0 - 15.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zu `ChatGPT search` ergänzt: Beim am 15.08.2026 verifizierten Help-Center-Stand beschreibt OpenAI `ChatGPT search` für Enterprise und Edu als gesondert steuerbare Web-Funktion, bei der disassoziierte Suchanfragen und gegebenenfalls strukturierte Prompt-Daten an Bing oder spezialisierte Datenanbieter gehen können; die IP-Adresse selbst wird laut OpenAI nicht geteilt, ein ungefährer Standort aus der IP kann aber weitergegeben werden ([ChatGPT search for Enterprise and Edu](https://help.openai.com/en/articles/10093903-chatgpt-search-for-enterprise-and-edu)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Hinweise zu `Claude Tag` ergänzt: Beim am 15.08.2026 verifizierten Help-Center-Stand dokumentiert Anthropic die Slack-Integration als organisationsgebundene Identität mit kanal- und workspacebezogener Memory, Admin-Rechten zum Anzeigen/Bearbeiten/Löschen dieser Memory, getrennten Slack-/Claude-Historien und automatischer Löschung aus Claude innerhalb von 30 Tagen nach Trennung oder Deinstallation ([What is Claude Tag?](https://support.claude.com/en/articles/15594475-what-is-claude-tag)).
+
+Geändert:
+
+- Freigabe- und Governance-Hinweise präzisiert: Für `ChatGPT search` sind nun Workspace-/Rollenfreigaben, Bing-/Datenanbieter-Nutzung und die Weitergabe eines ungefähren Standorts aus der IP gesondert zu dokumentieren; für `Claude Tag` sind Kanal-/Rollenfreigaben, Organisationsidentität im Kanal, Direct-Message-Nutzung über persönliche Konten sowie die Abgrenzung zwischen Slack-Retention und Claude-Löschung getrennt festzuhalten ([ChatGPT search for Enterprise and Edu](https://help.openai.com/en/articles/10093903-chatgpt-search-for-enterprise-and-edu), [What is Claude Tag?](https://support.claude.com/en/articles/15594475-what-is-claude-tag)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.18.0 - 14.08.2026
 

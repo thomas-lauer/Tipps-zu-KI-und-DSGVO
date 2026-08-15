@@ -1,6 +1,6 @@
 # Datenschutz-Folgenabschätzung (DSFA) - Vorlage für KI-Nutzung
 
-Stand: 13.08.2026
+Stand: 15.08.2026
 Status: Vorlage, vor produktivem Einsatz ausfüllen und durch Datenschutzbeauftragte/Rechtsprüfung bewerten lassen.
 
 > Hinweis: Diese Vorlage ersetzt keine Rechtsberatung. Sie orientiert sich an Art. 35 DSGVO, den DPIA-Leitlinien WP248 rev.01/EDPB, DSK-Kurzpapier Nr. 5 und den DSK-Hinweisen zu KI. Wenn Informationen fehlen, als "offen" kennzeichnen.
@@ -53,6 +53,7 @@ Quellen: [Art. 35 DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/
 - Werden private MCP-Server angebunden und bleibt deren Adresse intern, z. B. über eine outbound-only-Tunnelarchitektur statt über einen öffentlichen Endpoint?
 - Werden OpenAI-Funktionen mit eigener Retention genutzt, z. B. Responses API mit `store`, Background Mode, Extended Prompt Caching, Hosted Shell, Code Interpreter, gehostete Skills, Assistants, Threads oder Vector Stores?
 - Wird bei OpenAI-API-Nutzung `Fast mode` eingesetzt, und ist dokumentiert, dass dieser Modus laut OpenAI zwar mit Data Residency, Zero Data Retention und BAA kompatibel ist, die Prüfung der konkret genutzten Endpunkte, Tools und der regionalen Verfügbarkeit aber unberührt lässt ([Fast mode](https://developers.openai.com/api/docs/guides/fast-mode), [Fast mode FAQ](https://help.openai.com/en/articles/11647665-fast-mode-faq))?
+- Wird `ChatGPT search` genutzt, und ist dokumentiert, dass OpenAI dafür disassoziierte Suchanfragen sowie gegebenenfalls strukturierte Prompt-Daten an Bing oder spezialisierte Datenanbieter sendet, dass die IP-Adresse selbst laut OpenAI nicht geteilt wird, ein ungefährer Standort aus der IP aber geteilt werden kann, und wie Workspace- bzw. Rollenfreigaben dafür gesetzt sind ([ChatGPT search for Enterprise and Edu](https://help.openai.com/en/articles/10093903-chatgpt-search-for-enterprise-and-edu))?
 - Werden ChatGPT Work oder Scheduled Tasks genutzt, und ist dokumentiert, welche lokalen Ordner, Apps oder Dateien freigegeben sind, ob Monitoring- oder Wiederholungsläufe stattfinden, dass Tasks in Projekten nicht auf Projektdateien zugreifen, dass Task-Konversationen in der Compliance API erscheinen und ob `Voice` in Work/Codex dieselben Tool- und Rechtepfade nutzen darf ([ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex), [Scheduled Tasks in ChatGPT](https://help.openai.com/en/articles/10291617-tasks-in-chatgpt), [ChatGPT Voice](https://help.openai.com/en/articles/20001274-chatgpt-voice-in-work-and-codex))?
 - Ist für berechtigte Enterprise-/Edu-Workspaces mit EKM dokumentiert, ob `Work Cloud`, `Work Local` und die Default-Aktivierung für Mitglieder der Default-Rolle zugelassen sind und wie Cloud-synchronisierte Work-Chats von lokalen Chats auf dem Gerät abgegrenzt werden ([ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex))?
 - Wird bei ChatGPT Desktop dokumentiert, ob In-App-Updates zentral deaktiviert oder zugelassen sind und wer neue Versionen sowie Sicherheitsfixes vor dem Rollout prüft und verteilt ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes))?
@@ -63,6 +64,7 @@ Quellen: [Art. 35 DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/
 - Werden bei Anthropic Team oder Enterprise `individual usage analytics` genutzt oder nach dem Default-Wechsel ab dem 11.07.2026 bewusst deaktiviert, und ist dokumentiert, wer nutzerbezogene Nutzungsdaten nach Produkt, Modell und Skill sehen darf ([View usage analytics for Team and Enterprise plans](https://support.claude.com/en/articles/12883420-view-usage-analytics-for-team-and-enterprise-plans))?
 - Wird bei Anthropic Enterprise eine organisations- oder rollenbezogene Modell-Allowlist mit Effort-Caps genutzt, damit nur freigegebene Modelle auswählbar sind ([Release notes, 01.07.2026](https://support.claude.com/en/articles/12138966-release-notes), [Manage model access for your organization](https://support.claude.com/en/articles/15694740-manage-model-access-for-your-organization))?
 - Werden bei Anthropic Skills oder Plugins genutzt, und ist dokumentiert, ob `Skill and plugin security scanning` aktiviert ist, dass diese Enterprise-Funktion standardmäßig deaktiviert ist, nur neue Uploads oder Änderungen scannt und wie Warnhinweise für riskante Inhalte behandelt werden ([Release notes](https://support.claude.com/en/articles/12138966-release-notes), [Provision and manage skills for your organization](https://support.claude.com/en/articles/13119606-provision-and-manage-skills-for-your-organization))?
+- Wird `Claude Tag` in Slack genutzt, und ist dokumentiert, in welchen Kanälen oder Rollen es unter der Organisationsidentität arbeiten darf, welche Direct-Message-Nutzung stattdessen über persönliche Claude-Konten läuft, wie kanal- bzw. workspacebezogene Memory überprüft oder gelöscht wird und wie sich die 30-Tage-Löschung in Claude nach Trennung oder Deinstallation von den Slack-Retention-Regeln abgrenzt ([What is Claude Tag?](https://support.claude.com/en/articles/15594475-what-is-claude-tag))?
 - Wird `ChatGPT Voice` in Work oder Codex genutzt, und ist dokumentiert, dass Voice seit den Enterprise-/Edu-Release-Notes vom 07.08.2026 auch Datei-Uploads und Projects unterstützt, dabei auf aktuelle Projekt-Chats, Quellen und Projektanweisungen zugreifen kann und `Live` bei aktivierter Voice-Funktion zum Standard werden kann ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes))?
 - Werden Outputs von OpenAI oder Anthropic veröffentlicht, geteilt oder in DMS-, RAG- oder Kommunikationsprozesse übernommen, und ist dokumentiert, welche maschinenlesbaren Herkunftssignale der konkrete Anbieter-, Modalitäts- und Exportpfad tatsächlich unterstützt, wie `openai.com/verify` oder andere Prüfwege eingebunden sind und wo Signale bei Copy/Paste, Konvertierung oder nicht unterstützten Pfaden entfallen können ([EU AI Act: OpenAI Resources and Customer Guidance](https://help.openai.com/en/articles/12141645-eu-ai-act-openai-resources-and-customer-guidance), [Provenance signals (Content Credentials, SynthID) in OpenAI-generated content](https://help.openai.com/en/articles/8912793-provenance-signals-content-credentials-synthid-in-openai-generated-content), [How Claude marks AI-generated content](https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content))?
 - Werden öffentlich zugängliche Webquellen oder bereits gescrapte Datensätze für Training, Fine-Tuning oder externe Wissensbestände genutzt, und ist deren Rechtsgrundlage gesondert dokumentiert ([Guidelines on web scraping](https://www.edpb.europa.eu/public-consultations/guidelines-on-web-scraping_en), [EDPB News, 08.07.2026](https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en))?
@@ -156,6 +158,7 @@ Offene Rechtsfragen:
 | Microsoft-365-`write tools`: Tenant-Re-Consent und fehlende Tagging-Abdeckung für Datei-/Kalenderwrites dokumentiert |  |
 | Private MCP-Server/Tunnelarchitektur mit Ziel- und Rollenbegrenzung dokumentiert |  |
 | OpenAI-Sync-Apps: Indexierung, Residency-Region und US-Azure-Fallback bewertet |  |
+| OpenAI-`ChatGPT search`: Web-search-Freigabe, externe Datenanbieter, ungefährer Standort aus IP und RBAC bewertet |  |
 | OpenAI-App-Unterhaltungen/App-Calls in Compliance API bzw. Compliance Logs berücksichtigt |  |
 | OpenAI Work/Codex/Agent: dokumentiert, dass Compliance API bzw. Compliance Logs Unterhaltungen und Responses, nicht aber Dateien, Aktionen oder Tool-Calls abdecken |  |
 | Für OpenAI-Compliance-Logs mit 30-Tage-Retention ist bei Bedarf ein laufender Export in SIEM/eDiscovery/Data Lake festgelegt |  |
@@ -173,6 +176,7 @@ Offene Rechtsfragen:
 | Getrennte Workspace-, Subscription- oder Sandbox-Konfiguration für solche Anthropic-Modelle dokumentiert |  |
 | Anthropic-Modellfreigaben / Effort-Caps organisations- oder rollenbezogen gesetzt |  |
 | Anthropic-`individual usage analytics` geprüft, begrenzt und intern transparent dokumentiert |  |
+| Anthropic-`Claude Tag`: Kanal-/Workspace-Memory, Slack-vs.-Claude-Historie, DM-vs.-Organisationsidentität und 30-Tage-Löschung bewertet |  |
 | Nutzung öffentlich zugänglicher Webdaten oder gescrapter Datensätze für Training/Fine-Tuning gesondert geprüft |  |
 | Anonymisierungsmethode dokumentiert; Re-Identifikationscheck statt bloßer Pseudonymisierung durchgeführt |  |
 | Extended Prompt Caching / Hosted Containers / gehostete Skills geprüft |  |
@@ -390,6 +394,7 @@ Erneute Prüfung bei:
 - [DSK RAG Orientierungshilfe](https://www.datenschutzkonferenz-online.de/media/oh/DSK_OH_RAG.pdf)
 - [EDPB AI Privacy Risks and Mitigations in LLMs](https://www.edpb.europa.eu/system/files/2025-04/ai-privacy-risks-and-mitigations-in-llms.pdf)
 - [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data)
+- [ChatGPT search for Enterprise and Edu](https://help.openai.com/en/articles/10093903-chatgpt-search-for-enterprise-and-edu)
 - [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp)
 - [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels)
 - [Guidelines on anonymisation](https://www.edpb.europa.eu/public-consultations/guidelines-on-anonymisation_en)
@@ -398,6 +403,7 @@ Erneute Prüfung bei:
 - [Claude Chat Search and Memory](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)
 - [Claude Enterprise Retention](https://support.claude.com/en/articles/10440198-configure-custom-data-retention-controls-for-enterprise-plans)
 - [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs)
+- [What is Claude Tag?](https://support.claude.com/en/articles/15594475-what-is-claude-tag)
 - [Anthropic API and Data Retention](https://platform.claude.com/docs/en/manage-claude/api-and-data-retention)
 - [Anthropic Message Batches](https://platform.claude.com/docs/en/build-with-claude/batch-processing)
 - [Art. 4 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-4)
