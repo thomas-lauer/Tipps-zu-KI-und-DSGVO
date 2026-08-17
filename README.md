@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.19.0
-Stand: 15.08.2026
+Aktuelle Version: 1.20.0
+Stand: 17.08.2026
 
 ## Versionsinfo
+
+### Version 1.20.0 - 17.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zu `ChatGPT workspace agents` und `app templates` ergänzt: Beim am 17.08.2026 verifizierten Stand der Enterprise-&-Edu-Release-Notes vom 28.05.2026 dokumentiert OpenAI rollenbezogene Veröffentlichungsrechte für Agents im gemeinsamen Workspace-Verzeichnis sowie templatebasierte Workspace-Apps für GitHub Enterprise, Snowflake und Databricks mit Konfigurationspunkten wie OAuth-Credentials, Webhooks, `managed MCP server URLs`, Rollenfreigaben und Action-Controls ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Admin controls, security, and compliance for plugins and apps](https://help.openai.com/en/articles/11509118-admin-controls-security-and-compliance-for-plugins-and-apps)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Hinweise zu Connector- und MCP-Governance ergänzt: Beim am 17.08.2026 verifizierten Help-Center-Stand beschreibt Anthropic technische Enterprise-Kontrollen, mit denen verifizierte Unternehmensdomains für bestimmte Connectoren auf Enterprise-Konten beschränkt, Connectoren per Identity-Provider zentral und rollenbezogen ausgerollt und Connector-Berechtigungen serverseitig über Claude-Web, Mobile, Cowork und Claude Code durchgesetzt werden können ([Restrict verified-domain connectors to your Enterprise](https://support.claude.com/en/articles/15402193-restrict-verified-domain-connectors-to-your-enterprise), [Authorize MCP connectors for your entire organization](https://support.claude.com/en/articles/15537633-authorize-mcp-connectors-for-your-entire-organization), [Set up role-based permissions on Enterprise plans](https://support.claude.com/en/articles/13930458-set-up-role-based-permissions-on-enterprise-plans), [Manage custom roles on Enterprise plans](https://support.claude.com/en/articles/13930452-manage-custom-roles-on-enterprise-plans)).
+
+Geändert:
+
+- Freigabe- und Governance-Hinweise präzisiert: Für OpenAI-Agentik ist jetzt getrennt zu dokumentieren, wer Agents veröffentlichen darf, welche App-Aktionen pro Agent zulässig sind und ob templatebasierte Apps mit Webhook-, Connector- oder `managed MCP`-Anbindung in die Workspace-Whitelist aufgenommen werden. Für Anthropic-Connectoren ist zusätzlich zu dokumentieren, ob persönliche Claude-Konten technisch von Unternehmens-Connectoren ausgeschlossen werden, welche Rollen Connectoren automatisch erhalten und wo lokale oder Drittplattform-Wege außerhalb der serverseitigen Connector-Steuerung verbleiben ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Admin controls, security, and compliance for plugins and apps](https://help.openai.com/en/articles/11509118-admin-controls-security-and-compliance-for-plugins-and-apps), [Restrict verified-domain connectors to your Enterprise](https://support.claude.com/en/articles/15402193-restrict-verified-domain-connectors-to-your-enterprise), [Authorize MCP connectors for your entire organization](https://support.claude.com/en/articles/15537633-authorize-mcp-connectors-for-your-entire-organization), [Manage custom roles on Enterprise plans](https://support.claude.com/en/articles/13930452-manage-custom-roles-on-enterprise-plans)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.19.0 - 15.08.2026
 
