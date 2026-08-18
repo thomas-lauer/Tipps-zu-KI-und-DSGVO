@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.20.0
-Stand: 17.08.2026
+Aktuelle Version: 1.21.0
+Stand: 18.08.2026
 
 ## Versionsinfo
+
+### Version 1.21.0 - 18.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zu `Workspace analytics`, `Task insights`, `Personal Analytics plugin`, Audit-Logs im `Global Admin Console` und additiver RBAC-Logik ergänzt: Beim am 18.08.2026 verifizierten Stand dokumentiert OpenAI per-user usage metrics, CSV-Exporte, optionale Aufgabenkategorisierung, neue Audit-Log-Einsicht für Workspace-Owner/-Admins sowie Rollenlogik mit `Default`/`On`/`Off`, bei der ein explizites `Off` eine Berechtigung trotz anderer Rollen sperrt ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Workspace analytics for ChatGPT Enterprise and Edu](https://help.openai.com/en/articles/10875114-workspace-analytics-for-chatgpt-enterprise-and-edu), [Global Admin Console](https://help.openai.com/en/articles/12289294-global-admin-console), [Role Based Access Controls for ChatGPT Enterprise](https://help.openai.com/en/articles/11750701)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Hinweise zu `Claim and migrate accounts on your domain` ergänzt: Anthropic dokumentiert seit dem am 18.08.2026 verifizierten Help-Center-Stand ein Enterprise-Verfahren zum organisationsweiten Claiming und Migrieren privater Claude-Konten auf verifizierten Unternehmensdomains mit SSO-/JIT-/SCIM-Voraussetzungen, einmaligem 30-Tage-Migrationsfenster und Ausschluss einer Datenübernahme bei aktivierter HIPAA-readiness oder CMEK ([Claim and migrate accounts on your domain](https://support.claude.com/en/articles/14625619-claim-and-migrate-accounts-on-your-domain)).
+
+Geändert:
+
+- Freigabe- und Governance-Hinweise präzisiert: Für OpenAI-Analytics ist jetzt getrennt zu dokumentieren, wer Audit- oder Nutzungsdaten sehen darf, ob `Task insights` oder das `Personal Analytics plugin` aktiviert sind und dass bereits erzeugte aggregierte `Task insights`-Daten laut OpenAI bei späterem Abschalten derzeit nicht gelöscht werden. Für Anthropic-Domain-Claiming ist zusätzlich zu dokumentieren, ob alle betroffenen Nutzer vor Aktivierung im IdP sind, wie das 30-Tage-Fenster begleitet wird und ob nur `join fresh` statt Datenmigration zulässig ist ([Workspace analytics for ChatGPT Enterprise and Edu](https://help.openai.com/en/articles/10875114-workspace-analytics-for-chatgpt-enterprise-and-edu), [Claim and migrate accounts on your domain](https://support.claude.com/en/articles/14625619-claim-and-migrate-accounts-on-your-domain)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.20.0 - 17.08.2026
 

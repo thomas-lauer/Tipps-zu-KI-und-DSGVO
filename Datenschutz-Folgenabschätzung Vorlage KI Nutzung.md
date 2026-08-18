@@ -1,6 +1,6 @@
 # Datenschutz-Folgenabschätzung (DSFA) - Vorlage für KI-Nutzung
 
-Stand: 17.08.2026
+Stand: 18.08.2026
 Status: Vorlage, vor produktivem Einsatz ausfüllen und durch Datenschutzbeauftragte/Rechtsprüfung bewerten lassen.
 
 > Hinweis: Diese Vorlage ersetzt keine Rechtsberatung. Sie orientiert sich an Art. 35 DSGVO, den DPIA-Leitlinien WP248 rev.01/EDPB, DSK-Kurzpapier Nr. 5 und den DSK-Hinweisen zu KI. Wenn Informationen fehlen, als "offen" kennzeichnen.
@@ -62,11 +62,14 @@ Quellen: [Art. 35 DSGVO, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/
 - Wird in ChatGPT Enterprise `Computer History` genutzt, obwohl OpenAI die Funktion seit den Release Notes vom 13.08.2026 als optionale macOS-Funktion mit Interaktionsereignissen aus ausgewählten Apps und Websites beschreibt, die standardmäßig deaktiviert ist, rollenbasiert freigegeben wird und derzeit nicht im EEA, im Vereinigten Königreich oder in der Schweiz verfügbar ist ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes))?
 - Werden für Codex-Automatisierungen dedizierte `service accounts` oder persönliche `access tokens` genutzt, und ist dokumentiert, welche Rollen, Gruppen, Plugins, Token-Laufzeiten und vertrauenswürdigen Runner dafür freigegeben sind ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Service accounts](https://learn.chatgpt.com/docs/enterprise/service-accounts), [Access tokens](https://learn.chatgpt.com/docs/enterprise/access-tokens))?
 - Werden OpenAI-`workspace agents` oder aus `app templates` veröffentlichte Workspace-Apps genutzt, und ist dokumentiert, welche Rollen Agents in das gemeinsame Directory veröffentlichen dürfen, welche App-Aktionen pro Agent erlaubt sind, wann Endnutzer Freigaben erteilen müssen und ob providerbezogene Konfigurationen wie OAuth-Credentials, Webhooks oder `managed MCP server URLs` für GitHub Enterprise, Snowflake oder Databricks tatsächlich freigegeben sind ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Admin controls, security, and compliance for plugins and apps](https://help.openai.com/en/articles/11509118-admin-controls-security-and-compliance-for-plugins-and-apps))?
+- Sind bei OpenAI `Workspace analytics`, `Task insights`, Audit-Ansichten im `Global Admin Console` oder das `Personal Analytics plugin` aktiviert, und ist dokumentiert, wer Audit-Ereignisse, per-user usage metrics, CSV-Exporte oder aggregierte Workspace-Trends sehen darf, dass Workspace Analytics laut OpenAI kein Rohlog-Interface ist und dass in EU-Residency-Workspaces `Task insights` standardmäßig aus ist, bereits erzeugte aggregierte Daten laut OpenAI bei späterem Abschalten aber derzeit nicht gelöscht werden ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Workspace analytics for ChatGPT Enterprise and Edu](https://help.openai.com/en/articles/10875114-workspace-analytics-for-chatgpt-enterprise-and-edu), [Global Admin Console](https://help.openai.com/en/articles/12289294-global-admin-console))?
+- Ist die OpenAI-Rollenlogik mit additiver RBAC dokumentiert, also `Default`/`On`/`Off`, Mehrfachrollen, explizites `Off` als Sperre trotz anderer Freigaben und ein möglicher zusätzlicher Eingriff von `Lockdown Mode`, bevor Funktionen wie Websuche, Apps, Work oder Agentik freigegeben werden ([Role Based Access Controls for ChatGPT Enterprise](https://help.openai.com/en/articles/11750701))?
 - Werden Anthropic-Funktionen mit eigener Retention genutzt, z. B. Claude Enterprise-Projekte, Audit Logs, Message Batches, `covered models` wie Claude Fable 5 oder API-Features ohne ZDR?
 - Werden bei Anthropic Team oder Enterprise `individual usage analytics` genutzt oder nach dem Default-Wechsel ab dem 11.07.2026 bewusst deaktiviert, und ist dokumentiert, wer nutzerbezogene Nutzungsdaten nach Produkt, Modell und Skill sehen darf ([View usage analytics for Team and Enterprise plans](https://support.claude.com/en/articles/12883420-view-usage-analytics-for-team-and-enterprise-plans))?
 - Wird bei Anthropic Enterprise eine organisations- oder rollenbezogene Modell-Allowlist mit Effort-Caps genutzt, damit nur freigegebene Modelle auswählbar sind ([Release notes, 01.07.2026](https://support.claude.com/en/articles/12138966-release-notes), [Manage model access for your organization](https://support.claude.com/en/articles/15694740-manage-model-access-for-your-organization))?
 - Werden bei Anthropic Skills oder Plugins genutzt, und ist dokumentiert, ob `Skill and plugin security scanning` aktiviert ist, dass diese Enterprise-Funktion standardmäßig deaktiviert ist, nur neue Uploads oder Änderungen scannt und wie Warnhinweise für riskante Inhalte behandelt werden ([Release notes](https://support.claude.com/en/articles/12138966-release-notes), [Provision and manage skills for your organization](https://support.claude.com/en/articles/13119606-provision-and-manage-skills-for-your-organization))?
 - Wird `Claude Tag` in Slack genutzt, und ist dokumentiert, in welchen Kanälen oder Rollen es unter der Organisationsidentität arbeiten darf, welche Direct-Message-Nutzung stattdessen über persönliche Claude-Konten läuft, wie kanal- bzw. workspacebezogene Memory überprüft oder gelöscht wird und wie sich die 30-Tage-Löschung in Claude nach Trennung oder Deinstallation von den Slack-Retention-Regeln abgrenzt ([What is Claude Tag?](https://support.claude.com/en/articles/15594475-what-is-claude-tag))?
+- Ist für Anthropic-Enterprise-Domain-Claiming dokumentiert, ob SSO erzwungen, JIT oder SCIM aktiviert, alle betroffenen Nutzer im IdP vorhanden und die betroffenen persönlichen Claude-Konten vorab inventarisiert sind, dass nach Aktivierung von `Migrate accounts using your domain` ein organisationsweites 30-Tage-Fenster gilt und dass bei HIPAA-readiness oder CMEK laut Anthropic nur `join fresh` ohne Datenübernahme möglich ist ([Claim and migrate accounts on your domain](https://support.claude.com/en/articles/14625619-claim-and-migrate-accounts-on-your-domain))?
 - Wird `ChatGPT Voice` in Work oder Codex genutzt, und ist dokumentiert, dass Voice seit den Enterprise-/Edu-Release-Notes vom 07.08.2026 auch Datei-Uploads und Projects unterstützt, dabei auf aktuelle Projekt-Chats, Quellen und Projektanweisungen zugreifen kann und `Live` bei aktivierter Voice-Funktion zum Standard werden kann ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes))?
 - Werden Outputs von OpenAI oder Anthropic veröffentlicht, geteilt oder in DMS-, RAG- oder Kommunikationsprozesse übernommen, und ist dokumentiert, welche maschinenlesbaren Herkunftssignale der konkrete Anbieter-, Modalitäts- und Exportpfad tatsächlich unterstützt, wie `openai.com/verify` oder andere Prüfwege eingebunden sind und wo Signale bei Copy/Paste, Konvertierung oder nicht unterstützten Pfaden entfallen können ([EU AI Act: OpenAI Resources and Customer Guidance](https://help.openai.com/en/articles/12141645-eu-ai-act-openai-resources-and-customer-guidance), [Provenance signals (Content Credentials, SynthID) in OpenAI-generated content](https://help.openai.com/en/articles/8912793-provenance-signals-content-credentials-synthid-in-openai-generated-content), [How Claude marks AI-generated content](https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content))?
 - Werden öffentlich zugängliche Webquellen oder bereits gescrapte Datensätze für Training, Fine-Tuning oder externe Wissensbestände genutzt, und ist deren Rechtsgrundlage gesondert dokumentiert ([Guidelines on web scraping](https://www.edpb.europa.eu/public-consultations/guidelines-on-web-scraping_en), [EDPB News, 08.07.2026](https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en))?
@@ -168,6 +171,8 @@ Offene Rechtsfragen:
 | ChatGPT-Enterprise-`Computer History` und einbezogene Apps/Websites bewertet |  |
 | OpenAI-Codex-Automatisierung: `service accounts`, Plugins, Token-Laufzeiten und Trusted Runner dokumentiert |  |
 | OpenAI-`workspace agents`/`app templates`: Publishing-Rechte, App-Aktionen, Freigabe- und `managed MCP`-Konfiguration dokumentiert |  |
+| OpenAI-`Workspace analytics`/`Task insights`/`Personal Analytics plugin`: Zweck, Rollen, Exporte, EU-Residency-Default und Nicht-Löschung bereits erzeugter aggregierter `Task insights`-Daten bewertet |  |
+| OpenAI-RBAC-Logik mit `Default`/`On`/`Off`, Mehrfachrollen und `Lockdown Mode` dokumentiert |  |
 | Datenresidenz | EU / USA / global / offen |
 | SCC/DPF/TIA geprüft |  |
 | Training/Model Improvement deaktiviert |  |
@@ -181,6 +186,7 @@ Offene Rechtsfragen:
 | Anthropic-`individual usage analytics` geprüft, begrenzt und intern transparent dokumentiert |  |
 | Anthropic-`Claude Tag`: Kanal-/Workspace-Memory, Slack-vs.-Claude-Historie, DM-vs.-Organisationsidentität und 30-Tage-Löschung bewertet |  |
 | Anthropic-Connector-Governance: `verified-domain`-Sperre, `Enterprise-managed auth`, Rollen-/Scope-Zuweisung und serverseitige Durchsetzung bewertet |  |
+| Anthropic-Domain-Claiming/Migration: SSO/JIT/SCIM, IdP-Abgleich, 30-Tage-Frist, Deaktivierung nicht migrierter Privatkonten und HIPAA-/CMEK-Ausnahme bewertet |  |
 | Nutzung öffentlich zugänglicher Webdaten oder gescrapter Datensätze für Training/Fine-Tuning gesondert geprüft |  |
 | Anonymisierungsmethode dokumentiert; Re-Identifikationscheck statt bloßer Pseudonymisierung durchgeführt |  |
 | Extended Prompt Caching / Hosted Containers / gehostete Skills geprüft |  |
@@ -249,6 +255,7 @@ Bewertungsskala:
 | Zusätzliche Nutzungs- oder Beschäftigtentransparenz durch `Computer History` |  |  |  | Rollenfreigabe, Opt-in, App-/Site-Begrenzung, Transparenz, ggf. Mitbestimmung |  |
 | Persönliche Tokens oder überprivilegierte `service accounts` in Codex-Automatisierungen |  |  |  | Service-Account-Trennung, Least Privilege, Token-Rotation, Trusted Runner |  |
 | Unverhältnismäßige Mitarbeitertransparenz oder faktische Leistungsüberwachung durch nutzerbezogene KI-Analytics |  |  |  | Zweckbegrenzung, Rollenbeschränkung, interne Transparenz, ggf. Mitbestimmung |  |
+| Kontosperre, ungeplante Datenübernahme oder Datenverlust bei Anthropic-Domain-Claiming |  |  |  | IdP-Abgleich, SSO/JIT/SCIM vor Aktivierung, Nutzerkommunikation, Fristmanagement, dokumentierte `join fresh`-/Merge-Entscheidung |  |
 | Unvollständige KI-VO-Einstufung oder fehlende Transparenz |  |  |  | KI-VO-Kurzcheck, Schulung, Kennzeichnung, Dokumentation |  |
 | Unklare Löschung aus Logs/Backups/Indexen |  |  |  | Löschkonzept, Anbieterprüfung |  |
 | Fehlende Transparenz gegenüber Betroffenen |  |  |  | Datenschutzhinweise, interne Hinweise |  |
@@ -399,6 +406,10 @@ Erneute Prüfung bei:
 - [EDPB AI Privacy Risks and Mitigations in LLMs](https://www.edpb.europa.eu/system/files/2025-04/ai-privacy-risks-and-mitigations-in-llms.pdf)
 - [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data)
 - [ChatGPT search for Enterprise and Edu](https://help.openai.com/en/articles/10093903-chatgpt-search-for-enterprise-and-edu)
+- [ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes)
+- [Workspace analytics for ChatGPT Enterprise and Edu](https://help.openai.com/en/articles/10875114-workspace-analytics-for-chatgpt-enterprise-and-edu)
+- [Global Admin Console](https://help.openai.com/en/articles/12289294-global-admin-console)
+- [Role Based Access Controls for ChatGPT Enterprise](https://help.openai.com/en/articles/11750701)
 - [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp)
 - [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels)
 - [Guidelines on anonymisation](https://www.edpb.europa.eu/public-consultations/guidelines-on-anonymisation_en)
@@ -408,6 +419,7 @@ Erneute Prüfung bei:
 - [Claude Enterprise Retention](https://support.claude.com/en/articles/10440198-configure-custom-data-retention-controls-for-enterprise-plans)
 - [Claude Audit Logs](https://support.claude.com/en/articles/9970975-access-audit-logs)
 - [What is Claude Tag?](https://support.claude.com/en/articles/15594475-what-is-claude-tag)
+- [Claim and migrate accounts on your domain](https://support.claude.com/en/articles/14625619-claim-and-migrate-accounts-on-your-domain)
 - [Anthropic API and Data Retention](https://platform.claude.com/docs/en/manage-claude/api-and-data-retention)
 - [Anthropic Message Batches](https://platform.claude.com/docs/en/build-with-claude/batch-processing)
 - [Art. 4 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-4)
