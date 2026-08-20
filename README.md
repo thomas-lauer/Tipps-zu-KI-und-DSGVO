@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.21.0
-Stand: 18.08.2026
+Aktuelle Version: 1.22.0
+Stand: 20.08.2026
 
 ## Versionsinfo
+
+### Version 1.22.0 - 20.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zu `OpenAI Presence` ergänzt: OpenAI dokumentiert `Presence` als separates, gemanagtes Enterprise-Produkt für stark kontrollierte agentische Workflows mit Testing-, Guardrail-, Monitoring- und Human-Handoff-Funktionen; welche Daten zugänglich sind, geloggt, maskiert, gespeichert oder wie lange aufbewahrt werden, ist laut OpenAI deployment-spezifisch in Architektur, Security-Dokumentation und Vertrag zu prüfen ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [OpenAI Presence](https://help.openai.com/en/articles/20001405)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Hinweise zur freiwilligen Migration persönlicher Claude-Konten in Team-/Enterprise-Organisationen ergänzt: Laut dem am 20.08.2026 verifizierten Help-Center-Stand können dabei u. a. Chats, Projekte, Dateien, Tasks, Projekt-Sync-Konfigurationen, Memory und Claude-Code-Einstellungen mitwandern, während z. B. Custom Skills, App-Logins, eigene Connectoren, öffentliche Share-Links, Cowork-Task-/Session-Historien, lokale Cowork-Daten und Claude-Code-Cloud-Sessions nicht migriert werden ([Move your personal Claude account to a Team or Enterprise organization](https://support.claude.com/en/articles/9267400-move-your-personal-claude-account-to-a-team-or-enterprise-organization)).
+
+Geändert:
+
+- Freigabe- und Governance-Hinweise präzisiert: Für OpenAI-Agentik ist jetzt ausdrücklich zwischen `Workspace Agents` innerhalb von ChatGPT und `OpenAI Presence` als separatem Deployment mit eigener Daten- und Logging-Architektur zu unterscheiden. Für Anthropic-Konto-Migrationen ist zusätzlich zum Domain-Claiming nun getrennt zu dokumentieren, welche Inhalte bei freiwilliger Migration in den Unternehmens-Workspace übergehen dürfen und welche vorher separat gesichert oder neu verbunden werden müssen ([OpenAI Presence](https://help.openai.com/en/articles/20001405), [Move your personal Claude account to a Team or Enterprise organization](https://support.claude.com/en/articles/9267400-move-your-personal-claude-account-to-a-team-or-enterprise-organization)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.21.0 - 18.08.2026
 
