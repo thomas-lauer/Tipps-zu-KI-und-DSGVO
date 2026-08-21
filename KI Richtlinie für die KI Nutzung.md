@@ -1,6 +1,6 @@
 # KI-Richtlinie für die KI-Nutzung
 
-Stand: 20.08.2026
+Stand: 21.08.2026
 Status: Vorlage für Unternehmen/Organisationen
 
 > Ziel dieser Richtlinie ist eine produktive, sichere und DSGVO-konforme Nutzung von KI-Systemen wie Claude.ai, OpenAI/ChatGPT, API-Diensten, RAG-Systemen und vergleichbaren Tools. Diese Vorlage muss an Organisation, Rollen, Tools und Rechtsgrundlagen angepasst werden.
@@ -237,7 +237,9 @@ Mindestanforderungen:
 - bei ChatGPT Work, Codex oder Agent getrennt dokumentieren, dass Compliance API/Compliance Logs zwar Unterhaltungen und Responses, nicht aber Dateien, Aktionen oder Tool-Calls abdecken; für Aufbewahrung über 30 Tage ist ein laufender Export vorzusehen
 - ChatGPT-Library-Dateien und Chat-Löschung getrennt steuern; das Löschen eines Chats entfernt gespeicherte Library-Dateien nicht automatisch
 - wenn In-App-Updates der ChatGPT-Desktop-App organisatorisch deaktiviert werden, Releases und Sicherheitsfixes über einen eigenen Freigabe- und Patchprozess zeitnah verteilen
-- `ChatGPT Enterprise`-`Computer History` nur nach separater Freigabe einsetzen; dokumentieren, welche Apps/Websites einbezogen werden, dass laut OpenAI nur Interaktionsereignisse und keine Screenshots, Bildschirmaufnahmen, Mikrofoneingaben oder Systemaudio erfasst werden, dass Private Browsing ausgenommen ist, die Funktion standardmäßig aus ist und Nutzer zusätzlich opt-in müssen; derzeit ist sie laut OpenAI nicht im EEA, im Vereinigten Königreich oder in der Schweiz verfügbar
+- `ChatGPT`-`Computer History` nur nach separater Freigabe einsetzen; dokumentieren, welche Apps/Websites einbezogen werden, dass laut OpenAI nur Interaktionsereignisse und keine Screenshots, Bildschirmaufnahmen, Mikrofoneingaben oder Systemaudio erfasst werden, dass Private Browsing ausgenommen ist, die Funktion standardmäßig aus ist, `Memories` voraussetzt und Nutzer zusätzlich opt-in müssen; seit dem 20.08.2026 ist sie laut OpenAI für Business und Enterprise auf macOS auch im EEA, im Vereinigten Königreich und in der Schweiz verfügbar
+- `Apple Messages` in ChatGPT Work oder Codex nur nach separater Freigabe einsetzen; dokumentieren, dass das Plugin auf Apple-Silicon-Macs iMessage-, SMS- und RCS-Chats lesen und durchsuchen sowie Nachrichten vorbereiten oder senden kann, dass standardmäßig vor dem Senden Freigaben für Nachricht und Empfänger nötig sind und dauerhafte Chat-Freigaben nur für ausdrücklich vertrauenswürdige Chats zulässig sein sollen
+- schreibgeschützte Codex-Snapshots oder Workspace-Share-Links nur nach separater Freigabe einsetzen; vor jeder Weitergabe ist zu prüfen, ob Nachrichten, Reasoning-Zusammenfassungen, Bilder, Dateipfade oder Diffs sensible Inhalte enthalten, weil OpenAI nur bekannte Secret-Muster automatisch redigiert
 - Codex-Automatisierungen möglichst über dedizierte `service accounts` oder klar getrennte `access tokens` mit eigener Rollen-, Gruppen- und Plugin-Konfiguration betreiben; persönliche Tokens nur auf vertrauenswürdigen Runnern einsetzen, sicher speichern und regelmäßig rotieren
 - OpenAI-`Workspace analytics`, `Task insights`, `Personal Analytics plugin` und Audit-Ansichten im `Global Admin Console` nur mit dokumentiertem Zweck, enger Rollenfreigabe und interner Transparenz aktivieren; per-user usage metrics und CSV-Exporte gesondert bewerten
 - OpenAI-RBAC so konfigurieren, dass `Default`/`On`/`Off`, explizite `Off`-Vetos, Mehrfachrollen und `Lockdown Mode` berücksichtigt werden
@@ -464,15 +466,19 @@ Diese Richtlinie wird mindestens jährlich und bei wesentlichen Änderungen aktu
 - [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content)
 - [Commission Opinion on the assessment of the Code of Practice on Transparency of AI-generated content](https://digital-strategy.ec.europa.eu/en/library/commission-opinion-assessment-code-practice-transparency-ai-generated-content)
 - [OpenAI Data controls](https://developers.openai.com/api/docs/guides/your-data)
+- [ChatGPT Business - Release Notes](https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes)
 - [ChatGPT search for Enterprise and Edu](https://help.openai.com/en/articles/10093903-chatgpt-search-for-enterprise-and-edu)
 - [ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes)
+- [Computer History](https://developers.openai.com/codex/customization/computer-history)
 - [OpenAI Presence](https://help.openai.com/en/articles/20001405)
 - [Workspace analytics for ChatGPT Enterprise and Edu](https://help.openai.com/en/articles/10875114-workspace-analytics-for-chatgpt-enterprise-and-edu)
 - [Global Admin Console](https://help.openai.com/en/articles/12289294-global-admin-console)
 - [Role Based Access Controls for ChatGPT Enterprise](https://help.openai.com/en/articles/11750701)
 - [OpenAI MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp)
 - [OpenAI Secure MCP Tunnel](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels)
+- [Plugins - ChatGPT Learn](https://developers.openai.com/codex/plugins)
 - [ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex)
+- [Use ChatGPT](https://developers.openai.com/codex/use-chatgpt)
 - [Scheduled Tasks in ChatGPT](https://help.openai.com/en/articles/10291617-tasks-in-chatgpt)
 - [Guidelines on anonymisation](https://www.edpb.europa.eu/public-consultations/guidelines-on-anonymisation_en)
 - [Guidelines on web scraping](https://www.edpb.europa.eu/public-consultations/guidelines-on-web-scraping_en)

@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.22.0
-Stand: 20.08.2026
+Aktuelle Version: 1.23.0
+Stand: 21.08.2026
 
 ## Versionsinfo
+
+### Version 1.23.0 - 21.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zu `Apple Messages` in ChatGPT Work und Codex ergänzt: Auf Apple-Silicon-Macs kann das Plugin iMessage-, SMS- und RCS-Unterhaltungen lesen und durchsuchen sowie Nachrichten vorbereiten oder senden; standardmäßig ist vor dem Senden die Freigabe von Nachricht und Empfängern erforderlich, dauerhafte Sendefreigaben pro Chat sind aber möglich ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Plugins - ChatGPT Learn](https://developers.openai.com/codex/plugins)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zu schreibgeschützten Codex-Snapshots ergänzt: Workspace-Links sind auf Mitglieder des Ursprungs-Workspaces begrenzt, Snapshots können laut OpenAI aber u. a. Nachrichten, Reasoning-Zusammenfassungen, Bilder, Dateipfade und Diffs enthalten; bekannte Secret-Muster werden redigiert, sensible Inhalte können dennoch verbleiben ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Use ChatGPT](https://developers.openai.com/codex/use-chatgpt)).
+
+Geändert:
+
+- Die bisherigen Hinweise zu `Computer History` korrigiert: Seit den Release Notes vom 20.08.2026 ist die Funktion für Business- bzw. Enterprise-Nutzer in der ChatGPT-macOS-App auch im EEA, im Vereinigten Königreich und in der Schweiz verfügbar; sie bleibt standardmäßig deaktiviert, erfordert `Memories`, eine Admin-Freigabe im Workspace und zusätzlich ein individuelles Opt-in ([ChatGPT Business - Release Notes](https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes), [ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Computer History](https://developers.openai.com/codex/customization/computer-history)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.22.0 - 20.08.2026
 
