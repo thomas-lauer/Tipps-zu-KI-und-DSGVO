@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.23.0
-Stand: 21.08.2026
+Aktuelle Version: 1.23.1
+Stand: 22.08.2026
 
 ## Versionsinfo
+
+### Version 1.23.1 - 22.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zu `workspace-scoped Admin APIs` und `Admin keys` ergänzt: Seit dem Release-Stand vom 20.08.2026 können Workspace-Owner und -Admins Einladungen sowie Mitglieder automatisiert verwalten; laut der am 22.08.2026 verifizierten Admin-Key-Dokumentation können Admin Keys u. a. Analytics, Gruppen-/Mitgliedschaftslisten, Service-Accounts oder Compliance-Endpunkte steuern, gewähren aber keinen Modellzugriff und sind von `service-account access tokens` zu trennen ([ChatGPT Enterprise & Edu - Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes), [Managing Admin keys in the Credentials tab](https://help.openai.com/en/articles/20001407-managing-admin-keys-in-the-credentials-tab)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um präzisierte Anthropic-Hinweise zu `memory stores` in `self-hosted sandboxes` ergänzt: Laut aktueller Sandbox- und Sicherheitsdokumentation bleiben `memory stores` einschließlich Versionshistorie bei Anthropic gehostet; lokal liegt nur eine synchronisierte Arbeitskopie unter `/mnt/memory/`, die bei fehlgeschlagenem Worker-Teardown zurückbleiben kann und dann in eigener Verantwortung zu bereinigen ist ([Self-hosted sandboxes](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes), [Security model](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-security)).
+
+Geändert:
+
+- Die bisherigen Hinweise zu Anthropic-`self-hosted sandboxes` präzisiert: `read_only` schützt laut aktueller Dokumentation nur vor Rückschreiben in den zentralen Store, nicht zwingend vor lokalen Änderungen etwa über `bash`, Custom Tools oder eigene MCP-Server; Synchronisationskonflikte werden zugunsten des zentralen Stores aufgelöst ([Self-hosted sandboxes](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes), [Security model](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-security)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.23.0 - 21.08.2026
 
