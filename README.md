@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.23.1
-Stand: 22.08.2026
+Aktuelle Version: 1.24.0
+Stand: 23.08.2026
 
 ## Versionsinfo
+
+### Version 1.24.0 - 23.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Hinweise zur `Compliance Platform` ergänzt: Beim am 23.08.2026 verifizierten Help-Center-Stand beschreibt OpenAI die Enterprise-/Edu-Compliance jetzt ausdrücklich als Kombination aus `Compliance Logs Platform` für unveränderliche, nur anhängbare Audit-Events und `Stateful Compliance API` für zustandsbezogene Abfragen. Die Logs werden laut OpenAI 30 Tage vorgehalten; für längere Aufbewahrung ist ein laufender Export nötig. Löschungen über die API machen Daten nicht wiederherstellbar, beseitigen aber laut OpenAI keine intern zu Audit- oder Sicherheitszwecken protokollierten Daten; außerdem werden alle authentifizierten Zugriffe auf diese API selbst protokolliert ([OpenAI Compliance Platform for Enterprise and Edu Customers](https://help.openai.com/en/articles/9261474-openai-compliance-platform-for-enterprise-and-edu-customers)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Anthropic-Hinweise zu `Playground`/`Workbench (legacy)` ergänzt: Beim am 23.08.2026 verifizierten Help-Center-Stand speichert der neue Playground laut Anthropic weder Prompt-Historie noch Gespräche serverseitig; der aktuelle Entwurf bleibt im Browser. Gespeicherte Legacy-Workbench-Daten können nur noch bis zum 01.09.2026 aus der Claude Console exportiert werden und sind danach laut Anthropic nicht mehr wiederherstellbar ([How do I use the playground?](https://support.claude.com/en/articles/8606378-how-do-i-use-the-playground)).
+
+Geändert:
+
+- Hinweise zu Anthropic-Konto-Migrationen präzisiert: Laut der am 23.08.2026 verifizierten Migrationsdokumentation wandern `Claude Design`-Systeme und -Projekte nur dann mit, wenn sie seit dem 14.08.2026 migriert wurden; vor dem 14.08.2026 migrierte Design-Inhalte werden ausdrücklich nicht übernommen ([Move your personal Claude account to a Team or Enterprise organization](https://support.claude.com/en/articles/9267400-move-your-personal-claude-account-to-a-team-or-enterprise-organization)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.23.1 - 22.08.2026
 
