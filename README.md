@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.24.0
-Stand: 23.08.2026
+Aktuelle Version: 1.25.0
+Stand: 24.08.2026
 
 ## Versionsinfo
+
+### Version 1.25.0 - 24.08.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen neuen Anthropic-Hinweis zu Google-Workspace-Connectoren ergänzt: Beim am 24.08.2026 verifizierten Help-Center-Stand speichert Anthropic über Gmail-, Drive- und Calendar-Connectoren abgerufene Daten auf Anthropic-Servern zusammen mit dem zugehörigen Chat; laut Anthropic können diese Daten grundsätzlich über die Löschung des Chats entfernt werden. Für Team- und Enterprise-Pläne werden die Connectoren erst nach Owner-/Primary-Owner-Freigabe nutzbar. Anthropic erklärt außerdem, die Connector-Daten selbst nicht für Modelltraining zu verwenden; bei Consumer-Nutzung mit aktiviertem Trainings-Opt-in können aber kopierte Inhalte oder Antworten mit solchen Daten weiterhin in die Modellverbesserung einfließen ([Use Google Workspace connectors](https://support.claude.com/en/articles/10166901-use-google-workspace-connectors)).
+
+Geändert:
+
+- Freigabe-, Lösch- und Trainingshinweise zu Anthropic-Connectoren präzisiert: Für Google-Workspace-Connectoren ist nun gesondert zu dokumentieren, ob nur Team-/Enterprise-Nutzung zulässig ist, wie Chat-Löschung als Löschpfad organisatorisch umgesetzt wird und dass Consumer-Konten mit Trainings-Opt-in trotz fehlendem Connector-Training über kopierte Inhalte oder Antworten weiterhin ein Trainingsrisiko auslösen können ([Use Google Workspace connectors](https://support.claude.com/en/articles/10166901-use-google-workspace-connectors)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.24.0 - 23.08.2026
 
