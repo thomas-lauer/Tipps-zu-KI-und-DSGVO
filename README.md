@@ -42,10 +42,25 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.25.0
-Stand: 24.08.2026
+Aktuelle Version: 1.26.0
+Stand: 17.10.2026
 
 ## Versionsinfo
+
+### Version 1.26.0 - 17.10.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue Hinweise zur Anthropic-Cowork-Umstellung ergänzt: Seit dem 06.10.2026 laufen neue Cowork-Aufgaben für Pro- und Max-Pläne laut Anthropic in der Cloud; die Option „Only on your computer“ wurde entfernt. Bereits lokal begonnene Aufgaben verbleiben lokal, neue geplante Aufgaben laufen in der Cloud. Lokale Ordner bleiben laut Anthropic auf dem Gerät; bei Cloud-Aufgaben werden nur Dateien aus verbundenen Ordnern bei Bedarf kopiert. Für Team und Enterprise nennt Anthropic Cloud-Cowork weiterhin Beta-Status und eine Admin-Freigabe für Enterprise ([Use Claude Cowork on web, desktop, and mobile](https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile)).
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um neue OpenAI-Admin-Kontrollen ergänzt: OpenAI dokumentiert für Enterprise und Edu seit dem 16.10.2026 neue Inhaltskontrollen für den Echtzeit-Zugriff der Apps Google Drive, Microsoft Teams und Outlook Email, soweit diese im Workspace aktiviert sind. Owners und Admins können sie unter „Safety & Security Controls“ je App prüfen; individuelle Google-/Microsoft-Berechtigungen gelten weiter. Seit dem 08.10.2026 können Enterprise-/Edu-Admins mit RBAC außerdem Pluginzugriff rollenbezogen auf „Available“, „Install“ oder „Disabled“ setzen ([ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
+
+Geändert:
+
+- Freigabe- und DSFA-Hinweise zu agentischen Cloud-Aufgaben und OpenAI-Plugins präzisiert: Für die jeweiligen Workspaces sind Ausführungsort, Datenkopien, lokale Ordnerzugriffe, Zeitpläne sowie App-Inhaltskontrollen und rollenbezogene Pluginrechte nachvollziehbar zu dokumentieren.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.25.0 - 24.08.2026
 
