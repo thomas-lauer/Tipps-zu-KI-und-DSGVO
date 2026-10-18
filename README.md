@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.26.0
-Stand: 17.10.2026
+Aktuelle Version: 1.27.0
+Stand: 18.10.2026
 
 ## Versionsinfo
+
+### Version 1.27.0 - 18.10.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um Governance-Hinweise für `@ChatGPT` in Slack und Microsoft Teams ergänzt: OpenAI dokumentiert für Business, Edu und Enterprise einen eigenen Service-Account mit den für ihn konfigurierten Unternehmensverbindungen. Die Rechte dieses Kontos bestimmen lesbare Daten und zulässige Aktionen; persönliche Autorisierungen einzelner Mitglieder sind davon getrennt. Antworten in geteilten Gesprächen sind für deren Teilnehmende sichtbar. Die Freigabe muss daher Service-Account, Verbindungsrechte, persönliche Autorisierungen, zulässige Kanäle/Chats und Empfängerkreis getrennt dokumentieren ([Setting up and managing @ChatGPT in Slack and Microsoft Teams](https://help.openai.com/en/articles/20001538-setting-up-and-managing-chatgpt-in-slack-and-microsoft-teams)).
+
+Geändert:
+
+- Freigabe- und DSFA-Prüfpunkte für Slack-/Teams-Integrationen von ChatGPT präzisiert.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.26.0 - 17.10.2026
 
