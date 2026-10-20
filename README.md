@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.27.0
-Stand: 18.10.2026
+Aktuelle Version: 1.28.0
+Stand: 20.10.2026
 
 ## Versionsinfo
+
+### Version 1.28.0 - 20.10.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um Freigabehinweise für `ChatGPT for Word` ergänzt: Die offizielle OpenAI-Dokumentation beschreibt die Funktion als Seitenleiste im geöffneten Word-Dokument. Seit dem 01.10.2026 ist sie standardmäßig aktiviert; Workspace-Admins und Microsoft-365-Admins können sie jeweils steuern. Unterhaltungen des Add-ins sind von der ChatGPT-Historie getrennt, Memory und Skills werden nicht übernommen. Die Freigabe muss daher Dokumentzugriff, beide Administrationsschalter, das getrennte Gesprächs- und Löschkonzept sowie die Datenkontrollen des verwendeten ChatGPT-Plans abdecken ([ChatGPT for Word](https://help.openai.com/en/articles/20001526-chatgpt-for-word)).
+
+Geändert:
+
+- Freigabe- und DSFA-Prüfpunkte für ChatGPT-Add-ins in Microsoft 365 präzisiert.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.27.0 - 18.10.2026
 
