@@ -1,6 +1,6 @@
 # Tipps zur DSGVO bei der Nutzung von Claude.ai und OpenAI
 
-Stand: 24.08.2026
+Stand: 21.10.2026
 
 Dieses Dokument ist eine praktische Checkliste für den Einsatz generativer KI. Es ersetzt keine Rechtsberatung. Wenn ein Punkt nicht sicher bewertet werden kann, muss er als offen dokumentiert und vor produktiver Nutzung geklärt werden.
 
@@ -16,7 +16,15 @@ Neu zu berücksichtigen ist außerdem, dass Anthropic die freiwillige Migration 
 
 Beim am 23.08.2026 verifizierten Help-Center-Stand präzisiert Anthropic diese freiwillige Migration zusätzlich für `Claude Design`: `Claude Design`-Systeme und -Projekte wandern nur mit, wenn sie seit dem 14.08.2026 migriert wurden; vor dem 14.08.2026 migrierte Design-Inhalte werden laut Anthropic nicht übernommen. Für Unternehmensnutzung sollte deshalb gerade bei freiwilligen Konto-Migrationen gesondert dokumentiert werden, ob dort noch relevante Design-Inhalte liegen und wie sie vorab exportiert oder anderweitig gesichert werden ([Move your personal Claude account to a Team or Enterprise organization](https://support.claude.com/en/articles/9267400-move-your-personal-claude-account-to-a-team-or-enterprise-organization)).
 
+Neu zu berücksichtigen ist außerdem, dass `Claude Design` auf Enterprise-Plänen laut Anthropic seit dem 15.10.2026 standardmäßig aktiviert ist. Beim Einrichten eines Design-Systems können u. a. Codebasen, Präsentationen oder andere Design-Referenzen hochgeladen werden. Vorschauen laufen laut Anthropic in einer sandboxed iframe auf einer separaten Anthropic-Content-Domain; deren Code kann nicht auf Claude-Konto, Login oder Editor zugreifen. Für Unternehmensnutzung sollten Aktivierung, zulässige Asset-Kategorien, Rollen, Veröffentlichungs- und Exportwege sowie die Freigabe von Vorschauen getrennt festgelegt werden ([Claude Design admin guide](https://support.claude.com/en/articles/14604406-claude-design-admin-guide-for-team-and-enterprise-plans)).
+
 Quellen: [DSK KI und Datenschutz](https://www.datenschutzkonferenz-online.de/media/oh/20240506_DSK_Orientierungshilfe_KI_und_Datenschutz.pdf), [OpenAI Enterprise Privacy](https://openai.com/enterprise-privacy/), [Anthropic Claude for Work Rollen](https://support.anthropic.com/en/articles/9267385-what-is-the-data-relationship-between-anthropic-the-customer-and-the-user).
+
+## 1a. Veröffentlichbare KI-Artefakte und zugelassene Workspaces
+
+`ChatGPT Sites` kann nach OpenAI Informationen aus Prompts, Anweisungen, Gesprächskontext, hochgeladenen oder referenzierten Dateien, Site-Code, generierten Artefakten, URLs, Zugriffs- und Speichereinstellungen sowie Betriebsdaten verarbeiten. In unterstützten Business-Workspaces sind Sites standardmäßig aktiviert; bei Enterprise ist öffentliche Veröffentlichung standardmäßig deaktiviert und muss durch Admins aktiviert werden. Bei verbundenen Apps nutzt jeder Site-Besucher sein eigenes verbundenes Konto und seine bestehenden Berechtigungen. Deshalb dürfen Sites nur nach separater Freigabe für Datenkategorien, Site-Speicher, verbundene Apps, Zielgruppe, Veröffentlichungsweg und Änderungsrechte eingesetzt werden ([ChatGPT Sites](https://help.openai.com/en/articles/20001339-creating-and-using-chatgpt-sites)).
+
+Für ChatGPT Enterprise beschreibt OpenAI außerdem ein Netzwerkverfahren, bei dem ein `ChatGPT-Allowed-Workspace-Id`-Header nur die ausdrücklich zugelassenen Workspace-IDs durchlässt; andere, auch persönliche Workspaces werden laut OpenAI ausgefiltert. Die Kontrolle ist nur wirksam, wenn sie im Unternehmensnetz technisch eingerichtet wird; für Desktop- und Mobile-Apps nennt OpenAI zusätzlich verwaltete Zertifikats-Pinning-Ausnahmen per MDM. Die Umsetzung und Reichweite dieser Netzwerkkontrolle sind daher vor einer Richtlinienvorgabe technisch zu prüfen und zu dokumentieren ([Corporate Network Controls](https://help.openai.com/en/articles/20001323-corporate-network-controls-in-chatgpt-enterprise)).
 
 ## 2. Keine sensiblen Daten in Consumer-KI
 

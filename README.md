@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.28.0
-Stand: 20.10.2026
+Aktuelle Version: 1.29.0
+Stand: 21.10.2026
 
 ## Versionsinfo
+
+### Version 1.29.0 - 21.10.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um Freigabehinweise für `ChatGPT Sites`, Enterprise-Workspace-Blocking und `Claude Design` ergänzt: ChatGPT Sites kann Prompts, Gesprächskontext, Dateien, Site-Code, Zugriffs- und Speichereinstellungen sowie Betriebsdaten verarbeiten; in Enterprise ist öffentliche Veröffentlichung standardmäßig deaktiviert, in Business sind Sites standardmäßig aktiviert. Das Enterprise-Workspace-Blocking kann über einen Netzwerk-Header nicht zugelassene, auch persönliche Workspaces ausfiltern. `Claude Design` ist auf Enterprise-Plänen seit dem 15.10.2026 standardmäßig aktiv und kann Design-Assets wie Codebasen oder Präsentationen verarbeiten. Freigaben müssen daher Datenkategorien, Rollen, Veröffentlichungsziel, verbundene Apps sowie die jeweiligen Admin- und Netzwerkkontrollen getrennt festlegen ([ChatGPT Sites](https://help.openai.com/en/articles/20001339-creating-and-using-chatgpt-sites), [Corporate Network Controls](https://help.openai.com/en/articles/20001323-corporate-network-controls-in-chatgpt-enterprise), [Claude Design admin guide](https://support.claude.com/en/articles/14604406-claude-design-admin-guide-for-team-and-enterprise-plans)).
+
+Geändert:
+
+- Freigabe- und DSFA-Prüfpunkte für veröffentlichbare KI-Artefakte, externe Site-Zugriffe und die organisatorische Trennung zugelassener Enterprise- von persönlichen ChatGPT-Workspaces präzisiert.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.28.0 - 20.10.2026
 
