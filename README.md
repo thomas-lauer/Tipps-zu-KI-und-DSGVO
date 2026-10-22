@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.29.0
-Stand: 21.10.2026
+Aktuelle Version: 1.30.0
+Stand: 22.10.2026
 
 ## Versionsinfo
+
+### Version 1.30.0 - 22.10.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen eng abgegrenzten QMS-Prüfpunkt für Anbieter von Hochrisiko-KI ergänzt: Die Kommission berichtete am 19.10.2026 über die mit Durchführungsbeschluss (EU) 2026/2274 am 14.10.2026 im Amtsblatt veröffentlichte Referenz auf EN 18286:2026. Der harmonisierte Standard kann für die von ihm abgedeckten Anforderungen des Qualitätsmanagementsystems nach Art. 17 KI-VO eine Konformitätsvermutung begründen; er gilt nicht als pauschaler Compliance-Nachweis für Betreiber oder andere KI-Systeme. Anbieter müssen daher Rolle, Hochrisiko-Einstufung, abgedeckte Art.-17-Anforderungen und die tatsächliche Umsetzung getrennt dokumentieren ([European Commission: First harmonised standard supporting the AI Act](https://digital-strategy.ec.europa.eu/en/library/first-harmonised-standard-supporting-ai-act-published-official-journal), [Commission Implementing Decision (EU) 2026/2274](https://eur-lex.europa.eu/eli/dec_impl/2026/2274/oj/eng)).
+
+Geändert:
+
+- KI-VO-Prüfung um die Abgrenzung zwischen einer Konformitätsvermutung für abgedeckte Art.-17-QMS-Anforderungen und der weiterhin erforderlichen Einzelfallprüfung ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.29.0 - 21.10.2026
 

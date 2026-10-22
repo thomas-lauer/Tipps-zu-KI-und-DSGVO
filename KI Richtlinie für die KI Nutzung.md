@@ -30,6 +30,8 @@ Für jeden KI-Use-Case ist zusätzlich zur DSGVO-Prüfung die KI-VO-Einstufung z
 
 Bei Hochrisiko-KI sind nach der aktuellen Kommissions-FAQ insbesondere `instructions of use`, laufendes Monitoring, menschliche Aufsicht, relevante und hinreichend repräsentative Eingabedaten sowie gegebenenfalls eine Grundrechte-Folgenabschätzung vor Erstnutzung zu organisieren; für entscheidungsrelevante Outputs ist außerdem ein Prozess für das Recht auf Erklärung vorzusehen ([Navigating the AI Act](https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act)).
 
+Ist die Organisation Anbieter eines Hochrisiko-KI-Systems, ist zusätzlich zu prüfen und zu dokumentieren, ob EN 18286:2026 für die einschlägigen Qualitätsmanagementsystem-Anforderungen nach Art. 17 KI-VO eingesetzt wird. Die Kommission berichtete am 19.10.2026 über die mit [Durchführungsbeschluss (EU) 2026/2274](https://eur-lex.europa.eu/eli/dec_impl/2026/2274/oj/eng) am 14.10.2026 im Amtsblatt veröffentlichte Referenz des Standards. Sie kann nur für die von ihm abgedeckten Art.-17-Anforderungen eine Konformitätsvermutung begründen. Sie ersetzt weder die Prüfung von Anbieterrolle und Hochrisiko-Einstufung noch den Nachweis der tatsächlichen Umsetzung; für Betreiber und andere KI-Systeme ist sie kein pauschaler Compliance-Nachweis ([European Commission: First harmonised standard supporting the AI Act](https://digital-strategy.ec.europa.eu/en/library/first-harmonised-standard-supporting-ai-act-published-official-journal)).
+
 ## 3. Zugelassene Tools
 
 KI-Tools dürfen nur genutzt werden, wenn sie auf der Tool-Whitelist stehen.
