@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.30.0
-Stand: 22.10.2026
+Aktuelle Version: 1.31.0
+Stand: 23.10.2026
 
 ## Versionsinfo
+
+### Version 1.31.0 - 23.10.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen Aufbewahrungs- und Transparenzhinweis zu `Locked chats` ergänzt: OpenAI dokumentiert für ChatGPT Enterprise und Edu seit dem 20.10.2026, dass gesperrte Unterhaltungen aus regulärem Verlauf, angehefteten Chats und der Suche ausgeblendet werden; sie werden dadurch nicht gelöscht. Die Aufbewahrungsrichtlinien der Organisation und die Compliance-Anforderungen gelten weiter, und die Nachrichten bleiben in den über die Compliance Platform verfügbaren Conversation Message Logs enthalten. Die Sperrfunktion darf daher nicht als Lösch- oder Retention-Kontrolle eingeordnet werden ([ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
+
+Geändert:
+
+- Freigabe-, DSFA- und Richtlinienprüfung für geschützte Chatansichten präzisiert: Zweck, zulässige Nutzerkreise, Aufbewahrung, Compliance-Export und Betroffenenrechte sind unabhängig von der lokalen Sperransicht festzulegen ([ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.30.0 - 22.10.2026
 

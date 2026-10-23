@@ -364,6 +364,8 @@ Quellen: [OpenAI Data controls](https://developers.openai.com/api/docs/guides/yo
 
 51. `ChatGPT for Word` nur nach separater Freigabe einsetzen: Die Funktion arbeitet laut OpenAI als Seitenleiste mit dem geöffneten Word-Dokument und ist seit dem 01.10.2026 standardmäßig aktiviert. ChatGPT-Workspace-Admins und Microsoft-365-Admins können sie jeweils steuern. Add-in-Unterhaltungen sind von der ChatGPT-Historie getrennt; Memory und Skills werden nicht übernommen. Daher Dokumentzugriff, beide Administrationsschalter, das getrennte Gesprächs- und Löschkonzept sowie die Datenkontrollen des verwendeten ChatGPT-Plans dokumentieren ([ChatGPT for Word](https://help.openai.com/en/articles/20001526-chatgpt-for-word)).
 
+52. `Locked chats` in ChatGPT Enterprise oder Edu nicht als Lösch- oder Retention-Kontrolle behandeln: Laut OpenAI werden gesperrte Unterhaltungen zwar aus regulärem Verlauf, angehefteten Chats und Suche ausgeblendet, unterliegen aber weiter den Aufbewahrungsrichtlinien und Compliance-Anforderungen der Organisation. Die Nachrichten bleiben in den Conversation Message Logs der Compliance Platform verfügbar. Daher Zweck, zugelassene Nutzerkreise, Aufbewahrung, Compliance-Export und Betroffenenrechte unabhängig von der Sperransicht dokumentieren ([ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
+
 ## 16. KI-VO-Kurzcheck zusätzlich zur DSGVO
 
 Die KI-Verordnung ersetzt die DSGVO nicht. Für jeden KI-Einsatz sollte separat dokumentiert werden:
