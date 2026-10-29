@@ -1,6 +1,6 @@
 # Tipps zur DSGVO bei der Nutzung von Claude.ai und OpenAI
 
-Stand: 21.10.2026
+Stand: 29.10.2026
 
 Dieses Dokument ist eine praktische Checkliste für den Einsatz generativer KI. Es ersetzt keine Rechtsberatung. Wenn ein Punkt nicht sicher bewertet werden kann, muss er als offen dokumentiert und vor produktiver Nutzung geklärt werden.
 
@@ -25,6 +25,10 @@ Quellen: [DSK KI und Datenschutz](https://www.datenschutzkonferenz-online.de/med
 `ChatGPT Sites` kann nach OpenAI Informationen aus Prompts, Anweisungen, Gesprächskontext, hochgeladenen oder referenzierten Dateien, Site-Code, generierten Artefakten, URLs, Zugriffs- und Speichereinstellungen sowie Betriebsdaten verarbeiten. In unterstützten Business-Workspaces sind Sites standardmäßig aktiviert; bei Enterprise ist öffentliche Veröffentlichung standardmäßig deaktiviert und muss durch Admins aktiviert werden. Bei verbundenen Apps nutzt jeder Site-Besucher sein eigenes verbundenes Konto und seine bestehenden Berechtigungen. Deshalb dürfen Sites nur nach separater Freigabe für Datenkategorien, Site-Speicher, verbundene Apps, Zielgruppe, Veröffentlichungsweg und Änderungsrechte eingesetzt werden ([ChatGPT Sites](https://help.openai.com/en/articles/20001339-creating-and-using-chatgpt-sites)).
 
 Für ChatGPT Enterprise beschreibt OpenAI außerdem ein Netzwerkverfahren, bei dem ein `ChatGPT-Allowed-Workspace-Id`-Header nur die ausdrücklich zugelassenen Workspace-IDs durchlässt; andere, auch persönliche Workspaces werden laut OpenAI ausgefiltert. Die Kontrolle ist nur wirksam, wenn sie im Unternehmensnetz technisch eingerichtet wird; für Desktop- und Mobile-Apps nennt OpenAI zusätzlich verwaltete Zertifikats-Pinning-Ausnahmen per MDM. Die Umsetzung und Reichweite dieser Netzwerkkontrolle sind daher vor einer Richtlinienvorgabe technisch zu prüfen und zu dokumentieren ([Corporate Network Controls](https://help.openai.com/en/articles/20001323-corporate-network-controls-in-chatgpt-enterprise)).
+
+## 1b. Persönliche Workspaces vor Migration prüfen
+
+Bei verpflichtender Enterprise-/Edu-Migration mit verifizierter E-Mail-Domain beginnt laut OpenAI eine feste Siebentagesfrist mit der Aufnahme in den Workspace. Vor Übernahme persönlicher Inhalte sollten Zuständigkeit, Datenumfang und Export geklärt werden; einzelne Chats lassen sich nicht zur Migration auswählen ([OpenAI: Workspace-Migration](https://help.openai.com/en/articles/8801890-migrating-your-personal-workspace-to-chatgpt-business-or-enterprise)).
 
 ## 2. Keine sensiblen Daten in Consumer-KI
 

@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.31.0
-Stand: 23.10.2026
+Aktuelle Version: 1.32.0
+Stand: 29.10.2026
 
 ## Versionsinfo
+
+### Version 1.32.0 - 29.10.2026
+
+Ergänzt:
+
+- Hinweise zur Prüfung persönlicher Inhalte vor Workspace-Migration in Checkliste, DSFA und Richtlinie. OpenAI dokumentiert seit dem 23.10.2026 eine feste Siebentagesfrist für verpflichtende Enterprise-/Edu-Migrationen mit verifizierter Domain; Beginn ist die Aufnahme in den Workspace ([Release Notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
+
+Geändert:
+
+- Migrationsprüfung um Datenumfang, Export und Zielzugriff präzisiert; einzelne Chats sind nicht zur Übertragung auswählbar ([OpenAI: Workspace-Migration](https://help.openai.com/en/articles/8801890-migrating-your-personal-workspace-to-chatgpt-business-or-enterprise), abgerufen am 29.10.2026; ein absolutes Aktualisierungsdatum nennt die Seite nicht).
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.31.0 - 23.10.2026
 
