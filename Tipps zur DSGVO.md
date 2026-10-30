@@ -370,6 +370,8 @@ Quellen: [OpenAI Data controls](https://developers.openai.com/api/docs/guides/yo
 
 52. `Locked chats` in ChatGPT Enterprise oder Edu nicht als Lösch- oder Retention-Kontrolle behandeln: Laut OpenAI werden gesperrte Unterhaltungen zwar aus regulärem Verlauf, angehefteten Chats und Suche ausgeblendet, unterliegen aber weiter den Aufbewahrungsrichtlinien und Compliance-Anforderungen der Organisation. Die Nachrichten bleiben in den Conversation Message Logs der Compliance Platform verfügbar. Daher Zweck, zugelassene Nutzerkreise, Aufbewahrung, Compliance-Export und Betroffenenrechte unabhängig von der Sperransicht dokumentieren ([ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
 
+53. Anthropic-`Inference hooks` nur mit eigener Freigabe einsetzen: Laut Anthropic sind sie für Enterprise allgemein verfügbar und senden jeden Prompt, jede Tool-Antwort sowie Text aus Uploads vor der Claude-Verarbeitung an einen kundenseitig betriebenen Policy-Server. Deshalb Endpoint, Empfängerrolle, Rechtsgrundlage bzw. Auftragsverarbeitung, Speicher- und Löschkonzept sowie Allow-/Deny- und Fehlerverhalten getrennt dokumentieren ([Inference hooks overview](https://support.claude.com/en/articles/16059458-inference-hooks-overview)).
+
 ## 16. KI-VO-Kurzcheck zusätzlich zur DSGVO
 
 Die KI-Verordnung ersetzt die DSGVO nicht. Für jeden KI-Einsatz sollte separat dokumentiert werden:

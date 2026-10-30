@@ -274,7 +274,7 @@ Mindestanforderungen:
 - OpenAI-RBAC so konfigurieren, dass `Default`/`On`/`Off`, explizite `Off`-Vetos, Mehrfachrollen und `Lockdown Mode` berücksichtigt werden
 - Anthropic-Managed-Agents mit `scheduled deployments`, Vaults oder GitHub-/Dateianbindung nur nach separater Freigabe, enger Zeitplan- und Secret-Begrenzung sowie dokumentierter Run-Historie einsetzen
 - Anthropic-Managed-Agents nur freigeben, wenn der serverseitige State ausdrücklich bewertet ist; nach aktueller Anthropic-Dokumentation sind Managed Agents derzeit nicht ZDR- oder HIPAA-BAA-fähig
-- Anthropic-`Inference hooks` nur als Kontrollmaßnahme einplanen, wenn Scope, AI-Security-Server, Shadow-Mode bzw. Durchsetzung, Failure Handling und der Ausschluss von Bedrock/Google Cloud dokumentiert sind
+- Anthropic-`Inference hooks` nur als Kontrollmaßnahme einplanen, wenn zusätzlich dokumentiert ist, dass jeder Prompt, jede Tool-Antwort und Text aus Uploads vor der Claude-Verarbeitung an einen kundenseitig betriebenen Policy-Server gehen; Scope, Endpoint-Betreiber, Speicher- und Löschkonzept, Shadow-Mode bzw. Durchsetzung und Failure Handling festlegen ([Inference hooks overview](https://support.claude.com/en/articles/16059458-inference-hooks-overview))
 - bei Anthropic Enterprise Modell-Allowlist und Effort-Caps so setzen, dass nicht freigegebene oder retention-pflichtige Modelle technisch begrenzt sind
 - nutzerbezogene KI-Analytics nur mit dokumentiertem Zweck, enger Sichtberechtigung und interner Transparenz aktiv lassen
 - `Claude Tag` in Slack nur nach separater Freigabe einsetzen; Kanäle, Rollen, Direct-Message-Nutzung, Organisationsidentität, kanal-/workspacebezogene Memory sowie die unterschiedlichen Retention-Regeln zwischen Claude und Slack gesondert dokumentieren

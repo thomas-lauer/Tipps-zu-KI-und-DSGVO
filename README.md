@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.32.0
-Stand: 29.10.2026
+Aktuelle Version: 1.32.1
+Stand: 30.10.2026
 
 ## Versionsinfo
+
+### Version 1.32.1 - 30.10.2026
+
+Ergänzt:
+
+- Anthropic-`Inference hooks` als zusätzlichen Datenfluss präzisiert: Die Funktion ist laut Anthropic für Enterprise allgemein verfügbar; jeder Prompt, jede Tool-Antwort und Text aus Uploads wird vor der Claude-Verarbeitung an einen kundenseitig betriebenen Policy-Server übermittelt. Der Endpoint, die dortige Verarbeitung sowie Freigabe- und Fehlerverhalten sind daher in Checkliste, DSFA und Richtlinie zu dokumentieren ([Inference hooks overview](https://support.claude.com/en/articles/16059458-inference-hooks-overview)).
+
+Geändert:
+
+- Die bisherige Beta-Einordnung von `Inference hooks` durch den aktuelleren offiziellen Herstellerstand ersetzt; die technische Ausgestaltung und tatsächliche Nutzung bleiben organisationsspezifisch zu prüfen.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.32.0 - 29.10.2026
 
