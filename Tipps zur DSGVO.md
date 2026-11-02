@@ -1,6 +1,6 @@
 # Tipps zur DSGVO bei der Nutzung von Claude.ai und OpenAI
 
-Stand: 29.10.2026
+Stand: 02.11.2026
 
 Dieses Dokument ist eine praktische Checkliste für den Einsatz generativer KI. Es ersetzt keine Rechtsberatung. Wenn ein Punkt nicht sicher bewertet werden kann, muss er als offen dokumentiert und vor produktiver Nutzung geklärt werden.
 
@@ -29,6 +29,10 @@ Für ChatGPT Enterprise beschreibt OpenAI außerdem ein Netzwerkverfahren, bei d
 ## 1b. Persönliche Workspaces vor Migration prüfen
 
 Bei verpflichtender Enterprise-/Edu-Migration mit verifizierter E-Mail-Domain beginnt laut OpenAI eine feste Siebentagesfrist mit der Aufnahme in den Workspace. Vor Übernahme persönlicher Inhalte sollten Zuständigkeit, Datenumfang und Export geklärt werden; einzelne Chats lassen sich nicht zur Migration auswählen ([OpenAI: Workspace-Migration](https://help.openai.com/en/articles/8801890-migrating-your-personal-workspace-to-chatgpt-business-or-enterprise)).
+
+## 1c. Custom-GPT-Migration zu Plugins prüfen
+
+Für betroffene ChatGPT-Enterprise-Workspaces endete laut OpenAI am 26.10.2026 die Erstellung neuer Custom GPTs; FedRAMP-Workspaces sind ausgenommen. Bestehende, noch nicht migrierte GPTs bleiben bis zum jeweils geltenden Ruhestandsdatum bearbeitbar. Nach der Migration bleibt das Original bis dahin nutzbar, wird aber schreibgeschützt. Vor dem Wechsel muss daher festgelegt werden, wer GPTs inventarisiert und migriert, welche Anweisungen, Referenzdateien und Zielgruppen in das Ersatz-Plugin übergehen dürfen und wer es testen sowie freigeben muss. Custom Actions werden nicht automatisch migriert; eine Ersatz-App oder ein eigener MCP-Server ist ein neuer, separat zu prüfender Daten- und Berechtigungspfad. Das Ersatz-Plugin startet privat, wird nicht automatisch installiert oder geteilt und kann anders antworten als das bisherige GPT ([OpenAI: Custom GPT retirement and migration FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq), [ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
 
 ## 2. Keine sensiblen Daten in Consumer-KI
 

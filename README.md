@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.32.1
-Stand: 30.10.2026
+Aktuelle Version: 1.33.0
+Stand: 02.11.2026
 
 ## Versionsinfo
+
+### Version 1.33.0 - 02.11.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um die OpenAI-Migration von Custom GPTs zu Plugins ergänzt: In betroffenen Enterprise-Workspaces endete die Erstellung neuer Custom GPTs am 26.10.2026 (ausgenommen FedRAMP). Bestehende, nicht migrierte GPTs bleiben bis zum jeweils geltenden Ruhestandsdatum bearbeitbar; nach einer Migration ist das Original schreibgeschützt. Custom Actions werden nicht automatisch migriert. Deshalb müssen die Ersatzintegration, ihre Berechtigungen, Datenflüsse und Freigaben vor dem Wechsel separat geprüft und die Ersatz-Plugins getestet werden ([OpenAI: Custom GPT retirement and migration FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq), [ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
+
+Geändert:
+
+- Freigabe- und Migrationsprüfung für wiederverwendbare ChatGPT-Workflows um die getrennte Bewertung von Plugin, übertragenen Referenzdateien, wiederaufgebauten Integrationen und Zielgruppe ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.32.1 - 30.10.2026
 
