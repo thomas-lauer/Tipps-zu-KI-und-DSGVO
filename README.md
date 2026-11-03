@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.33.0
-Stand: 02.11.2026
+Aktuelle Version: 1.34.0
+Stand: 03.11.2026
 
 ## Versionsinfo
+
+### Version 1.34.0 - 03.11.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um den Anthropic-Enterprise-Prüfpunkt `Chat and Cowork unified` ergänzt: Die Funktion führt Chat und Cowork zusammen und verlagert agentische Arbeit bei Bedarf in eine von Anthropic verwaltete isolierte Cloud-Sandbox. In bestehenden Organisationen ist sie zunächst deaktiviert, soll aber ab 16.11.2026 standardmäßig aktiviert werden, wenn Chat sowie Cloud-Codeausführung und Dateierstellung aktiv sind. Nicht verfügbar ist sie laut Anthropic für Organisationen mit Zero Data Retention, HIPAA-ready-Konfiguration oder CMEK. Vor einer Freigabe müssen deshalb insbesondere Sandbox-/Dateispeicher, Rollen, Egress, Connectoren, Freigaben, Retention und Compliance-API dokumentiert und geprüft werden ([Set up and manage the new unified Claude experience for your Enterprise organization](https://support.claude.com/en/articles/17444462-set-up-and-manage-the-new-unified-claude-experience-for-your-enterprise-organization)).
+
+Geändert:
+
+- Die Cowork-Governance präzisiert: Die bisherige getrennte Betrachtung von Chat und Cowork reicht für aktivierte Enterprise-Organisationen nicht aus, weil der Wechsel in Cloud-Agentik innerhalb derselben Unterhaltung erfolgen kann.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.33.0 - 02.11.2026
 
