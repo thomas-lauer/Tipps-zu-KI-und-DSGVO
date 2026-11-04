@@ -205,6 +205,7 @@ Offene Rechtsfragen:
 | Anthropic-`individual usage analytics` geprüft, begrenzt und intern transparent dokumentiert |  |
 | Anthropic-`Claude Tag`: Kanal-/Workspace-Memory, Slack-vs.-Claude-Historie, DM-vs.-Organisationsidentität und 30-Tage-Löschung bewertet |  |
 | Anthropic-Connector-Governance: `verified-domain`-Sperre, `Enterprise-managed auth`, Rollen-/Scope-Zuweisung und serverseitige Durchsetzung bewertet |  |
+| Anthropic-Plugins-/Skills-Umstellung zum 30.11.2026 bewertet: gemeinsame Oberfläche, blockierende Skills-Off-Einstellung in Claude Desktop, erforderliche Cloud-Codeausführung/Dateierstellung und getrennte Connector-Trennung dokumentiert ([Manage plugins, skills, and connectors from one Plugins page](https://support.claude.com/en/articles/17740565-manage-plugins-skills-and-connectors-from-one-plugins-page)) |  |
 | Anthropic-Domain-Claiming/Migration: SSO/JIT/SCIM, IdP-Abgleich, 30-Tage-Frist, Deaktivierung nicht migrierter Privatkonten, HIPAA-/CMEK-Ausnahme und produktbezogene Migrationsgrenzen wie `Claude Design` ab/nicht vor 14.08.2026 bewertet ([Move your personal Claude account to a Team or Enterprise organization](https://support.claude.com/en/articles/9267400-move-your-personal-claude-account-to-a-team-or-enterprise-organization)) |  |
 | Nutzung öffentlich zugänglicher Webdaten oder gescrapter Datensätze für Training/Fine-Tuning gesondert geprüft |  |
 | Anonymisierungsmethode dokumentiert; Re-Identifikationscheck statt bloßer Pseudonymisierung durchgeführt |  |

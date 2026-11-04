@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.34.0
-Stand: 03.11.2026
+Aktuelle Version: 1.35.0
+Stand: 04.11.2026
 
 ## Versionsinfo
+
+### Version 1.35.0 - 04.11.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen Anthropic-Enterprise-Prüfpunkt für die Zusammenführung von Plugins, Skills und Connectoren ergänzt: Die Umstellung ist für Enterprise ab 30.11.2026 vorgesehen. Sind Skills dann deaktiviert, werden laut Anthropic auch Plugins in Claude Desktop blockiert; Cloud-Codeausführung und Dateierstellung sind Voraussetzung für Plugins. Bestehende Connectoren werden beim Entfernen eines Plugin-Pakets nicht automatisch getrennt. Daher sind Freigabeentscheidung, getrennte Connector-Trennung sowie die Auswirkung der Skills-/Plugins-Einstellung auf Claude Desktop zu dokumentieren. In HIPAA-Konfigurationen deckt der BAA laut Anthropic Connectoren, Plugins und Skills nicht ab ([Manage plugins, skills, and connectors from one Plugins page](https://support.claude.com/en/articles/17740565-manage-plugins-skills-and-connectors-from-one-plugins-page)).
+
+Geändert:
+
+- Die Anthropic-Connector-/Skill-Governance um die für Enterprise angekündigte gemeinsame Oberfläche und ihre abweichende Sperrwirkung präzisiert.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.34.0 - 03.11.2026
 
