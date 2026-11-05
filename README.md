@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.35.0
-Stand: 04.11.2026
+Aktuelle Version: 1.36.0
+Stand: 05.11.2026
 
 ## Versionsinfo
+
+### Version 1.36.0 - 05.11.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen OpenAI-Prüfpunkt für `Dots` ergänzt: Die seit 04.11.2026 für berechtigte Enterprise-, Edu- und Healthcare-Workspaces dokumentierten persönlichen Dots können Aufgaben zwischen Unterhaltungen weiterführen. Bis 18.11.2026 besteht eine Admin-Vorschau; danach sollen sie ohne Opt-out standardmäßig verfügbar sein. Vor einer Freigabe sind Rollen, Agent-Security-Policies, Verbindungen, lokaler Computerzugriff, Aufbewahrung sowie getrennte Lösch- und Stopp-Prozesse zu dokumentieren. Bei Enterprise ist lokaler Computerzugriff standardmäßig deaktiviert. Das Löschen eines Dots löscht nicht automatisch getrennt gespeicherte Dateien, Gespräche oder unabhängige Work-/Codex-Aufgaben ([Managing dots in ChatGPT workspaces](https://help.openai.com/en/articles/20001554-managing-dots-in-chatgpt-workspaces), [ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
+
+Geändert:
+
+- Agentik-Governance um die gesonderte Freigabe, Administration und Löschbetrachtung fortlaufend arbeitender persönlicher Dots ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.35.0 - 04.11.2026
 
