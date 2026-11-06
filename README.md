@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.36.0
-Stand: 05.11.2026
+Aktuelle Version: 1.37.0
+Stand: 06.11.2026
 
 ## Versionsinfo
+
+### Version 1.37.0 - 06.11.2026
+
+Ergänzt:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um einen Anthropic-Prüfpunkt für die am 05.11.2026 angekündigten Enterprise-Sicherheits- und Admin-Funktionen ergänzt: Das `Security center` und zentrale Verwaltung sind laut Anthropic teilweise Beta; das Security-Center ist ausdrücklich keine Compliance-Zertifizierung. `Inference hooks` (Prompt- und Pre-Tool-Call-Hooks) sind allgemein verfügbar und leiten die jeweiligen Daten zur Prüfung an ein Sicherheitstool weiter. Bei organisationsübergreifender zentraler Verwaltung können auf Eltern-Ebene erstellte Compliance-API-Schlüssel Daten organisationsübergreifend lesen. Die neue Abmeldung über die Admin API beendet außerdem weder API-Schlüssel noch bereits laufende Cloud-Sitzungen oder geplante Routinen. Daher sind Empfänger, Zugriffsumfang, Stopp- und Löschprozesse sowie die tatsächliche Aktivierung der Kontrollen getrennt zu dokumentieren ([Anthropic: More visibility and control over Claude Enterprise for security teams](https://claude.com/resources/articles/claude-enterprise-security-updates), [Anthropic Release notes](https://support.claude.com/en/articles/12138966-release-notes)).
+
+Geändert:
+
+- Agentik- und Enterprise-Governance um Prüfungen für zentrale Administration, Hooks und wirksame Beendigung laufender Zugriffe ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.36.0 - 05.11.2026
 
