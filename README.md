@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.37.0
-Stand: 06.11.2026
+Aktuelle Version: 1.37.1
+Stand: 07.11.2026
 
 ## Versionsinfo
+
+### Version 1.37.1 - 07.11.2026
+
+Ergänzt:
+
+- Die am 07.11.2026 verifizierte, laut Seite am Vortag aktualisierte Anthropic-Anleitung zu `Chat and Cowork unified` präzisiert: Bei agentischer Arbeit erhält jede Unterhaltung eine eigene Cloud-VM; nach einigen Minuten Inaktivität wird sie gestoppt, ihr Datenträger als verschlüsselter Snapshot gespeichert und die Sandbox-Umgebung läuft 30 Tage ab Erstellung ab. Der Desktop-Zugriff auf lokale Ordner, lokale MCP-Server und Anwendungen bleibt optional und unterliegt laut Anthropic den Remote-Control- und Geräte-Richtlinien. Diese Speicher-, Ablauf- und lokalen Zugriffswege müssen getrennt in Freigabe, DSFA und Richtlinie geprüft werden ([Set up and manage the new unified Claude experience for your Enterprise organization](https://support.claude.com/en/articles/17444462-set-up-and-manage-the-new-unified-claude-experience-for-your-enterprise-organization)).
+
+Geändert:
+
+- Die Claude-Unified-Governance um konkrete Snapshot-Aufbewahrung, Sandbox-Ablauf und optionale lokale Datenpfade präzisiert.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.37.0 - 06.11.2026
 
