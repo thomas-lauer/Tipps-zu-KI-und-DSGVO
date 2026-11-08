@@ -1,6 +1,6 @@
 # Tipps zur DSGVO bei der Nutzung von Claude.ai und OpenAI
 
-Stand: 02.11.2026
+Stand: 08.11.2026
 
 Dieses Dokument ist eine praktische Checkliste für den Einsatz generativer KI. Es ersetzt keine Rechtsberatung. Wenn ein Punkt nicht sicher bewertet werden kann, muss er als offen dokumentiert und vor produktiver Nutzung geklärt werden.
 
@@ -17,6 +17,8 @@ Neu zu berücksichtigen ist außerdem, dass Anthropic die freiwillige Migration 
 Beim am 23.08.2026 verifizierten Help-Center-Stand präzisiert Anthropic diese freiwillige Migration zusätzlich für `Claude Design`: `Claude Design`-Systeme und -Projekte wandern nur mit, wenn sie seit dem 14.08.2026 migriert wurden; vor dem 14.08.2026 migrierte Design-Inhalte werden laut Anthropic nicht übernommen. Für Unternehmensnutzung sollte deshalb gerade bei freiwilligen Konto-Migrationen gesondert dokumentiert werden, ob dort noch relevante Design-Inhalte liegen und wie sie vorab exportiert oder anderweitig gesichert werden ([Move your personal Claude account to a Team or Enterprise organization](https://support.claude.com/en/articles/9267400-move-your-personal-claude-account-to-a-team-or-enterprise-organization)).
 
 Neu zu berücksichtigen ist außerdem, dass `Claude Design` auf Enterprise-Plänen laut Anthropic seit dem 15.10.2026 standardmäßig aktiviert ist. Beim Einrichten eines Design-Systems können u. a. Codebasen, Präsentationen oder andere Design-Referenzen hochgeladen werden. Vorschauen laufen laut Anthropic in einer sandboxed iframe auf einer separaten Anthropic-Content-Domain; deren Code kann nicht auf Claude-Konto, Login oder Editor zugreifen. Für Unternehmensnutzung sollten Aktivierung, zulässige Asset-Kategorien, Rollen, Veröffentlichungs- und Exportwege sowie die Freigabe von Vorschauen getrennt festgelegt werden ([Claude Design admin guide](https://support.claude.com/en/articles/14604406-claude-design-admin-guide-for-team-and-enterprise-plans)).
+
+Für die Migration von der eigenständigen Oberfläche `Claude Design` ist außerdem festzuhalten: Laut der am 08.11.2026 verifizierten Anthropic-Anleitung schließt sie am 14.12.2026 und ist danach nur lesbar. Bei der Übernahme nach Claude bleiben Chats und Kommentare in der eigenständigen Oberfläche; der verfügbare Gesamtexport enthält Dateien, jedoch keine Chats oder Kommentare. Organisationen mit Zero Data Retention können Projekte laut Anthropic nicht migrieren. Vor einer Freigabe sind daher Datenumfang, Rollen, Ziel-Retention, Export sowie ein separates Sicherungs- oder Löschkonzept für nicht übernommene Inhalte zu dokumentieren ([Move from standalone Claude Design to Claude](https://support.claude.com/en/articles/17440474-move-from-standalone-claude-design-to-claude)).
 
 Quellen: [DSK KI und Datenschutz](https://www.datenschutzkonferenz-online.de/media/oh/20240506_DSK_Orientierungshilfe_KI_und_Datenschutz.pdf), [OpenAI Enterprise Privacy](https://openai.com/enterprise-privacy/), [Anthropic Claude for Work Rollen](https://support.anthropic.com/en/articles/9267385-what-is-the-data-relationship-between-anthropic-the-customer-and-the-user).
 

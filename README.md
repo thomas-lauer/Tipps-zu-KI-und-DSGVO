@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.37.1
-Stand: 07.11.2026
+Aktuelle Version: 1.38.0
+Stand: 08.11.2026
 
 ## Versionsinfo
+
+### Version 1.38.0 - 08.11.2026
+
+Ergänzt:
+
+- Die am 08.11.2026 verifizierte Anthropic-Anleitung zur Migration der eigenständigen Oberfläche `Claude Design`: Sie schließt am 14.12.2026 und ist danach nur lesbar. Bei der Übernahme nach Claude bleiben Chats und Kommentare in der eigenständigen Oberfläche; der verfügbare Gesamtexport enthält Dateien, jedoch keine Chats oder Kommentare. Für Organisationen mit Zero Data Retention ist die Projektmigration laut Anthropic nicht verfügbar. Deshalb sind vor der Migration Datenumfang, Berechtigungen, Retention, Export und ein separates Sicherungs- oder Löschkonzept für nicht übernommene Inhalte festzulegen ([Move from standalone Claude Design to Claude](https://support.claude.com/en/articles/17440474-move-from-standalone-claude-design-to-claude)).
+
+Geändert:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um die getrennte Behandlung nicht übernommener `Claude Design`-Chats und -Kommentare ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.37.1 - 07.11.2026
 
