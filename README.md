@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.38.0
-Stand: 08.11.2026
+Aktuelle Version: 1.39.0
+Stand: 10.11.2026
 
 ## Versionsinfo
+
+### Version 1.39.0 - 10.11.2026
+
+Ergänzt:
+
+- Die am 10.11.2026 verifizierte, laut OpenAI drei Tage zuvor aktualisierte Verwaltungsdokumentation für `Dots`: Die Enterprise-/Edu-Freigabe erfordert kompatible Agent-Security-Policies; die zulässigen Freigabe-Policies müssen `on-request` und die zulässigen Prüfer `auto-review` enthalten. OpenAI dokumentiert außerdem keinen separaten Admin-Schalter, um die proaktive Recherche eines freigegebenen Dots abzuschalten. Verbundene App-Informationen können proaktiv ausgewertet und in Dot-Memories übernommen werden; eine Trennung der App löscht bereits übernommene Informationen nicht. Diese Voraussetzungen und Datenpfade sind vor der Freigabe sowie beim Offboarding gesondert zu prüfen ([Managing dots in ChatGPT workspaces](https://help.openai.com/en/articles/20001554-managing-dots-in-chatgpt-workspaces), [Getting started with your dot](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot)).
+
+Geändert:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um die verbindlich zu prüfenden Dot-Freigabe-Policies, die nicht separat abschaltbare proaktive Recherche und die Datenfolge bei App-Trennung ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.38.0 - 08.11.2026
 
