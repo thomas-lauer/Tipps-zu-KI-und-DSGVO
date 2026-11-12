@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.39.0
-Stand: 10.11.2026
+Aktuelle Version: 1.40.0
+Stand: 12.11.2026
 
 ## Versionsinfo
+
+### Version 1.40.0 - 12.11.2026
+
+Ergänzt:
+
+- Die am 12.11.2026 verifizierte Anthropic-Dokumentation zum Microsoft-365-Connector präzisiert für Team und Enterprise die Steuerung ausgewählter Schreibwerkzeuge: Für elf E-Mail-, Kalender- und Teams-Werkzeuge können Nutzende `Always allow` erst wählen, wenn ein Admin das jeweilige Werkzeug am oder nach dem 09.11.2026 auf `Always allow` gesetzt hat; für Organisationen, die den Connector erst nach diesem Datum hinzugefügt haben, gilt diese Begrenzung nicht. Nicht konfigurierte betroffene Werkzeuge sollen ab dem 09.12.2026 auf `Needs approval` stehen, sofern nicht der gesamte Connector blockiert ist. `Always allow` kann insbesondere in automatisch genehmigten Cowork- oder geplanten Aufgaben Ausführungen ohne erneute Nutzerbestätigung ermöglichen. Diese Freigabewege sind daher pro Werkzeug, Connector-Installation und Aufgabenmodus zu dokumentieren ([Microsoft 365 connector security guide](https://support.claude.com/en/articles/12684923-microsoft-365-connector-security-guide)).
+
+Geändert:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um die datierten Admin-Defaults, die `Needs approval`-Umstellung und die Wirkung von `Always allow` bei Claude-Microsoft-365-Schreibwerkzeugen ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.39.0 - 10.11.2026
 
