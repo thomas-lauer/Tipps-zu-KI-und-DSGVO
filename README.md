@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.40.0
-Stand: 12.11.2026
+Aktuelle Version: 1.40.1
+Stand: 13.11.2026
 
 ## Versionsinfo
+
+### Version 1.40.1 - 13.11.2026
+
+Ergänzt:
+
+- Die am 13.11.2026 verifizierte Anthropic-Platform-Release-Note vom 09.11.2026 konkretisiert die modellbezogene Retention: Claude Fable 5.2 und Claude Mythos 5.2 erfordern 30 Tage Datenaufbewahrung und sind ohne ausdrückliche Autorisierung durch Anthropic nicht unter Zero Data Retention verfügbar. Modellfreigabe, Retention-Konfiguration und ein gegebenenfalls getrenntes Setup sind deshalb vor der Nutzung zu prüfen ([Claude Platform release notes](https://platform.claude.com/docs/en/release-notes/overview)).
+
+Geändert:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um die explizit dokumentierten Retention-Vorgaben für Claude Fable 5.2 und Claude Mythos 5.2 präzisiert.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.40.0 - 12.11.2026
 
