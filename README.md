@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.40.1
-Stand: 13.11.2026
+Aktuelle Version: 1.41.0
+Stand: 15.11.2026
 
 ## Versionsinfo
+
+### Version 1.41.0 - 15.11.2026
+
+Ergänzt:
+
+- Die am 15.11.2026 verifizierte Anthropic-Dokumentation zu `Claude Meetings` (Release-Note vom 12.11.2026): Die Beta kann in Team und Enterprise als sichtbarer Teilnehmer zu Google Meet hinzugefügt werden, speichert Transkript, Zusammenfassung und Bildschirmbeschreibungen, jedoch kein Audio, und kann mit personenbezogenen Connector-Berechtigungen arbeiten. In Enterprise ist die Funktion standardmäßig aus; externe Gäste sind dort ebenfalls standardmäßig nicht zugelassen. Der Einsatz setzt daher eine dokumentierte Freigabe von Rollen, externen Gästen, Connectoren, Aufbewahrung sowie Information aller Gesprächsteilnehmenden voraus ([Use Claude Meetings](https://support.claude.com/en/articles/18325154-use-claude-meetings), [Claude release notes](https://support.claude.com/en/articles/12138966-release-notes)).
+
+Geändert:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um die Daten-, Freigabe- und Transparenzprüfung für `Claude Meetings` ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.40.1 - 13.11.2026
 
