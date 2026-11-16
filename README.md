@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.41.0
-Stand: 15.11.2026
+Aktuelle Version: 1.42.0
+Stand: 16.11.2026
 
 ## Versionsinfo
+
+### Version 1.42.0 - 16.11.2026
+
+Ergänzt:
+
+- Die am 16.11.2026 verifizierte OpenAI-FAQ zu `Dots`: Einzelne Dot-Memories können derzeit nicht separat eingesehen, geändert oder gelöscht werden. Das Pausieren eines Dots oder der Entzug seiner Workspace-Berechtigung löscht gespeicherte Dot-Informationen ebenfalls nicht. Für Löschkonzepte sind daher der separate Dot-Löschvorgang sowie verbleibende Dateien, Gespräche und Work-/Codex-Aufgaben getrennt zu planen; der Umfang einer individuellen Memory-Berichtigung oder -Löschung kann mit der derzeit dokumentierten Oberfläche nicht bestätigt werden ([Dots privacy, security, and safety FAQs](https://help.openai.com/en/articles/20001529-dots-privacy-security-and-safety-faqs)).
+
+Geändert:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um die gesonderte Prüfung nicht einzeln steuerbarer Dot-Memories sowie der fehlenden Löschwirkung von Pause und Berechtigungsentzug ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.41.0 - 15.11.2026
 
