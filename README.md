@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.42.0
-Stand: 16.11.2026
+Aktuelle Version: 1.42.1
+Stand: 18.11.2026
 
 ## Versionsinfo
+
+### Version 1.42.1 - 18.11.2026
+
+Ergänzt:
+
+- Die am 18.11.2026 verifizierte Anthropic-Dokumentation zu Claude Desktop: Seit der Release-Note vom 17.11.2026 stehen auf macOS und Windows die Kanäle `Stable` (Standard, weniger häufige und stärker getestete Releases) und `Latest` (etwa tägliche Releases) zur Verfügung. Auf Rechnern mit einer von der IT gesetzten Claude-Richtlinie ist die Auswahl nicht sichtbar und Claude Desktop folgt `Stable`. Ein Wechsel zurück zu `Stable` ersetzt die bereits installierte `Latest`-Version nicht; bis zu einem neueren Stable-Release werden daher laut Anthropic auch dringende Fixes nicht über diesen Kanal geliefert. Releasekanal, Geräteverwaltung, Freigabe und zeitnahe Verteilung von Sicherheitsupdates sind deshalb getrennt zu dokumentieren ([Claude Release notes](https://support.claude.com/en/articles/12138966-release-notes), [Install Claude Desktop](https://support.claude.com/en/articles/10065433-install-claude-desktop)).
+
+Geändert:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um die Prüfung des Claude-Desktop-Releasekanals und des Patchprozesses auf verwalteten Geräten ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.42.0 - 16.11.2026
 
