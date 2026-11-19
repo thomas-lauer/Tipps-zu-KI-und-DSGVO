@@ -48,6 +48,10 @@ Anthropic hat am 05.11.2026 neue Enterprise-Sicherheits- und Admin-Funktionen an
 
 Seit der Anthropic-Release-Note vom 17.11.2026 kann Claude Desktop auf macOS und Windows zwischen `Stable` (Standard, weniger häufige und stärker getestete Releases) und `Latest` (etwa tägliche Releases) wählen. Auf einem Rechner, auf dem die IT eine Claude-Richtlinie gesetzt hat, ist diese Auswahl laut Anthropic nicht sichtbar und Claude Desktop folgt `Stable`. Ein späterer Wechsel von `Latest` zu `Stable` ersetzt die bereits installierte Version nicht; bis zu einem neueren Stable-Release werden auch dringende Fixes nicht über den Stable-Kanal geliefert. Für Unternehmensgeräte sollte deshalb je Gerätegruppe dokumentiert werden, welcher Kanal gilt, welche Richtlinie ihn erzwingt, wer Updates testet und wie Sicherheitsfixes zeitnah ausgerollt werden ([Claude Release notes](https://support.claude.com/en/articles/12138966-release-notes), [Install Claude Desktop](https://support.claude.com/en/articles/10065433-install-claude-desktop)).
 
+## 1g. GPT-6.2-Modellfreigabe und Inferenzregion prüfen
+
+OpenAI dokumentiert in der Enterprise-&-Edu-Release-Note vom 18.11.2026 eine standardmäßig deaktivierte Admin-Vorschau für `GPT-6.2 Astra` und `GPT-6.2 Sol` in ChatGPT Work und Codex Desktop. Berechtigte Enterprise- und Edu-Workspaces können sie aktivieren; laut OpenAI unterstützen die Modelle Standard-US- und EU-Inferenz, stehen aber nicht für Workspaces mit verpflichtender UAE-Inferenz zur Verfügung. Vor einer Aktivierung sollten deshalb Modellfreigabe, tatsächlich berechtigte Mitglieder und die für den konkreten Workspace verfügbare Inferenzregion getrennt dokumentiert werden; aus der allgemeinen Modellverfügbarkeit folgt keine Freigabe für jeden Daten- oder Residency-Fall ([ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
+
 ## 2. Keine sensiblen Daten in Consumer-KI
 
 Nicht eingeben:

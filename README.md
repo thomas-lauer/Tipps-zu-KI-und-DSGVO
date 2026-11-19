@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.42.1
-Stand: 18.11.2026
+Aktuelle Version: 1.43.0
+Stand: 19.11.2026
 
 ## Versionsinfo
+
+### Version 1.43.0 - 19.11.2026
+
+Ergänzt:
+
+- Die am 19.11.2026 verifizierte OpenAI-Release-Note vom 18.11.2026 zu `GPT-6.2 Astra` und `GPT-6.2 Sol` in ChatGPT Enterprise und Edu: Die Admin-Vorschau in ChatGPT Work und Codex Desktop ist standardmäßig deaktiviert, kann durch Enterprise-/Edu-Workspaces aktiviert werden und unterstützt laut OpenAI Standard-US- sowie EU-Inferenz. Für Workspaces mit verpflichtender UAE-Inferenz ist sie nicht verfügbar. Modellfreigabe, betroffener Nutzerkreis und die für den konkreten Workspace verfügbare Inferenzregion sind daher vor der Aktivierung getrennt zu prüfen ([ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
+
+Geändert:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um die Modell-, Rollen- und Inferenzregionsprüfung für die GPT-6.2-Vorschau ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.42.1 - 18.11.2026
 

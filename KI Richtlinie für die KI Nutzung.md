@@ -354,6 +354,7 @@ Vor Freigabe eines KI-Tools müssen geprüft werden:
 - fehlende Nachweisquellen für Claude Cowork, insbesondere keine Audit-Logs/Compliance-API/Data-Exports und keine hostseitige EDR-Sicht auf die Remote-VM
 - modellbezogene Retention-Ausnahmen, z. B. Anthropic-`covered models`, Claude Fable 5.2 oder Claude Mythos 5.2 mit 30-Tage-Retention statt ZDR, sowie ein ggf. erforderliches separates Workspace-, Subscription- oder Sandbox-Setup ([Claude Platform release notes](https://platform.claude.com/docs/en/release-notes/overview))
 - organisations- oder rollenbezogene Modell-Allowlist und Effort-Caps, soweit der Anbieter dies unterstützt
+- bei Aktivierung der `GPT-6.2 Astra`-/`GPT-6.2 Sol`-Vorschau in ChatGPT Work oder Codex Desktop: standardmäßig deaktivierte Admin-Freigabe, berechtigte Mitglieder und die je Workspace verfügbare Inferenzregion; laut OpenAI unterstützt die Vorschau Standard-US- und EU-Inferenz, nicht jedoch Workspaces mit verpflichtender UAE-Inferenz ([ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes))
 - nutzerbezogene Usage-Analytics, Reports oder ähnliche Admin-Auswertungen: Zweck, Sichtberechtigungen und interne Transparenz prüfen
 - aktueller GPAI-Code-Signaturstatus wesentlicher Modellanbieter als freiwilliger Governance-Hinweis, ohne Ersatz der DSGVO-, Transfer- oder Featureprüfung
 - Microsoft-365-Connector-`write tools`: Tenant-Re-Consent zu erweiterten Graph-Scopes und fehlende Kennzeichnung von Datei-/Kalenderwrites
