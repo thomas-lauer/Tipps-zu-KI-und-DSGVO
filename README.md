@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.43.0
-Stand: 19.11.2026
+Aktuelle Version: 1.44.0
+Stand: 20.11.2026
 
 ## Versionsinfo
+
+### Version 1.44.0 - 20.11.2026
+
+Ergänzt:
+
+- Den endgültigen EDSA-Leitlinienstand zu Art. 6 Abs. 1 lit. f DSGVO: Die am 10.11.2026 angenommene Version 2.0 verlangt vor der Verarbeitung eine dokumentierte Dreistufenprüfung aus rechtmäßigem Interesse, Erforderlichkeit und Interessenabwägung. Sie ordnet die Norm nicht als Auffangrechtsgrundlage ein, schließt sie für öffentliche Stellen bei Wahrnehmung ihrer Aufgaben aus und verlangt bei einem Widerspruch nach Art. 21 Abs. 1 DSGVO eine gesonderte Prüfung zwingender schutzwürdiger Gründe ([EDSA, Leitlinien 1/2024, Version 2.0](https://www.edpb.europa.eu/system/files/2026-11/edpb_guidelines_202401_legitimateinterest_v2_en.pdf)).
+
+Geändert:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um die dokumentierte Art.-6-Abs.-1-lit.-f-Prüfung für KI-Haupt- und Zusatzverarbeitungen ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.43.0 - 19.11.2026
 

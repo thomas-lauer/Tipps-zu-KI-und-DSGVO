@@ -162,6 +162,15 @@ KI-VO-Hinweis: Die Grundrechte-Folgenabschätzung nach [Art. 27 KI-VO](https://a
 | Art.-9-Daten, falls vorhanden | Art. 9 Abs. 2 ... DSGVO |  |
 | Drittlandtransfer | Art. 44 ff. DSGVO, Mechanismus:  |  |
 
+Falls Art. 6 Abs. 1 lit. f DSGVO gewählt wird, ist vor Beginn der Verarbeitung gesondert zu dokumentieren:
+
+- das rechtmäßige, klar benannte und gegenwärtige berechtigte Interesse,
+- warum kein gleich wirksames, weniger eingriffsintensives Mittel verfügbar ist,
+- die einzelfallbezogene Abwägung gegen Rechte, Freiheiten und vernünftige Erwartungen der betroffenen Personen,
+- bei einem Widerspruch nach Art. 21 Abs. 1 DSGVO die dann erforderlichen zwingenden schutzwürdigen Gründe.
+
+Art. 6 Abs. 1 lit. f DSGVO ist keine Auffangrechtsgrundlage und steht öffentlichen Stellen bei der Wahrnehmung ihrer Aufgaben nicht zur Verfügung ([EDSA, Leitlinien 1/2024, Version 2.0, angenommen am 10.11.2026](https://www.edpb.europa.eu/system/files/2026-11/edpb_guidelines_202401_legitimateinterest_v2_en.pdf)).
+
 Offene Rechtsfragen:
 
 ## 7. Anbieter- und Vertragsprüfung

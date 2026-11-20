@@ -52,6 +52,10 @@ Seit der Anthropic-Release-Note vom 17.11.2026 kann Claude Desktop auf macOS und
 
 OpenAI dokumentiert in der Enterprise-&-Edu-Release-Note vom 18.11.2026 eine standardmäßig deaktivierte Admin-Vorschau für `GPT-6.2 Astra` und `GPT-6.2 Sol` in ChatGPT Work und Codex Desktop. Berechtigte Enterprise- und Edu-Workspaces können sie aktivieren; laut OpenAI unterstützen die Modelle Standard-US- und EU-Inferenz, stehen aber nicht für Workspaces mit verpflichtender UAE-Inferenz zur Verfügung. Vor einer Aktivierung sollten deshalb Modellfreigabe, tatsächlich berechtigte Mitglieder und die für den konkreten Workspace verfügbare Inferenzregion getrennt dokumentiert werden; aus der allgemeinen Modellverfügbarkeit folgt keine Freigabe für jeden Daten- oder Residency-Fall ([ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
 
+## 1h. Berechtigtes Interesse nicht pauschal als Rechtsgrundlage verwenden
+
+Wer sich für einen KI-Verarbeitungsschritt auf ein berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO stützt, muss nach den am 10.11.2026 endgültig angenommenen EDSA-Leitlinien vor Beginn der Verarbeitung kumulativ ein rechtmäßiges, klar benanntes und gegenwärtiges Interesse, die Erforderlichkeit ohne gleich wirksames milderes Mittel sowie eine einzelfallbezogene Interessenabwägung dokumentieren. Art. 6 Abs. 1 lit. f DSGVO ist keine Standard- oder Auffangrechtsgrundlage; für die Wahrnehmung öffentlicher Aufgaben dürfen Behörden sie nicht einsetzen. Bei einem Widerspruch nach Art. 21 Abs. 1 DSGVO genügt die frühere Abwägung nicht: Die Organisation muss im konkreten Fall zwingende schutzwürdige Gründe nachweisen. Dies ist insbesondere für Log-, Monitoring-, RAG- und Agentik-Datenflüsse getrennt je Zweck zu prüfen ([EDSA, Leitlinien 1/2024, Version 2.0](https://www.edpb.europa.eu/system/files/2026-11/edpb_guidelines_202401_legitimateinterest_v2_en.pdf)).
+
 ## 2. Keine sensiblen Daten in Consumer-KI
 
 Nicht eingeben:
