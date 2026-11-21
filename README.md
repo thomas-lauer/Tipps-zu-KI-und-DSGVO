@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.44.0
-Stand: 20.11.2026
+Aktuelle Version: 1.44.1
+Stand: 21.11.2026
 
 ## Versionsinfo
+
+### Version 1.44.1 - 21.11.2026
+
+Ergänzt:
+
+- Die am 21.11.2026 verifizierte OpenAI-Release-Note vom 19.11.2026 zu SSO-Ausnahmen für externe Workspace-Mitglieder: In Enterprise-, Edu- und Healthcare-Workspaces können Owner die Ausnahme je Workspace steuern. Bereits vorhandene externe Mitglieder in Workspaces mit SSO-Pflicht erhalten laut OpenAI eine Ausnahme zur Zugangserhaltung; neu hinzugefügte externe Mitglieder sind nicht standardmäßig ausgenommen. Die Ausnahme endet bei Austritt oder Entfernung und wird durch erneute Einladung nicht wiederhergestellt ([ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
+
+Geändert:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um die dokumentierte Prüfung externer Mitglieder und workspace-spezifischer SSO-Ausnahmen ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.44.0 - 20.11.2026
 

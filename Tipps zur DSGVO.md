@@ -56,6 +56,10 @@ OpenAI dokumentiert in der Enterprise-&-Edu-Release-Note vom 18.11.2026 eine sta
 
 Wer sich für einen KI-Verarbeitungsschritt auf ein berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO stützt, muss nach den am 10.11.2026 endgültig angenommenen EDSA-Leitlinien vor Beginn der Verarbeitung kumulativ ein rechtmäßiges, klar benanntes und gegenwärtiges Interesse, die Erforderlichkeit ohne gleich wirksames milderes Mittel sowie eine einzelfallbezogene Interessenabwägung dokumentieren. Art. 6 Abs. 1 lit. f DSGVO ist keine Standard- oder Auffangrechtsgrundlage; für die Wahrnehmung öffentlicher Aufgaben dürfen Behörden sie nicht einsetzen. Bei einem Widerspruch nach Art. 21 Abs. 1 DSGVO genügt die frühere Abwägung nicht: Die Organisation muss im konkreten Fall zwingende schutzwürdige Gründe nachweisen. Dies ist insbesondere für Log-, Monitoring-, RAG- und Agentik-Datenflüsse getrennt je Zweck zu prüfen ([EDSA, Leitlinien 1/2024, Version 2.0](https://www.edpb.europa.eu/system/files/2026-11/edpb_guidelines_202401_legitimateinterest_v2_en.pdf)).
 
+## 1i. Externe Workspace-Mitglieder und SSO-Ausnahmen prüfen
+
+OpenAI dokumentiert in der Release-Note vom 19.11.2026 für ChatGPT Enterprise, Edu und Healthcare eine je Workspace steuerbare SSO-Ausnahme für externe Mitglieder, deren E-Mail-Domain nicht durch den Workspace verifiziert ist. Bestehende externe Mitglieder eines Workspace mit SSO-Pflicht erhalten laut OpenAI eine Ausnahme zur Zugangserhaltung; neu hinzugefügte externe Mitglieder sind nicht standardmäßig ausgenommen. Die Ausnahme gilt nur für den ausgewählten Workspace, endet bei Austritt oder Entfernung und wird durch eine erneute Einladung nicht wiederhergestellt. Für Unternehmensnutzung sollte deshalb regelmäßig dokumentiert werden, welche externen Mitglieder eine Ausnahme erhalten, warum sie erforderlich ist, wer sie genehmigt und wie sie bei Austritt oder Rollenwechsel überprüft wird ([ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
+
 ## 2. Keine sensiblen Daten in Consumer-KI
 
 Nicht eingeben:
