@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.44.1
-Stand: 21.11.2026
+Aktuelle Version: 1.45.0
+Stand: 22.11.2026
 
 ## Versionsinfo
+
+### Version 1.45.0 - 22.11.2026
+
+Ergänzt:
+
+- Die am 22.11.2026 verifizierte Anthropic-Dokumentation zu `Computer use`: Die Team-/Enterprise-Beta ist standardmäßig deaktiviert, setzt `Chat and Cowork unified` voraus und kann Claude den Bildschirm sowie die zugelassenen Desktop-Apps bedienen lassen. Anthropic dokumentiert dafür Organisations-, Rollen-, App-Allow-/Blocklist- und MDM-Kontrollen; die Abschaltung kann laut Hersteller bis zur wirksamen Verteilung auf den einzelnen Geräten etwa eine Stunde oder länger dauern ([Set up computer use for Team and Enterprise plans](https://support.claude.com/en/articles/18483812-set-up-computer-use-for-team-and-enterprise-plans), [Claude release notes](https://support.claude.com/en/articles/12138966-release-notes)).
+
+Geändert:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um die getrennte Freigabe von `Computer use`, den begrenzten Rollen- und App-Scope, verwaltete Geräte sowie die verzögerte Wirksamkeit einer Deaktivierung ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.44.1 - 21.11.2026
 
