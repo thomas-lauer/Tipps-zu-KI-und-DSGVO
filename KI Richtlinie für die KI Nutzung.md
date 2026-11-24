@@ -400,7 +400,9 @@ Vorlage: `Datenschutz-Folgenabschätzung Vorlage KI Nutzung.md`
 
 Eine Grundrechte-Folgenabschätzung nach [Art. 27 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-27) kann für bestimmte Hochrisiko-KI-Systeme zusätzlich relevant sein und ergänzt eine DSFA, soweit deren Pflichten bereits einschlägige Punkte abdecken.
 
-Quellen: [Art. 35 DSGVO](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng), [DSK Kurzpapier Nr. 5 DSFA](https://www.datenschutzkonferenz-online.de/media/kp/dsk_kpnr_5.pdf), [Art. 27 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-27).
+Für bestimmte Betreiber von Hochrisiko-KI nach Anhang III ist ab 02.12.2027 eine Grundrechte-Folgenabschätzung nach Art. 27 KI-VO einzuplanen. Die Europäische Kommission hat am 16.11.2026 hierfür einen Konsultationsentwurf veröffentlicht; er ist bis 15.01.2027 öffentlich kommentierbar und noch kein verbindliches Muster. Bis zur Finalisierung ist der Entwurf nur als Lückenprüfung zu verwenden. Nach Finalisierung soll das Muster für die Abschätzung eingesetzt und ihr Ergebnis nach Art. 27 Abs. 3 KI-VO der Marktüberwachungsbehörde mitgeteilt werden ([Europäische Kommission: Entwurf für das FRIA-Muster](https://digital-strategy.ec.europa.eu/en/news/commission-seeks-feedback-draft-template-fundamental-rights-impact-assessment-under-ai-act)).
+
+Quellen: [Art. 35 DSGVO](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng), [DSK Kurzpapier Nr. 5 DSFA](https://www.datenschutzkonferenz-online.de/media/kp/dsk_kpnr_5.pdf), [Art. 27 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-27), [Europäische Kommission: Entwurf für das FRIA-Muster](https://digital-strategy.ec.europa.eu/en/news/commission-seeks-feedback-draft-template-fundamental-rights-impact-assessment-under-ai-act).
 
 ## 13. Transparenz
 

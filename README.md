@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.45.0
-Stand: 22.11.2026
+Aktuelle Version: 1.46.0
+Stand: 24.11.2026
 
 ## Versionsinfo
+
+### Version 1.46.0 - 24.11.2026
+
+Ergänzt:
+
+- Den am 16.11.2026 veröffentlichten Konsultationsentwurf der Europäischen Kommission für die Grundrechte-Folgenabschätzung nach Art. 27 KI-VO. Er betrifft bestimmte Betreiber von Hochrisiko-KI nach Anhang III; die Pflicht soll ab 02.12.2027 gelten. Der Entwurf ist noch nicht final: Die öffentliche Konsultation läuft bis 15.01.2027. Nach Finalisierung soll das Muster für die Vorbereitung der Abschätzung genutzt und das Ergebnis nach Art. 27 Abs. 3 KI-VO der Marktüberwachungsbehörde mitgeteilt werden ([Europäische Kommission: Entwurf für das FRIA-Muster](https://digital-strategy.ec.europa.eu/en/news/commission-seeks-feedback-draft-template-fundamental-rights-impact-assessment-under-ai-act)).
+
+Geändert:
+
+- Checkliste, DSFA-Vorlage und KI-Richtlinie um die Abgrenzung zwischen dem noch nicht finalen Kommissionsentwurf und der ab 02.12.2027 einschlägigen Art.-27-Pflicht ergänzt.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.45.0 - 22.11.2026
 

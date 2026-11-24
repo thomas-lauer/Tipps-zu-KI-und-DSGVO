@@ -130,6 +130,8 @@ Begründung:
 
 KI-VO-Hinweis: Die Grundrechte-Folgenabschätzung nach [Art. 27 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-27) ersetzt die DSFA nicht; wenn Pflichten aus einer DSFA nach [Art. 35 DSGVO](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng) bereits erfüllt sind, ergänzt die KI-VO-Abschätzung diese DSFA. Hochrisiko-Einstufungen sind nach [Art. 6 KI-VO](https://ai-act-service-desk.ec.europa.eu/de/ai-act/article-6) zu dokumentieren.
 
+Stand 24.11.2026: Die Europäische Kommission hat am 16.11.2026 einen **Konsultationsentwurf** für das Art.-27-Muster veröffentlicht. Er betrifft bestimmte Betreiber von Hochrisiko-KI nach Anhang III; die Pflicht soll ab 02.12.2027 gelten. Die Konsultation läuft bis 15.01.2027. Der Entwurf ist kein endgültiges Muster, kann aber für eine dokumentierte Lückenprüfung verwendet werden. Nach Finalisierung soll das Muster für die Grundrechte-Folgenabschätzung verwendet und ihr Ergebnis der Marktüberwachungsbehörde nach Art. 27 Abs. 3 KI-VO mitgeteilt werden ([Europäische Kommission: Entwurf für das FRIA-Muster](https://digital-strategy.ec.europa.eu/en/news/commission-seeks-feedback-draft-template-fundamental-rights-impact-assessment-under-ai-act)).
+
 ## 4. Datenkategorien
 
 | Datenkategorie | Beispiele | Erforderlich? | Schutzbedarf |
