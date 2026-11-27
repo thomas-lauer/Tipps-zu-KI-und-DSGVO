@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.46.0
-Stand: 24.11.2026
+Aktuelle Version: 1.47.0
+Stand: 27.11.2026
 
 ## Versionsinfo
+
+### Version 1.47.0 - 27.11.2026
+
+Ergänzt:
+
+- Die am 24.11.2026 veröffentlichte Anthropic-Beta für Dateiübertragungen zu Connector-Apps: In Team und Enterprise sind Uploads zu sowie Downloads von Connectoren standardmäßig deaktiviert und nur durch Owner oder Primary Owner aktivierbar. Gesendete Dateien werden bei Anthropic temporär verschlüsselt gespeichert; eine Chat- oder Sitzungs-Löschung entfernt weder die Datei beim Connector noch zwingend eine für Safety-Scanning vorgehaltene Kopie. Gesendete Dateien erscheinen auf Enterprise meist im Compliance-Activity-Feed, heruntergeladene Dateien können dagegen fehlen. Checkliste, DSFA-Vorlage und KI-Richtlinie enthalten deshalb einen separaten Freigabe-, Speicher- und Nachweisprüfpunkt ([Anthropic: Dateien zu Connector-Apps senden und daraus speichern](https://support.claude.com/en/articles/18534325-send-files-to-connected-apps-and-save-files-from-them)).
+
+Geändert:
+
+- Keine bestehenden Inhalte geändert.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.46.0 - 24.11.2026
 
