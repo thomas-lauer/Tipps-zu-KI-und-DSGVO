@@ -42,10 +42,24 @@ Enthält die Grundlagen der EU-KI-Verordnung: Kontext und Aufbau, Abgrenzung zur
 
 ## Version
 
-Aktuelle Version: 1.47.0
-Stand: 27.11.2026
+Aktuelle Version: 1.48.0
+Stand: 28.11.2026
 
 ## Versionsinfo
+
+### Version 1.48.0 - 28.11.2026
+
+Ergänzt:
+
+- Die am 28.11.2026 verifizierte Anthropic-Dokumentation zur Enterprise-Funktion `Chat and Cowork unified`: Wenn die Funktion in einer bestehenden Organisation weiterhin nur aufgrund der Standardvorgabe aktiv ist, soll sie am 08.12.2026 auch für Custom Roles mit den Berechtigungen `Chat` und `Cloud code execution and file creation` aktiviert werden. Eine explizite organisationsweite Ein- oder Ausschaltung ist laut Anthropic von dieser angekündigten Rollenänderung ausgenommen. Checkliste, DSFA-Vorlage und KI-Richtlinie verlangen daher vor diesem Datum eine dokumentierte organisationsweite Entscheidung und eine Prüfung aller Custom Roles ([Anthropic: Chat and Cowork unified verwalten](https://support.claude.com/en/articles/17444462-set-up-and-manage-the-new-unified-claude-experience-for-your-enterprise-organization)).
+
+Geändert:
+
+- Keine bestehenden Inhalte geändert.
+
+Entfernt:
+
+- Keine Inhalte entfernt.
 
 ### Version 1.47.0 - 27.11.2026
 
